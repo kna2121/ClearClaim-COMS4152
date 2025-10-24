@@ -1,0 +1,20 @@
+CO45:
+  reason: "Charge exceeds fee schedule/maximum allowable."
+  suggested_correction: "Review payer contract rates and resubmit with corrected charge or supporting documentation."
+  documentation:
+    - "Include proof of negotiated rate."
+    - "Attach itemized bill showing adjustments."
+
+PR204:
+  reason: "Service not covered under patient plan."
+  suggested_correction: "Verify eligibility or supply prior authorization demonstrating coverage."
+  documentation:
+    - "Add copy of authorization letter."
+    - "Reference specific plan clause in appeal."
+
+M86:
+  reason: "Procedure bundled with another service."
+  suggested_correction: "Submit modifier or separate documentation showing distinct service."
+  documentation:
+    - "Attach operative note."
+    - "Add modifier 59/XS as appropriate."

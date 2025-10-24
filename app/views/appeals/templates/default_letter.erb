@@ -1,0 +1,22 @@
+<%= Date.today.strftime("%B %d, %Y") %>
+
+Appeals Department
+<%= claim[:payer_name] || "Payer Name" %>
+
+Re: Appeal for Claim <%= claim[:claim_number] || "N/A" %> / Patient <%= claim[:patient_name] || "N/A" %>
+
+To Whom It May Concern,
+
+I am writing on behalf of <%= claim[:patient_name] || "the patient" %> to appeal the denial(s) for the services rendered on <%= claim[:service_period] || "the stated dates of service" %>. After reviewing the Explanation of Benefits, the following denial reasons were provided:
+
+<% Array(denial_reasons).each do |reason| %>
+- Code <%= reason[:code] %>: <%= reason[:reason] %>. Recommended action: <%= reason[:suggested_correction] %>.
+<% end %>
+
+Supporting documentation accompanies this appeal, including medical records, itemized billing, and any prior authorization letters needed to validate coverage. Based on these materials, we respectfully request that the claim be reprocessed and payment issued promptly.
+
+Thank you for your reconsideration.
+
+Sincerely,
+
+<%= claim[:submitter_name] || "ClearClaim Assistant" %>

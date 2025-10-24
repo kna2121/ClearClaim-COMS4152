@@ -1,0 +1,14 @@
+/.bundle
+/log/*
+/tmp
+!/log/.keep
+!/tmp/.keep
+/public/assets
+/storage/*
+!/storage/.keep
+/node_modules
+/yarn-error.log
+.byebug_history
+.DS_Store
+coverage/
+.env
