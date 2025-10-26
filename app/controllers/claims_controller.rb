@@ -11,15 +11,13 @@ class ClaimsController < ApplicationController
   end
 
   def suggest_corrections
-    codes = params[:denial_codes] || []
-    suggestions = Claims::CorrectionSuggester.new(denial_codes: codes).call
+    suggestions = Claims::CorrectionSuggester.new(denial_codes: denial_payload).call
     render json: { suggestions: suggestions }
   end
 
   def generate_appeal
     claim_payload = claim_params.to_h.symbolize_keys
-    denial_codes = params[:denial_codes] || []
-    denial_reasons = Claims::CorrectionSuggester.new(denial_codes: denial_codes).call
+    denial_reasons = Claims::CorrectionSuggester.new(denial_codes: denial_payload).call
     response = Appeals::AppealGenerator.new(
       claim: claim_payload,
       denial_reasons: denial_reasons,
@@ -41,5 +39,9 @@ class ClaimsController < ApplicationController
       :service_period,
       :submitter_name
     )
+  end
+
+  def denial_payload
+    params[:denials] || params[:denial_codes] || []
   end
 end
