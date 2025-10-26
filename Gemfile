@@ -22,6 +22,8 @@ gem "caracal"
 gem "prawn"
 gem "sidekiq"
 gem "attr_encrypted"
+gem "csv"
+gem "ostruct"
 
 group :development, :test do
   gem "sqlite3", "~> 1.4"
