@@ -10,12 +10,7 @@ module Claims
         rule = repository.fetch(code)
         next fallback_response(code) unless rule
 
-        {
-          code: code,
-          reason: rule["reason"],
-          suggested_correction: rule["suggested_correction"],
-          documentation: rule["documentation"]
-        }
+        build_response(code, rule)
       end
     end
 
@@ -25,6 +20,29 @@ module Claims
 
     def repository
       @repository ||= DenialRules::Repository.new
+    end
+
+    def build_response(requested_code, rule)
+      {
+        code: requested_code,
+        description: rule["description"] || rule["reason"],
+        reason: rule["reason"],
+        group_code: rule["group_code"],
+        remark_code: rule["remark_code"],
+        reason_codes: rule["reason_codes"],
+        rejection_code: rule["rejection_code"],
+        suggested_correction: rule["suggested_correction"].presence || default_suggestion(rule),
+        documentation: rule["documentation"]
+      }
+    end
+
+    def default_suggestion(rule)
+      codes = Array(rule["reason_codes"]).presence
+      if codes.present?
+        "Review payer policy for codes #{codes.join(', ')} and include supporting documents."
+      else
+        "Review payer policy and include required supporting documents."
+      end
     end
 
     def fallback_response(code)

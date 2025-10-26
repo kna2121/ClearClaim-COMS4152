@@ -1,0 +1,810 @@
+EOB CODE,DESCRIPTION,Rejection Code,Group Code,Reason Code,Remark Code
+001,Denied.  Care beyond first 20 visits or 60 days requires authorization.,NULL,CO,"A1, 45 N54,",M62
+002,Denied. Report of Accident (ROA) payable once per claim. Previous payment has been made.,NULL,CO,"B13, A1, 23",N117
+003,Initial office visit payable 1 time only for same injured worker/provider/diagnosis.,NULL,CO,B13,M13
+004,Denied. Physical therapy by the attending doctor is limited to 6 treatments.,NULL,CO,"35, A1, 45",N362
+005,Denied. Physical therapy beyond the first 12 treatments requires authorization.,NULL,CO,"A1, 45 M62,",N54
+006,Rental has extended over 30 days. Only short term rental is allowed.,NULL,CO,"108, 119, 45",NULL
+007,Denied. Facet joint injections are limited to 4 per injured worker.,NULL,CO,"35, A1, 45",N362
+008,Denied. Chemonucleolysis is allowed once in a lifetime only.,NULL,CO,"35, A1, 45",N117
+009,Maximum 2 service units allowed.,NULL,CO,"45, P12",NULL
+010,Maximum 40 hours payable per vocational referral.,NULL,NULL,NULL,NULL
+011,Maximum 50 hours payable per vocational referral.,NULL,NULL,NULL,NULL
+012,Maximum 2 hours allowed per vocational referral.,NULL,NULL,NULL,NULL
+013,Quality or level of service does not meet L&I standards.,NULL,CO,A1,N35
+014,Maximum 1 service unit allowed for same day/diagnosis.,NULL,CO,"P12, 45",NULL
+015,Maximum of 2 hours travel wait time allowed.,NULL,NULL,NULL,NULL
+016,Thank you. Your effort to complete this bill correctly has been appreciated.,NULL,NULL,NULL,NULL
+017,Denied.  Meal receipts must include business name or be accompanied by cash registered receipt.,NULL,NULL,NULL,NULL
+018,Additional views/units are not payable on MRI's.,NULL,CO,45,NULL
+019,Amount paid is according to hours lost from work per the daily compensation rate.,NULL,NULL,NULL,NULL
+020,This service is payable only once and must be billed as 1 line item and 1 unit of service. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,M53
+021,Denied. Free parking available at this facility.,NULL,NULL,NULL,NULL
+022,Consultations not payable to attending physician.,NULL,CO,A1,N637
+023,"Denied. Submit bill to party who requested testimony (e.g. attorney general office, BIIA, etc.)",NULL,PI,109,NULL
+024,Maximum of 1 hour allowable only.,NULL,CO,"P12, 45",NULL
+025,Accumulated services have exceeded L&I limit.,NULL,CO,NULL,NULL
+026,This is an individual interim payment.,NULL,CO,NULL,NULL
+027,Denied. Not authorized to provide work hardening services. Contact work hardening reviewer at (360)902-4480.,NULL,CO,"A1 M62,",N612
+028,A maximum of 1 service unit is allowed.,NULL,CO,"P12, 45",NULL
+029,"Denied. Home nursing travel, holidays, overtime & weekends are considered the providers overhead.",NULL,CO,A1,N643
+030,A maximum of 300 miles is allowed.,NULL,CO,"P12, 45",NULL
+031,"This was paid at the highest allowable fee for breakfast, lunch or dinner.",NULL,NULL,NULL,NULL
+032,Denied. The tooth number billed has not been authorized.,NULL,CO,"A1, 197",N473
+033,Lack of correct amount of units on bill can reduce or delay payment.,NULL,CO,226,M53
+034,Number of hours paid per agreement with L&I Occupational Nurse Consultant.,NULL,CO,P12,N10
+035,Paid professional component only. Technical component billed by and paid to another provider.,NULL,CO,NULL,NULL
+036,Adjustment/deduction taken to credit base anesthesia units that were billed by you in error.,NULL,CR,P13,N692
+037,L&I responsible for payment of this bill. Reimburse payments made by other sources.,NULL,CO,19,MA17
+038,"Use modifier -7N with X-ray, lab services, and other allowed diagnostic services performed in conjunction with an IME.",NULL,CO,4,M78
+039,Denied. The legal maximum of $4000 for retraining has been expended. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+040,Denied. Place of service is invalid/invalid for date of service. Resubmit with valid code.,NULL,CO,NULL,M77
+041,Adjustment made to this bill per contractual agreement with utilitzation review (UR) vendor.,NULL,CR,NULL,N10
+042,Payment of this service has been made per Board of Industrial Insurance Appeals (BIIA).,NULL,CO,NULL,N10
+043,Denied. Procedure code missing from bill.,NULL,CO,"16, A1",MA66
+044,Denied. Out of state travel expenses incurred prior to 7-1- 91 are not payable.,NULL,NULL,NULL,NULL
+045,Denied. Type service/procedure code is invalid. Refer to current fee schedule for valid code.,NULL,CO,8,NULL
+046,Payment made to correct your account for the refund which you made to L&I.,NULL,CR,P12,NULL
+047,"Denied. Treatment is available within ten miles, one way. Travel expense is not payable.",NULL,NULL,NULL,NULL
+048,Adjudicated per instructions from Claim Manager.,NULL,CO,P12,N10
+049,Denied. No Report of Accident (ROA) has been received for this claim number by L&I.,NULL,CO,NULL,NULL
+050,Only 1 new patient visit allowed within 3 years.,NULL,CO,B16,NULL
+051,Payment made to EBP for review of service for which claim was not received/initiated by L&I.,NULL,NULL,NULL,NULL
+052,Denied. The maximum allowable number of units was paid on another line or bill.,NULL,CO,45,N362
+053,"Services 9/98 through 6/99, 40 maximum units allowed. Services 7/99 on, 32 maximum units allowed.",NULL,CO,P12,N362
+054,"Denied. Clinic provider number may not be used in provider field, only payee field.",NULL,CO,NULL,N290
+055,Payment adjusted or denied. Only one unit of service payable per claim.,NULL,CO,"A1, 45",N362
+056,Denied. Chart notes are required for services billed. No additional amount is payable. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"16, A1",N29
+057,Submit charges for rehab DRG 462 under your facilities separate rehab unit provider number.,NULL,CO,8,NULL
+058,Denied. E/M code not payable with MPE or impairment rating by same provider/claim/date of service.,NULL,CO,A1,M86
+059,Payment adjusted to number of service units authorized by the Claim Manager.,NULL,CO,P12,N10
+060,Denied. Please rebill using the correct provider number for these services.,NULL,CO,"8, A1",N77
+061,Allowed at combined procedure code rate per L&I published fee schedule.,NULL,CO,"P12, 45",NULL
+062,Fee for visit includes care of the day.,NULL,CO,NULL,M15
+063,Denied. Reopening application is payable only on claims closed over 60 days.,NULL,CO,P13,NULL
+064,Denied. Fee for service includes office call.,NULL,CO,P13,NULL
+065,Only one adjustment form should be submitted listing all changes requested to an ICN bill.,NULL,CR,16,N232
+066,Denied. The admit and discharge dates are the same. Rebill this service as outpatient service. MA31,NULL,CO,"A1 N64,","N173,"
+067,"Adjusted.  Examination completed within 6 weeks of a ""no show"" exam billed to L&I.",NULL,CR,NULL,NULL
+069,Denied. The provider is not an approved chiropractic consultant with L&I.,NULL,CO,B7,NULL
+070,Allowable fee set by L&I Chiropractic Consultant based upon review of report.,NULL,CO,P12,N10
+071,Denied. Injury occurred while in course of employment subject to Longshore & Harbor Workers Act,NULL,CO,"109, A1",N104
+072,Denied. Rebill services under the performing provider's name and provider number and/or NPI.,NULL,CO,NULL,N290
+073,Payment adjusted per review by Department Occupational Nurse Consultant. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,P12,N10
+074,Denied. Replacement and repair of this item is not covered by L&I.,NULL,CO,"96, A1",N171
+075,Denied. Requested records not rec'd by August(AHS). Injured worker is not to be billed.,NULL,CO,"226,  A1",N463
+076,"Denied. Claim reopened for provisional time-loss only. If/when reopened for medical, rebill.",NULL,CO,"27, A1",N578
+077,Procedure billed needs a referral ID on the bill. Contact the referring vocational provider for this number.,NULL,NULL,NULL,NULL
+078,Services paid. Claim now closed and no additional benefits are payable.,NULL,CO,35,NULL
+079,Denied. This is a rebill of an original that is currently under review by utilization review (UR) vendor.,NULL,CO,18,NULL
+080,Anesthesia services reimbursed under RBRVS are not paid by base and time units.,NULL,CO,59,NULL
+081,Units adjusted to 24. This procedure's unit value is calculated on a per hour basis.,NULL,CO,P12,NULL
+082,The modifier used requires a report. No report has been received for these services.,NULL,CO,"16, A1",N29
+083,When using a group number you must also indicate by provider number which doctor performed services.,NULL,CO,NULL,N290
+084,Units or payment adjusted to pay maximum allowable amount per day.,NULL,CO,P12,N362
+085,Units per injury per time period exceeded. Denied/Adjusted per current fee schedule maximum.,NULL,CO,P12,N362
+086,Payment adjusted. Payment of guest convenience items are the injured worker's responsibility.,NULL,NULL,NULL,NULL
+087,Units adjusted to correct amount. Only 2 additional visits allowed per day.,NULL,CO,"P12, 45",NULL
+088,Referring provider number is missing/not valid for this claim. Contact referring vocational provider for this number. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+089,Denied. Service dates not within authorized dates for billed referral ID.,NULL,NULL,NULL,NULL
+090,"Denied. Travel only reimbursed for scheduled treatment, exams and vocational services.",NULL,NULL,NULL,NULL
+091,"Bill's referral ID does not match claim number on bill, is missing or invalid.  Correct and rebill.",NULL,NULL,NULL,NULL
+092,Denied. Performing provider number not valid for this date of service.,NULL,CO,B7,NULL
+093,This bill was adjusted in error in 12-90 when the Dept processed accommodation code adjustments.,NULL,NULL,NULL,NULL
+094,Adjustment made to this bill per contractual agreement with utilization review (UR) vendor.,NULL,CR,NULL,N10
+095,Payment made to utilization review (UR) vendor for review of service for which claim was not received/initiated by L&I.,NULL,CO,100,NULL
+096,Denied. Requested records not received by utilization review (UR) vendor. Injured worker is not to be billed.,NULL,CO,"226,  A1",N463
+097,Denied. This is a rebill of an original that is currently under review by utilization review (UR) vendor.,NULL,CO,18,NULL
+098,Denied. Incorrect procedure code for referral ID/type billed.,NULL,NULL,NULL,NULL
+099,Charge/fee converted to rate of exchange in effect for date of service.,NULL,CO,P12,NULL
+100,Effective 9/1/93 L&I will not pay for Stadol Nasal Solution.,NULL,CO,NULL,NULL
+101,"Denied as duplicate. If not a duplicate, submit an adjustment request with documentation.",NULL,CO,"18, B13",NULL
+102,Deny. No vocational rehabilitation counselor (VRC) is assigned to this referral.,NULL,NULL,NULL,NULL
+103,Deny. Payee provider is not assigned to this referral ID.,NULL,NULL,NULL,NULL
+104,Denied. Service is included in flat fee or follow up care period for major surgery performed.,NULL,CO,B1,M144
+105,Denied. Procedure code is incompatible with diagnosis code on the bill. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,11,NULL
+106,Denied. The therapeutic class and the diagnosis on the bill are incompatible.,80,NULL,NULL,NULL
+107,Board charges are allowed for payment of food items only. Other items are not authorized.,NULL,NULL,NULL,NULL
+108,Payment of this service has been authorized as a retraining expense.,NULL,NULL,NULL,NULL
+109,Deduction taken to reimburse L&I for unauthorized or excess payment of this service.,NULL,CR,"P12, 197",NULL
+110,Paid technical component only. Professional component billed by and paid to another provider.,NULL,CO,"P12, 89",NULL
+111,The procedure modifier(s) required for the surgery(s) on this bill is either invalid or missing,NULL,CO,4,NULL
+112,Units of service adjusted to comply with the maximum 40 hours payable for this service.,NULL,CO,P12,NULL
+113,When billing an unlisted procedure code a specific description of service must be on the bill.,NULL,CO,"16 M51,",MA69
+114,Paid. Condition not accepted but retarding recovery from accepted condition.,NULL,CO,20,NULL
+115,Units of service for accommodations conflict with the covered dates listed on your bill.,NULL,CO,16,N345
+116,No payment made for this surgical service. It is included in flat fee for major surgery billed.,NULL,CO,97,M144
+117,The 1st procedure code modifier is either completely invalid or invalid for the service dates billed.,NULL,CO,4,NULL
+118,This service has already been billed by and paid to another provider.,NULL,CO,B20,NULL
+119,Paid on adjunctive treatment basis only. Condition not accepted.,NULL,CO,20,NULL
+120,Denied. The date of service is required. Submit bill only when service has been completed.,NULL,CO,16,MA31
+121,Not paid. Provider name and/or number is missing or invalid. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,N290
+122,History adjustment due to consolidation of claim numbers.,NULL,OA,P12,NULL
+123,Denied. This service is not payable in advance.,15,CO,110,NULL
+124,Denied. The beginning/ending service date is missing or invalid.,15,CO,16,MA31
+125,Denied. Bill was received in L&I after 90 days from date of service.,NULL,CO,29,NULL
+126,Payment processed. Future vouchers for travel over 90 days old will be denied.,NULL,NULL,NULL,NULL
+127,Denied. The prescription was not written by the recognized attending physician of record.,NULL,CO,"A1,184",N31
+128,Denied. The prescription was written for a condition unrelated to the industrial injury.,NULL,CO,"96, A1",N576
+129,Missing or invalid modifier code was billed. Please note corrected code used in this instance.,NULL,CO,4,M78
+130,Injured worker name was missing from the billing received by L&I.,CD,CO,16,MA36
+131,Denied. The prescribing provider number is missing or invalid.,25,CO,16,N31
+132,Please list all applicable modifiers in the description field when billing modifier 99.,NULL,CO,4,M78
+133,Denied. Gasoline and/or automotive costs are included in the mileage reimbursement rate.,NULL,NULL,NULL,NULL
+134,Allowed at rate established by Washington Administrative Code effective this service date.,NULL,CO,P12,NULL
+135,Denied.  Parking receipts were not attached to your billing. Attach receipts to bill and resubmit for further consideration.,NULL,NULL,NULL,NULL
+136,Extra views must be billed under -22 modifier per Fee Schedule/WAC 296-23-01005.,NULL,CO,4,NULL
+137,"Procedure code states ""minimum of __ views."" Additional amount not payable for extra views. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code",NULL,CO,"P12, 45",NULL
+138,Payment for report not allowed when procedure code billed requires submission of report.,NULL,CO,97,NULL
+139,Adjustment processed as result of provider audit.,NULL,CR,P12,N10
+140,Refund made as result of provider audit.,NULL,CR,P12,N10
+141,Base units paid only. Actual anesthesia time must be on bill. Submit adjustment to this bill.,NULL,CO,"16 M49,",N203
+142,Allowable fee set by L&I Medical Consultant based upon review of report.,NULL,CO,P12,N10
+143,Provider number or NPI corrected to match name. Bill with correct number for provider name in future.,NULL,CO,226,N290
+144,The prescription written date is missing or is invalid.,NULL,NULL,NULL,NULL
+145,Type of service code is missing or is invalid.,NULL,CO,226,N34
+146,Denied. The injured worker's sex code on this bill is missing or invalid.,NULL,CO,"16, A1",MA39
+147,The daily room rate was missing from the billing you submitted to L&I.,NULL,CO,16,M51
+148,The revenue code for this service was missing from the billing you submitted to L&I.,NULL,CO,16,M50
+149,Use of this procedure code for this date of service is invalid.,NULL,CO,A1,M67
+150,Denied. Injured worker date of birth is missing or invalid.,NULL,CO,16,N329
+151,"The side of body code is invalid. It must be L (left), R (right) B (both) or remain blank.",NULL,CO,4,NULL
+152,NDC code and/or the prescription number is missing or invalid.,NULL,CO,"16, A1",M119
+153,Denied. Principal diagnosis code is invalid for the first date of service.,NULL,CO,A1,MA63
+154,Denied. Second ICD diagnosis code is invalid for the first date of service.,NULL,CO,A1,M64
+155,Drug quantity missing/invalid. If equipment rebill on Statement for Miscellaneous Services. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,E7,CO,16,NULL
+156,Days supply missing/invalid. If equipment send bill on Statement for Miscellaneous Services.,19,CO,16,NULL
+157,Not responsible for repair or replacement of contacts or glasses not worn at time of injury.,NULL,PR,96,NULL
+158,Bill paid. You must reimburse the employer the total amount he/she paid for this service.,NULL,OA,P12,NULL
+159,Prescribing provider number on your bill was terminated or associated to a terminated number when the prescription was written.,71,CO,184,NULL
+160,Reduced to office call fee for 90030 or ER visit 90350 per our Medical Aid Rules.,NULL,CO,"P12, 45",NULL
+161,Denied. Third ICD diagnosis code is invalid for first date of service.,NULL,CO,16,M64
+162,Denied. Fourth ICD diagnosis code is invalid for first date of service.,NULL,CO,16,M64
+163,Not paid. Diagnosis code missing.,NULL,CO,16,M64
+164,Denied. Fifth ICD diagnosis code is invalid for first date of service.,NULL,CO,16,M64
+165,Unable to determine referring physician's name and/or provider number.,NULL,CO,"16 N285,",N286
+166,Section of the bill indicating if the old glasses prescription was available was not completed.,NULL,CO,16,NULL
+167,Denied. Patient status code is missing or invalid for state fund injured workers.,NULL,CO,16,MA43
+168,Denied. Refraction is not paid when the old prescription is available.,NULL,CO,96,NULL
+169,Denied. Admitting/Principal ICD diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+170,Denied. Second ICD diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+171,Denied. Third ICD diagnosis code is not sufficiently specific. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"16, A1",M81
+172,Type service/procedure code is missing or is an invalid L& procedure code.,I,NULL,CO 16,MA66
+173,Denied. The admission date and the service dates are incompatible. MA31,NULL,OA,"16, A1","MA40,"
+174,Denied. L&I did not authorize these services by this provider for this claim.,NULL,CO,"A1, 197",N473
+175,"Service prior to April 1, 1986 must be billed as a separate line item.",NULL,NULL,NULL,NULL
+176,Denied. Fourth ICD diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+177,Denied. Fifth ICD diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+178,Denied. First diagnosis code denotes a non-industrial condition or is not sufficiently specific,NULL,CO,"16, A1",M81
+179,"Admit type is invalid. Valid admit types are 1,2,3, and 4.",NULL,CO,16,MA41
+180,Denied. Principal procedure date is more than 2 days prior to the bill's first covered date.,NULL,CO,"26, A1",MA66
+181,Denied. Principal diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",MA63
+182,Incorrect revenue code billed for this service.,NULL,CO,"16, A1",M50
+183,The units of service are missing or invalid.,NULL,CO,"16, A1",M53
+184,Charge is missing or $0.00; invalid (rate X days not equal to charge); or CPT category 2 code.,DU,CO,"16, A1",M79
+185,The admission date is missing.,NULL,CO,"16, A1",MA40
+186,Denied. The provider has already been paid for this service under his individual L&I provider number.,NULL,CO,18,M86
+187,Denied. The clinic has already been paid for this service under the clinic's L&I provider number.,NULL,CO,18,M86
+188,Denied. Second diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+189,Denied. Third diagnosis denotes a non-industrial condition or is not sufficiently specific. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"16, A1",M81
+190,Denied. fourth diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+191,Denied. Fifth diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+192,"Denied. Resubmit with list of ingredients, their cost and compounding time on Statement for Compound Prescription form 245-010-000.",NULL,CO,"16, A1",N668
+193,Denied. The principal ICD diagnosis code is missing.,NULL,CO,"16, A1",MA63
+194,Denied. Authorization of this service has been denied in this claim.,NULL,CO,A1,N216
+195,Denied. Principal diagnosis has not been accepted as related to this injury. 167,NULL,CO,"A1, P12,",MA63
+196,Denied. Second diagnosis has not been accepted as related to this injury. 167,NULL,CO,"A1, P12,  M76,",M64
+197,More specific revenue code needed. Use revenue code 291 for purchase or 292 for rental.,NULL,CO,16,M50
+198,Denied. The date of surgery and/or surgical procedure code is missing. Send adjustment request. MA66,NULL,CO,16,"N341,"
+199,Denied. One or more diagnosis codes in the 2nd through 9th fields are invalid.,NULL,CO,16,M64
+200,Denied. Principal and 2nd diagnosis codes not accepted as related to this injury. 167,NULL,CO,"A1, P12,  M64,",MA63
+201,L&I is processing these services under a new ICN.,NULL,CO,16,M47
+202,Charges must be submitted on a CMS-1500 for processing.,NULL,CO,"16 MA30,",N34
+203,Charges adjusted according to your state's fee schedule.,NULL,CO,P12,NULL
+204,Denied. Primary and/or secondary diagnoses not accepted as related to this injury. 167,NULL,CO,"A1, P12,  M64,",MA63
+205,Denied. Bills for crime victim claims must be submitted to the Crime Victim Compensation Program.,NULL,CO,"109, A1 N648,",N578
+206,Denied. We have no record of a claim having been filed with L&I with this claim number. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,31,NULL
+207,Denied. Each provider must bill charges separately.,NULL,CO,16,N232
+208,Please note the prescribing physician's new provider number and use it on future bills.,NULL,CO,16,NULL
+209,This provider is not authorized to provide this service.,M5,CO,A1,N612
+210,This transaction is a transfer of the credit portion of the interim payment.,NULL,CR,P12,NULL
+211,Injured worker paid at L&I rate. Please reimburse the provider for this service.,NULL,NULL,NULL,NULL
+212,Denied. This is a self-insured claim number.,NULL,CO,"109, A1 N625,",N578
+213,Inpatient bill adjusted to augment DRG database.,NULL,CO,P12,NULL
+214,Denied. The CPT procedure code submitted is not a valid code from the outpatient fee schedule.,NULL,CO,"16, A1",M67
+215,"Submit w/valid revenue code or if service is for lab, radiology, or PT use CPT procedure code.",NULL,CO,"16, A1 M50,",M20
+216,NDC invalid for service date billed.,NULL,CO,"16, A1",M119
+217,The revenue code was missing from the bill.,NULL,CO,"16, A1 M50,",M20
+218,Interest penalty as a result of overpayment.,NULL,CO,85,NULL
+219,Denied. This procedure is considered nonstandard and is not payable by L&I.,NULL,CO,56,N35
+220,Denied. Bill not submitted in a timely manner patient is not responsible for this charge.,NULL,CO,29,NULL
+221,Denied. Only 1office call per day is permitted after the first 3 days of treatment.,NULL,CO,"96, B1",M86
+222,"Denied. Effective January 1, 1987, $.36 tape billing fee is no longer payable by L&I.",NULL,NULL,NULL,NULL
+223,This credit is taken due to a warrant cancellation.,NULL,CR,P12,NULL
+224,The 1st procedure code modifier is not a valid payment modifier in conjunction with the procedure billed.,NULL,CO,4,M78
+225,Denied. The noncovered line item charge exceeds the line item billed charge. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"96, A1",M79
+226,Denied. Bill type invalid for this provider type. Correct bill type/provider number & resubmit.,NULL,CO,"16 N34,",MA30
+227,Paid as one hour. Supply time span for psychiatric exam in remarks on future bills.,NULL,CO,"P12, 122",N443
+228,Adjusted. On future bills indicate in remarks if psychiatrist was panel member and number of hours.,NULL,CR,"P12, 122",N443
+229,"When billing unlisted procedure code, specific description of service must be in remarks.",NULL,CO,16,MA69
+230,This item must be billed by NDC on the Statement for Pharmacy Services bill form.,NULL,CO,"16 M119,",N34
+231,"When billing -22 modifier, you must explain the nature of the additional services in remarks.",NULL,CO,"16 MA69,",M69
+232,You must list all applicable modifiers in remarks when billing modifier -99.,NULL,CO,16,MA69
+233,The diagnosis supplied on your bill has been denied under this claim number.,NULL,CO,"A1, 167 N569,",M76
+234,Paid at non-Washington percent of allowed charge (POAC) per WAC 296-23A-0230.,NULL,CO,P12,NULL
+235,Denied. Primary and/or secondary diagnosis has been denied under this claim number.,NULL,CO,"A1, 167 MA63,",M64
+236,Bill remarks do not pertain to bill payment and have delayed processing.,NULL,CO,133,MA69
+237,Remarks do not justify -22 modifier. Submit paper adjustment with justification.,NULL,CO,A1,N380
+238,Inpatient admission not medically necessary per L&I Medical Consultant. Paid at 50%.,NULL,CO,"P12, 197",N10
+239,Prior authorization not obtained for inpatient admission. Paid at half of allowable fee.,NULL,CO,197,NULL
+240,Time lost from work is payable only when an examination is requested by L&I. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+241,Not payable when injured worker is receiving time-loss compensation or has been kept on salary.,NULL,CO,"A1, P12",N734
+242,Bill contains multiple charges for dates when claim was not open. Delete services and rebill.,NULL,CO,"A1, 27",MA33
+243,"Denied. Please submit a paper bill to James L. Groves Company, Seattle.",NULL,NULL,NULL,NULL
+244,Denied. injured worker is not eligible under this claim for this date(s) of service.,M5,CO,"26, 27, A1",N30
+245,Denied. Please rebill these services on an outpatient bill.,NULL,CO,5,N34
+246,Denied. Procedure and/or modifier code is incorrect for service described on bill.,NULL,CO,4,N56
+247,"When multiple modifiers apply, use 99 & list all applicable modifiers in the description field.",NULL,CO,4,M78
+248,Allowed charges reduced to office call. Report billed and paid under 99080.,NULL,CO,"P12, 45",NULL
+249,Reimbursed at rate of exchange in effect at the time of service.,NULL,CO,P12,NULL
+250,Denied by L&I due to lack of identifying information as to provider of services.,5,CO,A1,N920
+251,"Procedure code 72140 is invalid, use codes 72141 through 72144 to bill for spinal MRI's.",NULL,CO,"96, A1",N56
+252,Claim closed. Only services requested by L&I are payable.,69,CO,27,NULL
+253,Use revenue codes 430 through 439 to bill occupational therapy. Do not bill with CPT codes.,NULL,CO,16,M50
+254,Patient status code 30 invalid for DRG bill; correct and resubmit or submit final bill only.,NULL,CO,A8,MA43
+255,"Denied, condition code invalid. L&I accepts 00 or 61 for inpatient, all national-valid outpatient.",NULL,CO,A1,M44
+256,Claim now closed.,NULL,CO,27,NULL
+257,Principal diagnosis code unacceptable according to Medicare Code Editor. Correct and resubmit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,MA63
+258,Credit taken to offset previous payment made by gross adjustment.,NULL,CR,P12,NULL
+259,Denied. Claim number/injured worker name mismatch. Call 1-,62,CO,31,"MA61,"
+800,-831-5227 to confirm claim number before rebilling. MA36,NULL,NULL,NULL,NULL
+260,Service was for concurrent treatment which has not been authorized for this injury.,NULL,CO,"197 M80,",N20
+261,Generically priced. Prescribing doctor hasn't submitted justification to issue brand name drug.,NULL,CO,P12,N447
+262,ICD procedure code(s) invalid for first date of service. Correct and resubmit.,NULL,CO,16,MA66
+263,Denied. Duplicate claim number. Contact L&I local office for the correct number.,7,CO,18,NULL
+264,"Claim not yet allowed.  Bill on hold for claim decision.  Do not send rebill, adjustment or appeal until you receive notice of payment decision.",67,CO,133,NULL
+265,Denied. Service rendered after date of pension and no treatment order has been authorized.,NULL,CO,"27, A1 N578,",N650
+266,"Per contract- ""Free"" trial of transcutaenous nerve stimulator.",NULL,CO,108,NULL
+267,Denied. This is a medical contract claim. Submit your bill to the employer contract carrier.,NULL,PI,109,NULL
+268,Denied. Travel expense must be billed to L&I within 12 months of the date of travel.,NULL,NULL,NULL,NULL
+269,All ICD operating room procedure codes are non-specific. Correct and resubmit.,NULL,CO,"16, A1",M51
+270,Injured worker's age invalid for diagnosis. Correct and resubmit.,NULL,CO,9,NULL
+271,Denied. Sum of line item charges does not equal total billed charge. Correct and resubmit.,NULL,CO,16,M54
+272,Please note when billing this procedure code enter 001 in bill's units of service field. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,P12,M53
+273,Please note the provider number. Use this number to bill for psychiatric unit services.,NULL,CO,16,N290
+274,Please note the provider number. Use this number to bill for alcohol unit service.,NULL,CO,16,N290
+275,Denied as duplicate. The service(s) where paid under your previous provider number.,NULL,CO,"18, A1",N111
+276,Denied. The diagnosis listed on your billing has not been accepted as related to this injury.,M1,CO,"96, A1 M76,",M64
+277,"Denied. Authorization of this procedure, drug or service has been denied under this claim number",70,CO,39,NULL
+278,Denied. L&I notification of cancellation was provided within 3 days of examination.,NULL,CO,"96, B1",NULL
+279,Deduction taken for bills previously paid on a claim which has subsequently been rejected.,NULL,CR,P12,NULL
+280,Denied. Claim number billed is not active. Call 1-800-831- 5227 to confirm the claim number before rebilling.,52,CO,31,NULL
+281,Denied. The date of service is prior to the date of injury.,65,CO,26,NULL
+282,Your bill must be held pending adjudication of this claim.,NULL,CO,133,NULL
+283,Bill did not exceed L&I high cost outlier thresholds.,NULL,CO,"P12, 45",NULL
+284,"DRG cannot be assigned. Check age, sex, patient status, procedure & diagnosis codes & resubmit.",NULL,CO,A8,NULL
+285,Not referred by the attending physician of record and L& authorization not obtained.,I,NULL,"CO A1, 197",N253
+286,Denied. The CPT code for the surgical procedure performed must be listed on the billing.,NULL,CO,"16, A1",M20
+287,Denied.  This is an electronic bill.  The clearinghouse is not authorized to submit bills for this provider.  Call 360-902- 6511.,NULL,CO,A1,N51
+288,Bill returned to provider with new provider application form. Previous application was not returned. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,N202
+289,Please note the provider number. Use this number to bill for rehabilitation unit services.,NULL,CO,16,N77
+290,Denied. Include outpatient charges on the inpatient bill to be resubmitted to L&I.,NULL,CO,A1,M2
+291,Denied. Explanation of -52 modifier not supplied as per contract requirements. Rebill.,NULL,CO,"16, A1",N29
+292,Denied. Our records do not show the provider and group number on bill as related. Call360-902-5140,NULL,CO,"16 N290,",N280
+293,Denied. These services were not billed in accordance with contract. Rebill per contract terms.,NULL,CO,A1,N381
+294,Denied. Dates of service must be itemized. Correct and resubmit.,NULL,CO,"16, A1",N63
+295,Injured worker reimbursement bill returned to injured worker due to invalid claim number.,NULL,NULL,NULL,NULL
+296,Injured worker reimbursement denied by L&I due to invalid claim number and no injured worker address on bill.,NULL,NULL,NULL,NULL
+297,Denied. Dental procedure code is missing or is not a valid 1987 American Dental Assoc code.,NULL,CO,A1,M67
+298,This payment is due to the hospital discount applied to your audit refund.,NULL,CR,P12,N10
+299,"Denied. As of July 1990, this revenue code is not a valid Washington State code.",NULL,CO,"16, A1",M50
+300,Services deleted were rendered after or during period of claim closure.,M5,CO,239,NULL
+301,Denied. The bill/report submitted was illegible. Information must be clearly printed and accurate.,NULL,CO,16,N232
+302,Unable to process. Submit bill directly to L&I on the appropriate bill form.,NULL,CO,16,N34
+303,Denied. This claim has been suspended and no benefits are payable during suspended time period.,NULL,CO,133,NULL
+304,Denied. This service is not authorized. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"A1, 197",N578
+305,This transaction has been taken to correct the file per a special request.,NULL,CO,"P12, 137",NULL
+306,Current charges are being processed. Submit an itemized billing for the balance forward amounts,NULL,CO,16,N232
+307,Corrections to this bill (ICN) have been made per your request.,NULL,CO,129,MA67
+308,Denied. This service is not an authorized vocational expense.,NULL,NULL,NULL,NULL
+309,Charges previously paid for this date. If this is not a duplicate submit adjustment to paid bill.,NULL,CO,"18, B13",NULL
+310,Denied. Service was before or after the dates authorized for the pain clinic program.,NULL,CO,A1,N54
+311,Denied. A pain program has not been authorized for this injured worker.,NULL,CO,"A1, 197 N683,",N578
+312,This transaction cancels interim payment credit balance for this provider number.,NULL,CR,P12,NULL
+313,This transaction reflects interim payment credit balance refund and corrects year to date info.,NULL,CR,P12,NULL
+314,This transaction reduces the interim payment credit balance for this provider number.,NULL,CR,P12,NULL
+315,This travel related expense is denied in accordance with L& policy.,I,NULL,NULL NULL,NULL
+316,This is a history adjustment to correct an error in firm number and class.,NULL,OA,P12,NULL
+317,"Denied. The principal, admitting or patient's reason for visit diagnosis code denotes a non-industrial condition or is not sufficiently specific.",70,CO,A1,M64
+318,Denied. Office visit includes manipulation.,NULL,CO,"97, B15",NULL
+319,"Revenue code, cover dates or prior authorization (PA) number are incompatible with the type of bill.  Rebill.",NULL,CO,16,M50
+320,Note claim number and your provider number. These are required on all bills sent to the L&I. MA92 EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,"N290,"
+321,Revenue code(s) invalid for date(s) of service billed. Rebill with correct codes.,NULL,CO,16,M50
+322,Denied. Service is in violation of specific restrictions imposed by the Department of Licensing.,NULL,CO,A1,N665
+323,This procedure code wasn't valid at time of service. Refer to the latest fee schedule revision.,NULL,CO,181,M67
+324,Denied. Bill and reports indicate services were provided for a new injury/incident.,NULL,CO,A1,N576
+325,An adjusted bill paid without deducting the original bill. This is a corrective action.,NULL,CR,129,MA67
+326,Denied. This service or drug is not allowed for treatment of industrial injuries.,70,CO,"96, A1",N643
+327,Denied. No report received from the attending doctor to justify authorization of this service.,NULL,CO,"226, A1",N463
+328,Denied. Injured worker age and/or sex invalid for this procedure or diagnosis.,NULL,CO,"6, 7, 9, 10",NULL
+329,This adjustment is the result of an independent audit of charges for the service(s).,NULL,CR,216,NULL
+330,Denied. This procedure was not included as a part of the approved program for this provider.,NULL,CO,B5,NULL
+331,Please refer to the billing instructions provided by L&I.,NULL,NULL,NULL,NULL
+332,Denied. The type of service and/or procedure is not authorized for this provider type.,NULL,CO,171,N95
+333,Do not bill several procedures/diagnoses/dates in one line. These will be denied in the future.,NULL,CO,16,N21
+334,These services were not medically necessary.,NULL,CO,50,NULL
+335,Please note the payee number. You must use this number when billing for pain clinic services.,NULL,CO,16,N77
+336,"Provider number, NPI and/or name used were incorrect. Note correction(s) and use on future billings. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code",NULL,CO,16,N77
+337,This is a repayment. You submitted a refund for services which we are unable to identify.,NULL,CR,P12,NULL
+338,This is a repayment. You submitted a refund in excess of what was required.,NULL,CR,P12,NULL
+339,Bill returned to provider with application required to establish provider number.,NULL,CO,16,N202
+340,Denied. Submit bill on original L&I approved form. Photocopies cannot be processed.,NULL,CO,16,N34
+341,Side of body code is required for this diagnosis.,NULL,CO,16,M76
+342,This diagnosis is not acceptable. L&I requires use of a more specific ICD.,NULL,CO,167,M81
+343,Denied. Interpreters must have prior authorization and bill L&I directly.,NULL,CO,"A1, 197 N683,",N54
+344,"Denied. The ICD diagnosis code is missing, invalid for first date of service or an E-code.",NULL,CO,A1,M64
+345,Denied. Special exam and/or L&I investigation relating this condition to the injury is pending.,NULL,CO,"133, A1",N581
+346,Full DRG payment for inpatient stay made on this ICN.,NULL,CO,45,NULL
+347,Denied. Rebill therapy on outpatient bill. Submit other charges as adjustment to inpatient bill,NULL,CO,"16, A1",N34
+348,Please note the provider number and use it on current bill forms you submit for hospital services.,NULL,CO,16,N77
+349,Denied. This service is not payable in addition to code 90676 or 90677.,"90670,  NULL",CO,A1,N20
+350,Report is required when this procedure and/or modifier code is billed. No report was received.,NULL,CO,"252 N706,",N714
+351,Denied. Incorrect revenue code used for the described service billed.,NULL,CO,A1,M50
+352,This ICN paid at $0.00. Full DRG payment for this inpatient stay made on separate ICN. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,B13,NULL
+353,Denied. Code must be authorized before payment can be made. Call 800-848-0811 for authorization.,NULL,CO,"A1, 197",N683
+354,"Denied. Bill/documentation detail is incomplete, invalid or missing.",NULL,CO,"16, A1 N730,",N34
+355,The tooth number on your billing is invalid. It must be in the range 01 through 32.,NULL,CO,"16, A1",N37
+356,The tooth number is required for this procedure and was not on your submitted billing.,NULL,CO,"16, A1",N37
+357,Payment processed. Future medical travel requires prior approval. Contact your Claim Manager.,NULL,NULL,NULL,NULL
+358,Services provided are not greater than those usually required for the listed procedure.,NULL,CO,"P12, 45",NULL
+359,These services are generally provided as an adjunct to common medical services.,NULL,CO,97,N20
+360,Circumstances do not clearly warrant additional charge beyond usual charge for basic service.,NULL,CO,"P12, 45",NULL
+361,Calls and/or conferences with injured worker's attorney are not necessary medical services.,NULL,CO,50,NULL
+362,Denied. The distance traveled does not justify payment of this meal.,NULL,NULL,NULL,NULL
+363,Payment of service(s) made at L&I maximum allowable rate(s).,NULL,CO,"P12, 45",NULL
+364,Payment made for the actual cost of service indicated on the receipt(s) attached to your bill.,NULL,NULL,NULL,NULL
+365,Denied. This place of service is not authorized for this procedure.,NULL,CO,"5, A1 N428,",M77
+366,Denied. The provider specialty on the L&I record does not include this service.,NULL,CO,"8, A1",N95
+367,The revenue code billed is invalid.,NULL,CO,A1,M50
+368,The charges for pain program services have been allowed as billed. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,20,NULL
+369,Transport/professional services rebill on CMS-1500. Others invalid or not authorized for workers.,NULL,NULL,NULL,NULL
+370,Adjudicated per agreement/contract.,NULL,CO,45,N381
+371,"Denied. Service must be billed as office call, which includes treatment of the day.",NULL,CO,"A1, 97",N20
+372,We have received information verifying that the service billed was not performed.,NULL,CO,"115, B12",N10
+373,Denied. This drug requires prior authorization. For authorization call 1-888-443-6798.,NULL,CO,"A1, 197",N683
+374,Full flat fee paid for major condition/procedure; lesser condition/procedure paid at percentage.,NULL,CO,"P12, 45",NULL
+375,Allowed as office call which includes care of the day per the Maximum Fee Schedule.,NULL,CO,"97, 45",NULL
+376,Paid previously to the injured worker. It is his/her responsibility to reimburse you for this service.,NULL,PR,100,NULL
+377,Interest not allowed. Criteria for submission and/or bill data has not been met.,NULL,CO,"85, 96",NULL
+378,This bill does not meet the criteria established by L&I for interest payment.,NULL,CO,"85, 96",NULL
+379,This line item is for payment of interest.,NULL,CO,85,NULL
+380,Payment recouped/denied. Include non-therapy outpatient services on resubmitted inpatient bill.,NULL,CR,16,N34
+381,This bill is not payable at this time. The claim is in abeyance pending further determination.,NULL,CO,133,NULL
+382,Denied. Incremental nursing charge rates must be billed with revenue code 23X.,NULL,CO,"16, A1",M50
+383,This line item deducted. Include charge on inpatient bill to be resubmitted L&I.,NULL,CO,A1,N34
+384,Denied. The revenue code billed does not match the description of the services rendered. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,M50
+385,Denied. Maximum allowed payment has already been made per contract or agreement.,NULL,CO,45,NULL
+386,Payment not made on this bill. This service(s) is duplicated on another bill in process.,NULL,CO,"18, B13",NULL
+387,The original bill was correctly adjudicated/processed; an adjustment to it is not allowable.,NULL,CO,193,NULL
+388,Additional payment for treatment to contiguous area is not allowed.,NULL,CO,A1,N20
+389,Procedure code changed to more closely reflect service indicated. Please note for future billing,NULL,CO,65,NULL
+390,Denied. A report is required when billing for this service or procedure.,NULL,CO,"A1, 252",N463
+391,This is an adjustment to correct a previously adjudicated/processed bill.,NULL,CR,129,MA67
+392,Payment for this service has been made to the provider. Contact them for reimbursement.,NULL,OA,B20,NULL
+393,Services in this date span were previously paid. No substantiation for added charges received.,NULL,CO,B13,N443
+394,Denied. This service is not covered by L&I.  Injured worker is responsible.,NULL,PR,96,NULL
+395,Time span for psychiatric exam not supplied on bill. Paid as one hour.,NULL,CO,"16, 122",N443
+396,Payment delay caused by the use of the same procedure code for overlapping dates of service.,NULL,CO,16,MA31
+397,These charges have been included for payment and processed on another bill.,NULL,CO,B13,NULL
+398,Denied. Invalid data entered in claim number field.,NULL,CO,"16, A1",MA61
+399,New incident unrelated to industrial injury. Bill injured worker on private non-industrial basis.,NULL,PR,"109, A1 N576,",N578
+400,There was no notification of this admit. The bill is referred to utilitzation review (UR) vendor for possible audit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,133,NULL
+401,The provider master records indicate this provider number was terminated due to invalid/address,40,CO,B7,N290
+402,"Denied. When billing this code, a description must be in remarks or on the bill.",NULL,CO,16,MA69
+403,Denied. Resubmit bill using your pain clinic provider number.,NULL,CO,"8, A1",N290
+404,Provider number is not active for dos billed. For information to update go to http://www.lni.wa.gov/ClaimsIns/Providers/Becoming/Networ k/Default.asp,40,CO,"B7, A1",N612
+405,Rebill:  Performing provider name/number and group name must be in box 31 or 33 on new bill form.,NULL,CO,"16 N290,",N289
+406,"Denied. Provider does not have a valid, active license for service dates billed.",40,CO,"B7, A1 N665,",N143
+407,Bill not payable at this time/reopening is in provisional status pending further determination.,NULL,CO,133,NULL
+408,Payment made for treatment of allowed condition(s) only. Bill injured worker for noncovered treatment.,NULL,PR,35,NULL
+409,Compounded prescription only paid. Rebill non-NDC items on Statement for Miscellaneous Services bill form.,NULL,CO,16,N34
+410,Total mileage charge calculated at the current L&I rate.,NULL,CO,P12,NULL
+411,Rejection of this claim has been overturned. Claim has now  NULL CO 19 ma23 been allowed by L&I.,NULL,NULL,NULL,NULL
+412,Claim is in appeal process before the Board of Industrial Insurance Appeals (BIIA). Please rebill services after change in claim status.,NULL,CO,133,NULL
+413,Denied. Professional interpret of this service payable only if test done in inpatient setting.,NULL,CO,96,NULL
+414,Repayment due to audit decision that has been reversed by L&I.,NULL,CR,137,N11
+415,Bill has been paid by A-19. Questions concerning this transaction should contact deduct desk. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,P12,NULL
+416,Denied. This reopening application has been billed by and paid to the attending physician of record.,NULL,CO,"18, A1",NULL
+417,Denied. These services need to be rebilled under the appropriate claim number.,NULL,CO,"31, A1",MA61
+418,Payment made to correct your account for the duplicate refund submitted to L&I.,NULL,CR,129,MA67
+419,There were no duplicate payments. You were posting from a credit balance remittance advice.,NULL,CR,P12,NULL
+420,Deduction taken. Treatment rendered after 30 visit maximum.,NULL,CR,"P12, 45",N362
+421,Please refer to the notification of potential DRG sent in regard to this bill.,NULL,NULL,NULL,NULL
+422,"Denied. Only procedures 99080, 99083 and 99084 are payable under this provider number.",NULL,CO,"8, A1",M51
+423,Lack of the provider number will result in delayed payment and/or return of your bills.,NULL,CO,16,N290
+424,Denied. Compensation not payable when the time lost from work was less than 4 hours.,NULL,NULL,NULL,NULL
+425,Note the correction to this ICD diagnosis code. The code was incorrectly billed.,NULL,CO,16,M64
+426,Denied. This code is not payable in combination with codes 97530 or 97531.,NULL,CO,"96, A1",N20
+427,Bill suspended. Submitter not authorized to submit bills for this provider. Call 360-902-6511.,NULL,CO,16,N51
+428,Outpatient service within 24 hrs of an admit paid by method is considered already paid.,DRG,NULL,CO 60,NULL
+429,Denied. Services requested by the injured worker's attorney must be billed to the attorney.,NULL,CO,"109, B1, A1 N643,",N578
+430,Denied. Consultation code not payable to a practitioner providing ongoing care.,NULL,CO,"96, A1",N637
+431,Autopsy bill with no claim number.  Refer to service date and first 2 letters of last name to identify. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,MA86
+432,50% of allowable charges paid. Bill balance to employer under self insured claim number.,NULL,OA,"35,20",NULL
+433,"Denied. If service rendered was a rating exam, rebill with procedure code 1106M.",NULL,CO,A1,M67
+434,Denied. Tax not payable when related charges are denied.,NULL,CO,"96, A1",N356
+435,Maximum allowable fee for this service has been paid. Payment for this line item is reduced.,NULL,CO,"P12, 45",NULL
+436,Prior authorization (PA) number on bill invalid for this claim number and/or admit.,NULL,CO,15,N54
+437,"Denied per WAC 296-20-03001, no more than 6 injections will be authorized per injured worker.",NULL,CO,35,NULL
+438,Bill paid. Please remove injured worker from collections.,NULL,NULL,NULL,NULL
+439,Denied. Massage services that are part of a treatment plan ordered by a doctor are exempt from tax.,NULL,CO,"96, A1",N578
+440,Denied. Provider's application to treat injured workers has been denied.,40,CO,"B7, A1",N612
+441,Denied. Bills for copies of records must be submitted by the provider performing the service.,NULL,CO,A1,N55
+442,Denied. Provider was suspended or was not enrolled on date of service.,40,CO,B7,NULL
+443,Missing/Invalid patient paid amount. Clmt paid amount is greater than total charge or clmt reimbursement submitted by third party is not allowed.,DX,NULL,NULL,NULL
+444,Refund made as a result of audit penalty imposed on the provider.,NULL,CR,P12,NULL
+445,Denied. Claim ID field has blanks and/or invalid data. Call 1-,7,CO,140,MA61
+800,-831-5227 to confirm claim ID.,NULL,NULL,NULL,NULL
+446,Denied. This bill was in the bill suspense file for over 2 years and has become outdated.,NULL,CO,A1,N246
+447,Denied. This supply/service is bundled into another procedure. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,NULL,M15
+448,Base code paid within endoscopic arthroscopic family code.,NULL,CO,"B13, 97",M15
+449,Denied. No retraining bills are payable during a plan interrupt.,NULL,NULL,NULL,NULL
+450,Denied. The admittance date is not within the date span for the billed notification (PA) number,NULL,CO,"15 MA40,",N54
+451,Denied. The 10 digit prior authorization (PA) number is for an admission denied by L&I Claim Manager.,NULL,CO,A1,M62
+452,Denied. The prior authorization (PA) number on the bill is not a valid number for this claim.,NULL,CO,"15, A1",N54
+453,Denied. L&I has not received the required documentation for this admission.,NULL,CO,"16, A1",N29
+454,"For admit dates of July 18, 1988 and after include the prior authorization number in field 91.",NULL,NULL,NULL,NULL
+455,Outpatient service within 24 hrs of an admit must be billed as inpatient on the inpatient bill.,NULL,CO,60,M2
+456,This readmission/transfer has been denied as a result of a medical review.,NULL,CO,A1,N35
+457,Denied. CPT coding was on the bill. Pain clinic service must be billed by revenue code.,NULL,CO,"A1, 16",M50
+458,We have changed the units billed to 1 and paid the procedure at the rate for 1 unit of service.,NULL,CO,226,M53
+459,Excessive units of service were billed.  Enter 1 unit for each time the procedure was performed.,NULL,CO,P12,M53
+460,Denied. A telephone call to your office verified that errors were made in the charges billed.,NULL,CO,"A1, 16",MA62
+461,Denied. Immunization procedures include the cost of materials.,NULL,CO,97,M14
+462,Denied. Procedure 97261 is payable only when an additional area of the body is manipulated.,NULL,CO,"A1, 96",NULL
+463,Denied. Payment for room accommodation charge for the date of discharge is not payable. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"96, A1",N153
+464,Per medical review the billed discharge status was corrected and payment made accordingly.,NULL,CO,P12,N10
+465,Please rebill ambulance service on a CMS-1500 form using your professional service provider number.,NULL,CO,"16 N34,",N77
+466,"Denied. Please submit request for interest including justification, to MIPS at mail ident.4203",NULL,CO,"85, A1",N517
+467,Denied. Use code 97201 to bill for added service or time. Submit an adjustment to this bill.,NULL,CO,A1,N517
+468,Denied. This service is not payable when billed with codes 97124/97125 or 97200/97201.,NULL,CO,"A1, 96",N20
+469,This request for interest payment has been forwarded to our fiscal unit for payment.,NULL,OA,"85, B11",NULL
+470,Denied. Please resubmit this inpatient bill with the required attachments.,NULL,CO,A1,N29
+471,Denied. Revenue code needs CPT/HCPCS procedure code for APG assignment - procedure code missing.,NULL,CO,"16, A1",M20
+472,Denied per your affidavit stating that you were not entitled to payment for this service.,NULL,CO,A1,MA46
+473,Denied. Procedure 99025 payable only in conjunction with starred (*) CPT surgical codes.,NULL,CO,"A1, 16",M51
+474,There was no notification of this admit. The bill is referred to AUGMED for possible audit. LONGER IN EFFECT,NO,NULL,NULL,NULL
+475,Returned. The provider number and the name on the bill do not match.,NULL,CO,A1,N77
+476,Thank you. Your effort to provide information needed to process this transaction is appreciated,NULL,NULL,NULL,NULL
+477,Denied. Units of service are invalid. Please rebill with correct unit/hours.,NULL,CO,"16, A1",M53
+478,Denied. Missed appointment was cancelled 3 or more days prior to the appointment date. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"B1, A1",N441
+479,"POAC retroactively adjusted to conform with July 1, 1993 effective date. Refer to 6/1/93 memo.",NULL,NULL,NULL,NULL
+480,"As of last cut-off date, this bill was on the provider's direct entry suspense file.",NULL,CO,133,NULL
+481,Denied. Sixth diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+482,Denied. Seventh diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+483,Denied. Eighth diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+484,Denied. Ninth diagnosis code is not sufficiently specific.,NULL,CO,"16, A1",M81
+485,Denied. Sixth diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+486,Denied. Seventh diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+487,Denied. Eighth diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+488,Denied. Ninth diagnosis denotes a non-industrial condition or is not sufficiently specific.,NULL,CO,"16, A1",M81
+489,Denied. Sixth ICD diagnosis code is invalid for first date of service.,NULL,CO,"16, A1",M64
+490,Denied. Seventh ICD diagnosis code is invalid for first date of service..,NULL,CO,"16, A1",M64
+491,Denied. Eighth ICD diagnosis code is invalid for first date of service.,NULL,CO,"16, A1",M64
+492,Denied. Ninth ICD diagnosis code is invalid for first date of service.,NULL,CO,"16, A1",M64
+493,Denied. Revenue code needs CPT/HCPCS procedure code for APG assignment - procedure code invalid.,NULL,CO,"16, A1",M20
+495,Denied.  Services not requested.,NULL,CO,A1,N629
+497,Employer reimbursed by hand warrant for payment of this bill.,NULL,OA,100,NULL
+498,An adjustment to this bill is in process and will appear on a future remittance advice. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,87,CR,P12,NULL
+499,Denied. Procedure previously paid for date(s) of service. Submit adjustment to paid bill.,NULL,CO,B13,NULL
+500,Date(s) of service on this bill have been changed to correspond with the retraining approval.,NULL,NULL,NULL,NULL
+501,Denied. Service was rendered outside of the authorized time period.,NULL,CO,"A1, 198",N54
+502,Payment made at amount authorized for this retraining procedure code.,NULL,NULL,NULL,NULL
+503,Denied. The legal maximum of $4000 for retraining has been expended.,NULL,NULL,NULL,NULL
+504,Approval of additional funds allows payment of previously denied or reduced bill.,NULL,CR,P12,NULL
+505,Denied. This revenue code is invalid for outpatient service.,NULL,CO,A1,M50
+506,Paid at a reduced rate. Procedure not authorized on an inpatient basis.,NULL,CO,P13,N54
+507,Denied. Retraining plan not approved on this claim.,NULL,NULL,NULL,NULL
+508,Please bill modifier -27 with any dates of service prior to 9-1- 93.,NULL,NULL,NULL,NULL
+509,Pharmacy submitted injured worker reimbursement. Injured worker will be reimbursed for payment.,84,NULL,NULL,NULL
+510,Denied. No balance remains in approved funds for this procedure. Contact vocational counselor.,NULL,NULL,NULL,NULL
+511,Denied. L&I records do not contain approval of retraining services for this claim.,NULL,NULL,NULL,NULL
+512,Prescription bill reversal submitted by pharmacy.,NULL,CO,P12,N694
+513,Prescribing provider not authorized for this claim. Bill not paid.,71,CO,"A1, 15",N31
+514,Denied. Drug refill too soon,79,CO,"A1, B5",N668
+515,Accident claim not yet allowed. Point of Sale bill denied pending claim allowance.,67,CO,A1,N30
+516,Denied. Services not requested. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,N629
+550,Please read your remittance advice newsletter dated 6-08- 93 re: name & number do not match.,NULL,NULL,NULL,NULL
+555,Tax computation adjusted and paid to reflect payment of 14. 1 percent multiplied by CHG billed.,NULL,CO,P12,NULL
+556,Denied. L&I does not accept minus charges.,NULL,CO,96,NULL
+559,"Action is being taken.  Do not send rebill, adjustment or appeal until you receive notice of payment decision.  After 60 days call L&I 800-848-0811.",NULL,CO,133,NULL
+560,Injured worker's accident rejected by L&I State Fund and service not authorized. Contact the injured worker.,65,PR,"109, A1 N643,",N584
+561,Denied. Surgical tray is not payable with the procedure billed.,NULL,CO,96,N20
+562,Avoid possible bill rejection. Please contact your nearest service location for current bill forms.,NULL,NULL,NULL,NULL
+566,Manually priced due to other surgery bills with same date. Modifiers are ranked within bill only.,NULL,CO,"59, 45",N10
+580,Denied. Service payable at intervals of no less than 6 months. See WA RBRVS payment policies.,NULL,CO,"A1, P12",N640
+582,,NULL,NULL,NULL,NULL
+583,Denied.  This is not a managed care pilot claim.  Rebill using your non-managed care provider #.,NULL,CO,16,N290
+589,Codes not payable in combination. Rebill exam with codes in range of 90671-90695 or Z0001-Z0045,NULL,CO,A1,N20
+598,"Action is being taken.  Do not send rebill, adjustment or appeal until you receive notice of payment decision.  After 60 days call L&I 800-848-0811.",NULL,CO,133,NULL
+599,"Action is being taken.  Do not send rebill, adjustment or appeal until you receive notice of payment decision.  After 60 days call L&I 800-848-0811.",NULL,CO,133,NULL
+600,Return letter for inpatient hospital bills containing multiple charges for unrelated conditions. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+601,Return letter for inpatient hospital bills containing multiple charges during a period of claim closure.,NULL,NULL,NULL,NULL
+602,Return letter for inpatient bills where CPT procedure codes have been used instead of ICD.,NULL,NULL,NULL,NULL
+603,Return letter for returning non-payable bills to unlicensed providers.,NULL,NULL,NULL,NULL
+604,Return letter for ungrouped CPT codes on hospital bills.,NULL,NULL,NULL,NULL
+605,Letter to return adjustment requests for hospital bills previously adjusted as a result of an independent audit.,NULL,NULL,NULL,NULL
+606,"Return letter (for providers) explaining that L&I is not ""co- pay"".",NULL,NULL,NULL,NULL
+607,Return letter for inpatient DRG interim bill.,NULL,NULL,NULL,NULL
+608,"Return letter (for workers) explaining that L&I is not ""co-pay"".",NULL,NULL,NULL,NULL
+609,Return letter for invalid inpatient hospital ICD codes.,NULL,NULL,NULL,NULL
+610,Return letter for problem with principal (first) diagnosis on hospital bill.,NULL,NULL,NULL,NULL
+611,Return letter for hospital bill with invalid data.,NULL,NULL,NULL,NULL
+612,Return letter for inpatient hospital bill with invalid age or sex- code data.,NULL,NULL,NULL,NULL
+613,Return letter for skilled nursing facility charge submitted on a UB92.,NULL,NULL,NULL,NULL
+614,Return letter for inpatient hospital bills that have invalid data and DRG cannot be assigned.,NULL,NULL,NULL,NULL
+617,Return letter for possible duplicate bill.,NULL,NULL,NULL,NULL
+621,Return letter for late charges that must be requested by adjustment to previously paid bill.,NULL,NULL,NULL,NULL
+622,Return letter for inpatient bill with invalid units of service for room charges.,NULL,NULL,NULL,NULL
+623,Return letter for IP bill submitted without prior notification and selected for audit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+624,Return letter for IP bill regarding admit & discharge dates being equal.,NULL,NULL,NULL,NULL
+625,Letter to return adjustment requests for hospital bills previously adjusted as a result of an,NULL,NULL,NULL,NULL
+626,Return letter for inpatient bill with invalid units of service for room charges.,NULL,NULL,NULL,NULL
+628,Return Letter for denied services on Managed Care Claims.,NULL,NULL,NULL,NULL
+629,"Rtn ltr for bills submitted on wrong bill form. Provider instructed to resubmit charges using the Department's ""Statement for Miscellaneous Svcs"" form.",NULL,NULL,NULL,NULL
+630,Return letter for negative charges billed. Provider instructed to resubmit bill listing only charges for treatment rendered.,NULL,NULL,NULL,NULL
+631,Return letter for bill that is not related to a Washington State Worker's Compensation claim.,NULL,NULL,NULL,NULL
+632,Return letter for compounded prescriptions billed on wrong bill form.,NULL,NULL,NULL,NULL
+633,Return letter for IP bill with incorrect information.,NULL,NULL,NULL,NULL
+634,Return letter for IP bill for services submitted within 24 hours.,NULL,NULL,NULL,NULL
+635,"Return letter for bill using ""old"" and ""new"" IME codes. Provider instructed to resubmit bill using only one type of procedure code.",NULL,NULL,NULL,NULL
+636,Return letter for IP bill regarding admit & discharge dates being equal.,NULL,NULL,NULL,NULL
+637,Return letter for IP bill for incorrect information on bill.,NULL,NULL,NULL,NULL
+640,Return letter for IME bill. Another bill for this date of service was previously paid under different procedure codes.,NULL,NULL,NULL,NULL
+641,Return letter for bill using out-of-date procedure code for a disability rating or an IME. Provider instructed to refer to current IME handbook.,NULL,NULL,NULL,NULL
+645,Return letter for compound drugs billed incorrectly. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+650,Return letter for vocational travel expense billings with incomplete or missing information.,NULL,NULL,NULL,NULL
+651,Return letter for hospital bills that don't have itemized detail.,NULL,NULL,NULL,NULL
+653,Return letter for bills submitted for which no claim exists in the Department for claimant name listed on the bill and/or date of injury.,NULL,NULL,NULL,NULL
+654,Rtn ltr for Misc & HCFA billing which have multiple missing/invalid detail including billing which is for more than 1 claim # and svcs submitted on single bill.,NULL,NULL,NULL,NULL
+655,Rtn ltr for IH hospital bills which have multiple missing detail including billing which is for more than 1 claim # and svcs submitted on a single bill.,NULL,NULL,NULL,NULL
+656,Rtn ltr for pharmacy bills which have multiple missing/invalid detail including billing which is for more than 1 claim # & svcs submitted on a single bill.,NULL,NULL,NULL,NULL
+657,Rtn ltr for claimant travel bills which have multiple missing detail including billing which is for more than 1 claim # & services submitted on a single bill.,NULL,NULL,NULL,NULL
+658,Rtn ltr for bills received on wrong bill form including billing which is for more than 1 claim # and services submitted on a single bill.,NULL,NULL,NULL,NULL
+659,Rtn ltr for hospital bills which did not have a summary charge sheet of revenue codes with corresponding total chge for each code or do not have rpts.,NULL,NULL,NULL,NULL
+660,Return letter for vocational bills on which too many line items have been included in a bill space.,NULL,NULL,NULL,NULL
+661,Return letter for bill on claims in abeyance.,NULL,NULL,NULL,NULL
+662,"Rtn ltr for possible dup bills when the previously paid bill was paid for a date range, by summary detail. The current bill possibly includes some of the same svc dts and we are unable to determine. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code",NULL,NULL,NULL,NULL
+663,Return letter for travel vouchers.,NULL,NULL,NULL,NULL
+664,Return letter for lines that are illegible/unreadable.,NULL,NULL,NULL,NULL
+665,Return letter to claimant who has requested reimbursement for services which he paid.,NULL,NULL,NULL,NULL
+666,Return letter for bills with dates of service greater than 12 months old.,NULL,NULL,NULL,NULL
+667,Return letter to claimant or provider who has requested reimbursement or billed for services on a self-insured claim.,NULL,NULL,NULL,NULL
+668,Return letter for claims before the appeals board.,NULL,NULL,NULL,NULL
+669,Return letter for claims where reopening action is pending.,NULL,NULL,NULL,NULL
+670,Blank return letter.,NULL,NULL,NULL,NULL
+671,Return letter for hospital bills whose charges need separation for unrelated conditions.,NULL,NULL,NULL,NULL
+672,Letter for returning bills for unitemized CPT codes.,NULL,NULL,NULL,NULL
+673,Return letter for prescription reimbursement to claimant for drug which requires authorization by the claim manager.,NULL,NULL,NULL,NULL
+674,Return letter for claimant reimbursement with charges for services over 12 months old.,NULL,NULL,NULL,NULL
+675,Return letter for pharmacy bill with charges for services over 12 months old.,NULL,NULL,NULL,NULL
+680,Return letter for bill submitted for an injured worker who was employed by Mayr Brothers at the time they were a self- insured employer.,NULL,NULL,NULL,NULL
+698,Return letter for bill which includes charges for services rendered during period claim closure.,NULL,NULL,NULL,NULL
+699,Return letter for bill which includes charges for services rendered over 12 months ago.,NULL,NULL,NULL,NULL
+700,Interest is the result of an audit.,NULL,CR,"225 N10,",N199
+701,Denied. The amount of hours missed from work are not clear. Please correct and resubmit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+702,Procedure billed not allowed in combination with other code billed for this dos. Refer to current fee schedule.,NULL,CO,A1,N20
+703,Adjusted. Only 1 unit of service allowed per day. Refer to current fee schedule.,NULL,CR,"P12, 45",N362
+704,Denied. Only 1 unit of service allowed per day. Refer to current fee schedule.,NULL,CO,"P12, A1, 45",N362
+740,Denied. Supplies should be billed using the appropriate revenue code(s).,NULL,CO,"16, A1",M50
+742,Transferred credit balance from provider number to payee number.,NULL,CR,P12,NULL
+743,Transferred credit balance to payee number from provider number.,NULL,CR,P12,NULL
+744,History only. Paid under correct claim number for this date/nature of injury.,NULL,CR,P12,NULL
+745,Paid under correct provider number for date(s) of service.,NULL,CO,P12,N77
+746,Injured worker's accident rejected by L&I State Fund and service not authorized. Contact the injured worker. N578,NULL,PR,"109, A1 N622,","N643,"
+747,Balance of job mod costs must be billed to and paid by injured worker's employer.,NULL,NULL,NULL,NULL
+748,"Bill paid, but might be adjusted after receipt of utilization review (UR) post discharge report.",NULL,CO,P12,NULL
+800,Only the technical portion of the x-ray is payable during the follow-up by the surgeon.,NULL,CO,A1,M144
+801,Denied. 908__ not allowed with E/M visit procedure codes. You must use psychotherapy codes instead of E/M codes.,NULL,CO,A1,N56
+802,Denied. Procedure code 76140 not payable in conjunction with these services.,NULL,CO,"96, A1",N20
+803,Denied. These services are not payable in conjunction with modalities and/or treatment for the same day.,NULL,CO,"96, A1",N20
+804,Denied. Time and/or co-signature missing from bill. MA81 EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"16, A1","N443,"
+805,Denied. Please refer to the HCPCS section of our current fee schedule for correct procedure code.,NULL,CO,"A1, P12 M67,",M20
+806,Denied. This service is not payable in addition to single examiner exams.,NULL,CO,"96, A1",N20
+807,Denied. The provider specialty on the L&I record does not include radiology consultations.,NULL,CO,"A1, 15",N95
+808,Denied. Revenue code for Medicaid only.,NULL,CO,"96, A1",M50
+809,Paid at fee schedule maximum.  Modifier 22 requires unusual circumstances and supporting documentation.,NULL,CO,"P12, 45",M69
+810,This patient is a participant in the managed care pilot program.,NULL,NULL,NULL,NULL
+811,Portable/mobile x-rays not payable to hospital based providers.,NULL,CO,"5, A1, 171 N95,",M97
+812,"Bill physician assistant with PA name, supervising physician name and physician provider number.",NULL,CO,"16 N296,",N297
+813,Denied.  Rental fees cannot exceed purchase price.,NULL,CO,"A1, 108",M7
+814,Denied.  Lab work is not payable when billed with complex assessment.,NULL,CO,A1,N20
+815,Denied. Provider is not a L&I approved Independent Medical Examiner.,NULL,CO,"A1, 185",N31
+816,"Denied. Please bill Kaiser / Attn: Kathleen Sharp / 2701 Vaughn #700 / Portland, OR 97210",NW,NULL,OA 109,NULL
+817,Free Standing surgical center not payable for this surgical procedure.,NULL,CO,"5, A1, 171",N95
+818,Denied. Bill the primary occupational medicine managed care provider.,NULL,OA,109,NULL
+819,Denied. Worker's MCPP participation period has ended. Rebill using fee for svc provider #.,NULL,NULL,NULL,NULL
+820,Denied. Service included  in Pain Clinic fees and not payable separately. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"B13, A1",N390
+821,"Denied. Contact the primary occup. medicine managed care provider at 1-800-443-0996, ext. 0845.",NULL,OA,109,NULL
+822,"Mangd care pilot claim.  Only rpt of accdnt, initial ov and dx studies are payable by the dept.",NULL,NULL,NULL,NULL
+823,Denied. Pharmacological evaluation is not payable with an E/M procedure code.,NULL,CO,A1,N20
+824,"Denied. Managed Care claim, please refer to PB 95-02.  Per WAC 296-20-010 do not bill worker.",NULL,NULL,NULL,NULL
+825,Revenue code 452 not allowed. Use 450 to bill 451/ 452 combined charges.,NULL,CO,"16, A1",M50
+826,Procedure not authorized. Call 1st Health/EBP for review: 1-,NULL,CO,"15, A1",M62
+800,-541-2894. Rebill when auth'd.,NULL,NULL,NULL,NULL
+827,Denied. A supplemental medical report (code 1056M) was not requested and/or received.,NULL,CO,A1,N29
+828,Denied. Maximum of 11 sympathetic blocks have been billed and paid for this claim. M139,NULL,CO,"35, A1, 45 N362,","N640,"
+829,"Denied. Two procedures w/the same descriptions have been billed, the higher value was paid.",NULL,CO,"A1, W2",M86
+830,Paid per Board of Industrial Insurance Appeals (BIIA) order or agreement of parties.,NULL,CO,216,N10
+831,Denied. Service is payable under a different procedure code. Refer to fee schedule & rebill.,NULL,CO,A1,M67
+832,Denied.  These services are not payable during hearing aid warranty period.,NULL,CO,A1,M7
+833,Denied.  Bill returned with provider application.  Provider address on file does not match address on bill.,NULL,CO,"A1, 16",N294
+834,Please note the provider number. You must use this number when billing for work hardening services.,NULL,CO,16,N77
+835,"Denied. Additional views, slices or levels of CT scans are not payable. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code",NULL,CO,P13,NULL
+836,Denied. Outpatient dates of service cannot overlap inpatient stay.,NULL,CO,"60, A1",MA133
+837,Denied. The date of service does not correspond to the supporting documents date of service.,NULL,CO,A1,M59
+838,"Procedure not authorized. Call UR vendor 800-541-2894. Once authorized, Rebill for total denied bill or send adjustment for partial paid bill.",NULL,PI,"A1, 197 N517,",N142
+839,Denied for audit. Utilization review (UR) vendor will be contacting you regarding this bill. Do not rebill.,NULL,PI,"137, A1",N35
+840,System resource error. Bill not processed. Resubmit.,85,NULL,NULL,NULL
+841,System resource error (claimant eligibility). Bill not processed. Resubmit.,85,NULL,NULL,NULL
+842,Denied for audit. EBP Health Plans will be contacting you regarding this bill. Do not rebill.,NULL,PI,"137, A1",N35
+843,System resource error (provider eligibility). Bill not processed. Resubmit.,85,NULL,NULL,NULL
+844,Denied. This must be rebilled on miscellaneous or CMS- 1500 bill form.,70,NULL,NULL,NULL
+845,Denied. NDC obsolete or expired for date RX filled. Verify correct NDC used. Rebill if necessary.,77,CO,A1,M119
+846,Denied. Prescribing provider number required when generic substitution not allowed.,25,CO,A1,N31
+847,Automated multi-channel test(s) paid at maximum allowed for unduplicated tests performed.,NULL,CO,45,M75
+848,Denied. Lab tests for service date must all be billed on one ICN. Send adjustment for paid ICN.,NULL,CO,"16, A1",M126
+849,System cannot determine pricing method. Submit manual bill.,M5,NULL,NULL,NULL
+850,"In the future, please list the individual provider number as well as the clinic provider number",NULL,CO,16,N290
+851,Denied. Payable only if lab test performed on inpatient basis. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,"A1, 5",M2
+852,Denied. Complex fees not payable in conjunction with single examiner examinations.,NULL,CO,A1,N20
+853,Microfiche handling payable only once per exam assignment.,NULL,CO,"45, P13",NULL
+854,Bill not processed. System error. Submit manual bill.,M5,NULL,NULL,NULL
+855,Bill not processed. Provider on review. Submit manual bill.,M5,NULL,NULL,NULL
+856,Denied. Surgery CPT for same DOS must be on one bill. Send adjustment to ICN (Internal Control Number) that has paid.,NULL,CO,A1,M51
+857,Denied. This Bill was in direct entry suspense file for over 180 days and has become outdated.,NULL,CO,29,NULL
+858,System resource error (drug file). Bill not processed. Resubmit.,NULL,NULL,NULL,NULL
+859,"Denied. Rebill with a copy of manufacturer's warranty/invoice showing cost, warranty information and serial numbers.",NULL,CO,"A1 M23,",N354
+860,Invalid data removed from prior authorization (PA) field. Leave blank if not required.  Invalid data causes delay.,NULL,CO,16,M62
+861,Denied. There is no employer/employee relationship.,NULL,PR,"A1, 31",MA89
+862,Denied. Travel not authorized on pension claims with or without a treatment order.,NULL,NULL,NULL,NULL
+863,Denied. Bill submitted without prior authorization. Call utilization review (UR) vendor 800-541-2894. Rebill when authorized.,NULL,PI,"15, A1",M62
+864,Allowed amt. Is $0.00. Immunobiologic is distributed at no cost by Centers for Disease Control.,NULL,CO,P13,NULL
+865,Denied. Chart notes required for service billed. No chart notes received.,NULL,CO,A1,N29
+866,Denied. Call utilization review (UR) vendor 800-541-2894 to be reviewed. Rebill when authorized.,NULL,PI,"15, A1",M62
+867,Decision made by L&I Office of the Medical Director to pay for noncovered services. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,PI,137,N11
+868,"Denied. 10 digit prior authorization number required, but missing from your bill.",NULL,CO,"16, 15, A1",M62
+869,Item paid. Your -99 modifier was for payment and information modifiers. Changed to payment modifier only.,NULL,NULL,NULL,NULL
+870,Denied. Date of service on bill does not match the review date or report date.,NULL,CO,"16,  A1",M59
+871,Denied. Submit your bill to Department of Energy (509-376- 1416).,41,OA,109,NULL
+872,Effective DOS 7/1/00 providers must use 00100-01999 to bill for services paid with base and time units.,NULL,CO,59,M67
+873,Procedure 99080 for narrative report only payable every 60 days unless specifically requested by L&I.,NULL,CO,P13,NULL
+874,Denied. Prior authorization was not obtained. Claim manager has denied.,NULL,CO,"A1, 197",NULL
+875,You cannot use your clinic provider number to bill. Please rebill using the correct provider number.,NULL,CO,16,N290
+876,Mileage has been reduced. Mileage over 50 miles one way needs prior approval.,NULL,NULL,NULL,NULL
+877,Claim closed during part of date span. Call 1-800-831- 5227 for claim closure informationefore rebilling.,NULL,CO,"A1, 27 N650,",N578
+878,Fluoroscopy must be used when performing this procedure.,NULL,CO,P12,NULL
+879,Denied. Diagnosis/procedure not authorized on treatment order.,NULL,CO,39,NULL
+880,Denied. Only 1 unit of service allowed per claim.,NULL,CO,"B5, 45",N640
+881,"Denied. Rebill to Dept. of L & I, Self Ins. Attn: Bankrupt Desk, P.O. Box 44892, Oly, WA 985044892.",NULL,OA,"A1, 109",N643
+882,Denied. Type service/procedure code is invalid. Refer to our current fee schedule for valid code.,NULL,CO,"8, P12",NULL
+883,Repayment made to provider. L&I has already done an adjustment to cover your account. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CR,P12,NULL
+884,"Refund is being returned. Generally accident report, initial visit & necessary tests are payable.",NULL,CR,P12,NULL
+885,Ambulatory Surgery Center (ASC) service paid at the lesser;,NULL,CO,"P12, 45",NULL
+100,% fee schedule or billed charge.,NULL,NULL,NULL,NULL
+886,Ambulatory Surgery Center (ASC) service paid at the lesser; 50% fee schedule or billed charge.,NULL,CO,"P12, 45",NULL
+887,Ambulatory Surgery Center (ASC) paid at the lesser; 25% fee schedule or billed charge.,NULL,CO,"P12, 45",NULL
+888,Denied. Resubmit bill with required copy of approved pre- job/job modification application form.,NULL,NULL,NULL,NULL
+889,Denied. Ambulatory Surgery Center (ASC) procedures for service date must all be billed on 1 ICN. Send adjustment to paid ICN.,NULL,CO,"A1, 16",M51
+891,Denied. Fluoroscopy not billed and place of service indicates non-accredited facility.,NULL,CO,5,NULL
+893,Denied. The requested medical records have not been received.,NULL,CO,16,M127
+894,"Authorized as one-time only, per claim manager.",NULL,CO,P12,N10
+895,Per WAC 296-20-1103 travel only allowed from injured worker's home to nearest point of adequate treatment.,NULL,NULL,NULL,NULL
+896,Denied. Reimbursement to pickup prescriptions/refills is not an allowed travel expense.,NULL,NULL,NULL,NULL
+897,Denied per provider request.,NULL,OA,A1,NULL
+898,Too many exceptions for your bill to process. Break this billing down to 7 line items each bill,NULL,NULL,NULL,NULL
+899,Too many errors for bill payment. Refer to Fee Schedule/Bill Instruction packet and resubmit.,MZ,CO,16,MA130
+900,Payment has been made to a payee holding a lien.,NULL,OA,100,NULL
+901,Payment is received as the result of a lien. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,OA,P12,NULL
+902,"Service(s) covered, but patient has received funds from third party and is responsible for payment.  Bill him/her this amount.",NULL,PR,201,M86
+903,"Action is being taken.  Do not send rebill, adjustment or appeal until you receive notice of payment decision.  After 60 days call L&I 800-848-0811.",87,CO,133,NULL
+904,Repayment of adjustment/deduction on bill(s) which refund/returned L&I warrant was received.,NULL,CR,P12,NULL
+905,Denied. Submit adjustment with copy of invoice showing your cost for drugs/supplies attached.,NULL,CO,"A1, 16",N29
+906,This adjustment is the result of an independent audit of charges for this hospitalization.,NULL,CR,137,N10
+907,Flat fee adjusted. After care charges paid to transfer physician.,NULL,CR,"P12, 100",NULL
+908,Denied. Service is included in flat fee.,NULL,CO,"A1, B13",M15
+909,Service balance was previously paid in this claim or a related claim for this injured worker.,NULL,CO,B13,NULL
+910,Bill adjusted. There was an error in your computation.,NULL,CR,129,MA67
+911,This service was paid on a diagnostic basis only.,NULL,CO,P12,M17
+912,Adjusted charge. Unlisted fee set by L&I allowed.,NULL,CR,P12,NULL
+913,Consultation fee paid; treatment fees paid only to the attending physician.,NULL,CO,"B10, P12",NULL
+914,Reopening exam and application paid; claim remains closed.,M5,CO,P12,NULL
+915,Rebill physician professional fees on CMS-1500 with CPT- 4 service codes.,NULL,CO,"16 N34,",M51
+916,Denied. Multiple procedures/diagnoses/dates in a line item cannot be processed. Rebill services,NULL,CO,A1,N63
+917,Denied. Wrong diagnosis or procedure code used for the described condition or service billed.,NULL,CO,"11, A1",N56
+918,Report/documentation submitted does not justify the code and/or fee billed. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,M69
+919,Denied. Multiple claim numbers on one bill cannot be processed. Rebill separately.,NULL,CO,"A1, 16",N61
+920,Denied. The procedure code and/or report indicate the service was for an unrelated condition.,NULL,CO,"A1, 96 N578,",N643
+921,Denied.  Crime victim claim.  Your bill has been forwarded to the Crime Victim Compensation Program.,NULL,OA,"B11, A1",NULL
+922,Denied. Reopening application not received.,NULL,CO,A1,N29
+923,Denied. This is a self-insured claims. Submit bill to the employer.,41,OA,"109, A1",N534
+924,Bill paid. You must reimburse the injured worker the total amount he/she paid for this service.,NULL,CO,A0,NULL
+925,Adjusted in accordance with L&I's published fee schedule.,NULL,CR,"P12, 45",NULL
+926,Professional fee adjusted to current L&I rate.,NULL,CR,"P12, 45",NULL
+927,Balance paid separately under different claim number or different fund.,NULL,CO,B13,NULL
+928,Denied. Attach copy of your receipt to copy of this statement and send to L&I.,NULL,NULL,NULL,NULL
+929,Denied. Only payable when you must travel more than 10 miles one way.,NULL,NULL,NULL,NULL
+930,Denied. Only authorized travel over 10 miles 1 way to nearest available treatment is payable.,NULL,NULL,NULL,NULL
+931,Medical travel expense not payable when residence is over 50 miles from the Washington State border.,NULL,NULL,NULL,NULL
+932,Denied. The authorized distance traveled does not justify payment for lodging.,NULL,NULL,NULL,NULL
+933,Denied. Emergency room report required.,NULL,CO,A1,N29
+934,As many items as possible have been processed on your bill. Rebill unprocessed services.,NULL,NULL,NULL,NULL
+935,Denied. This is a duplicate charge.,NULL,CO,18,NULL
+936,Processed using the injured worker's name that L&I has listed for this claim number. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,16,MA36
+937,You have used the wrong bill form for this service. Bill on proper bill form in the future.,NULL,CO,16,N34
+938,Denied. Justification required for more than one round trip travel on same day.,NULL,NULL,NULL,NULL
+939,Denied. Rebill or submit copy of remittance advice (circle number). Attach required reports,ICN,NULL,CO A1,N29
+940,Adjusted. Travel expense allowed to the nearest point of available treatment.,NULL,NULL,NULL,NULL
+941,Denied. These services were paid by a private insurance carrier whom we have reimbursed directly,NULL,CO,100,NULL
+942,Denied. Provider is not the attending physician of record. This service is not authorized.,NULL,CO,243,N450
+943,Denied. This injection is paid only in hospital setting for treatment of burns or fractures.,NULL,CO,"5, A1",M77
+944,This service paid on a diagnostic basis only. Treatment of the condition is denied.,NULL,CO,P12,NULL
+945,Denied. This service is not payable in addition to an extensive or comprehensive office visit.,NULL,CO,A1,N20
+946,Denied. Emergency room calls for scheduled drugs for treatment of chronic pain are not covered.,NULL,CO,"A1, 40, 96",N180
+947,Bill paid in summary detail. All future bills must show only one date of service per line space,NULL,CO,16,MA31
+948,Remainder of bill processed separately due to computer system limitations.,NULL,NULL,NULL,NULL
+949,Payment for pharmacy made this time. Future bills must be submitted with code 99070 for pharmacy,NULL,CO,16,M20
+950,"Denied. When an injured worker is placed on pension L& cannot pay schedule I,II,III,IV drugs",I,NULL,"PR A1, 27, 96",NULL
+951,Time units must be billed as whole units. Please check your Fee Schedule and bill accordingly.,NULL,CO,P12,M53
+952,Processing 80 per cent of the interim payment requested. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,NULL,NULL,NULL
+953,Denied. Service was prior to approved training plan start date.,NULL,NULL,NULL,NULL
+954,Denied. There are no funds approved for this procedure code. Contact vocational counselor.,NULL,NULL,NULL,NULL
+955,These services were paid by a hand warrant.,NULL,CO,B13,NULL
+956,Reopening examination and application paid. Claim reopening is under consideration.,NULL,CO,133,NULL
+957,This is a deduction from the interim payment.,NULL,CR,P12,NULL
+958,Adjusted. Mileage allowed based on number of miles by shortest direct route only.,NULL,NULL,NULL,NULL
+959,Denied or adjusted. The per diem rate allowed includes lodging and meals for the day.,NULL,NULL,NULL,NULL
+960,Denied. Side of body treated disagrees with the side of body accepted as injured in this claim.,NULL,CO,"96, A1",N578
+961,Denied. This is not a Washington state industrial injury.,NULL,CO,"A1, 109",N643
+962,Adjusted. Remaining balance from this procedure fund paid. Notify the vocational counselor.,NULL,NULL,NULL,NULL
+963,This deduction is taken for payment(s) made in error.,NULL,CR,P12,NULL
+964,This payment is made for a deduction which was taken in error.,NULL,CR,P12,NULL
+965,Denied. Injured worker expired prior to date of this service.,M5,CO,13,NULL
+966,"This is a rebill, check for prior payment. If none received, resubmit.",NULL,CO,B13,NULL
+967,No payment made because there were no charges listed on your billing.,DU,CO,16,M79
+968,Denied. The listed value for this service includes the professional component.,NULL,CO,"A1, 45",M15
+969,Denied. Provider tape billing fee is limited to one charge per claim in any 30 day period.,NULL,NULL,NULL,NULL
+970,Reopening denied. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,N578
+971,Processed under correct claim number for this date/nature of injury. Please note for future bills.,NULL,CO,16,MA86
+972,Waiting for signature certifying the delivery of services.,NULL,CO,16,MA81
+973,Denied. Excess invalid/missing detail on this bill. See billing instructions. Revise and rebill,NULL,CO,"16, A1",MA130
+974,Rebill dental professional fees on L&I Statement for Miscellaneous Service bill form.,NULL,CO,16,N34
+975,Denied. L&I is not responsible for 'no show' appointments.,NULL,CO,"A1, 115",N441
+976,This fee is payment for medical records.,NULL,CO,P12,NULL
+977,Please note the provider number. This is the number you must use when billing physician services,NULL,CO,16,N77
+978,Please note the provider number. This is the number you must use when billing pharmacy services,NULL,CO,16,N77
+979,Please note the provider number. You must use this number when billing for pain clinic services,NULL,CO,16,N77
+980,Please note the claim number. It must be used when billing for this injury for this injured worker.,NULL,CO,16,MA92
+981,Note  provider number and name. They must be on all billing sent to L&I.,NULL,CO,16,N77
+982,L&I has no provision for payment of provider administrative costs.,NULL,CO,96,NULL
+983,Denied. Refill of this drug in less than 30 days must be justified by the attending physician.,NULL,CO,"A1, B5",N584
+984,Payment made to correct your account for the refund which you made to L&I in error.,NULL,CR,P12,NULL
+985,Denied. This is a Social & Health Services bill sent to us in error.,NULL,OA,109,NULL
+986,"NDC number invalid or missing. If equipment, resubmit on Statement for Miscellaneous Services.",NULL,CO,16,M119
+987,Denied. Service was not substantiated by attending physician and requires prior authorization. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code,NULL,CO,A1,N29
+988,The date of service is before the reopen date.,NULL,CO,26,NULL
+989,Denied. Claim number missing. Resubmit new bill with claim number.,7,CO,"31, 16, A1",MA61
+990,Not paid. The provider must bill L&I and return your full payment directly to you.,NULL,NULL,NULL,NULL
+991,Denied. Drug quantity is invalid. Resubmit using metric measuring only.,NULL,CO,A1,M49
+992,Bill paid. You must reimburse the insurance company the total amount they paid for this service.,NULL,NULL,NULL,NULL
+993,Travel expense has been authorized only for the injured worker.,NULL,NULL,NULL,NULL
+994,Do not include line items for services which you are crediting and no payment is due.,NULL,NULL,NULL,NULL
+995,L&I is not responsible for payment while injured worker is in DNR Forest Camp.,NULL,PR,109,NULL
+996,Payment to cancel balance of interim credit in this provider account. Credit transferred.,NULL,CR,P12,NULL
+997,Refer to the accompanying explanation of benefits code listed for this service.,NULL,NULL,NULL,NULL
+998,This transaction is a refund from this provider.,NULL,CR,P12,NULL
+999,"This adjustment is made per your request on a previously processed bill. A01 APC discounting applied. NULL CO P12, 45 NULL A02 APC packaged service. NULL CO 97 M15 A03 Qualifies for APC outlier. NULL CO 97 NULL A04 Qualifies for outlier with discounting. NULL CO 97 NULL A05 APC packaged, considered in outlier amount. NULL CO 97 NULL A06 APC pass-through, considered in outlier amount. NULL CO 97 NULL A07 Denied. Seventh diagnosis invalid per code editor. NULL CO A1 M76, M64 A08 Denied. Eighth diagnosis invalid per code editor. NULL CO A1 M76, M64 A09 Denied. Ninth diagnosis invalid per code editor. NULL CO A1 M76, M64 EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code A10 Denied. Diagnosis and patient age are in conflict per the code  NULL CO 9 NULL editor. A11 Denied. Diagnosis and patient gender are in conflict per code  NULL CO 10 NULL editor. A12 THIS EOB IS INTENTIONALLY LEFT UNUSED NULL NULL NULL NULL A13 Denied. Procedure is invalid per code editor. NULL CO A1 M67 A14 Denied. Procedure and patient age conflict per code editor. NULL CO 6 NULL A15 Denied. Procedure and patient gender conflict per code editor. NULL CO 7 NULL A16 Denied. Noncovered service per code editor. NULL CO 96, A1 N578 A17 Denied. Condition code 21 (verification of denial) billed. NULL CO A1 M44 A18 Denied. Condition code 20 (submitted for review) billed. NULL CO A1 M44 A19 Denied. Defined as ""questionable covered service"" by code  NULL CO 50 NULL editor. A20 Denied. Per code editor.  Code indicates site of service not in  NULL CO 5 NULL Outpatient Prospective Payment System (OPPS). A21 Denied.  Service units outside of range allowed for procedure.  NULL CO A1 M53 For units consideration, submit adjustment with justification for additional units. A22 Denied. Per code editor, multiple bilateral procedures were  NULL CO 4 NULL billed without modifier -50. A23 Denied. Per code editor, specification of bilateral procedure is  NULL CO 4 NULL inappropriate. A24 Denied. Even with modifier, code editor won't allow this  NULL CO A1 NULL mutually exclusive or component procedure. A25 Denied. Per code editor, medical visit without modifier -25 not  NULL CO 4 NULL allowed with type ""T"" or ""S"" procedure. A27 Denied. Per code editor, terminated bilateral procedure can't  NULL CO A1 M53 have more than 1 unit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code A28 Denied.  Per code editor, the implementation or associated  NULL CO A1 M67 procedure is not consistent with the implanted device or administered substance. A29 Denied. CCI edit would allow this w/ proper modifier. Refer  NULL CO A1, 4 NULL to <http://www.ntis.gov for CCI subscription. A30 Denied. Per code editor, multiple medical visits billed for  NULL CO A1 M44, M86 same day without condition code G0. A31 Denied. Per code editor, blood product for transfusion or  NULL CO A1 M45 blood product exchange not specific. A32 Denied. Per code editor, observation revenue code billed with  NULL CO A1 M50, M67 non-observation HCPCS code. A33 Denied. Per code editor, service is not separately payable. NULL CO A1, 97 M15 A34 Denied. Per code editor one or more, modifier(s) is invalid. NULL CO 4 NULL A35 Denied. Per code editor, revenue center requires HCPCS code. NULL CO A1 M20 A36 Denied. Per code editor, revenue code is invalid. NULL CO A1 M50 A37 Denied. Inpatient bill submitted without patient prior  NULL CO 129 N473 authorization (PA#) number.  Correct/obtain prior authorization number and resubmit. A38 Denied.  Per code editor partial hospitalization requirements  NULL CO A1 N719 are not met. A41 Denied. Per code editor, service has not met the criteria for  NULL CO A1 N180 separate observation payment. A42 Denied. Per code editor, observation service cannot be billed  NULL CO A1 M50 unless type of bill is 13X. A43 Proc code not authd.  For assistance contact L&I Medical  NULL CO 15, P13 NULL Director's Office at 360-902-5036 or contact 360-902-6818 for IME related procedure codes. A44 Bill denied.  Per code editor, CA modifier requires patient  NULL CO A1 N34 status code 20. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code A45 Bill denied.  Per code editor, bill lacks required device code  NULL CO A1 N34 for one of the procedures billed or lacks the required procedure for device code billed. A46 Line denied.  Per code editor, incorrect billing of blood and  NULL CO A1 N34 blood products. A49 Denied.  Per code editor, trauma response critical care code  NULL CO A1 N34 billed without revenue code 068X and/or CPT 99291. A52 Payment made at maximum units for submitting service.  For  NULL CO P12 M53 consideration, submit adjustment with justification for additional units. A82 Denied. Non-case rate APC not allowed for treatment of  NULL CO A1 M20, M50 industrial injury  or invalid HCPCS/revenue code billed. A86 Denied. This APC ID is not allowed for treatment of industrial  NULL CO P13 NULL injuries. A91 Denied. Principal diagnosis code invalid per code editor. NULL CO A1 M76 A92 Denied. Second diagnosis code invalid per code editor. NULL CO A1 M64 A93 Denied. Third diagnosis code invalid per code editor. NULL CO A1 M64 A94 Denied. Fourth diagnosis code invalid per code editor. NULL CO A1 M64 A95 Denied. Fifth diagnosis code invalid per code editor. NULL CO A1 M64 A96 Denied. Sixth diagnosis code invalid per code editor. NULL CO A1 M64 A97 Denied. L&I accepts only hospital outpatient types of bill 131  NULL CO A1 N34 through 134 on CMS-1450 (UB04). A98 Denied.  Per Outpatient Code Editor (OCE), procedure lacks  NULL CO P13 NULL required radio labeled product. B01 Denied. Procedure code specific to your State.  Refer to  NULL CO A1 M51 Washington State fee schedule for appropriate code. B02 Denied. ICN on adjustment form does not match the bill ICN  NULL CO A1, P13 N152, you are trying to adjust. Correct and resubmit. MA130, N704 B03 Denied. Only one bill ICN can be adjusted per provider's  NULL CO A1, P12 N34, N704 request for adjustment form. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code B04 Modifier -99 should only be used when 2 or more modifiers  NULL NULL NULL NULL affect payment.  Doing so may delay payment. B05 Denied. Injured worker's lost time is not sufficient to justify  NULL NULL NULL NULL this procedure. B06 Denied. Prescribing provider's number and name on bill does  25 CO A1, 16 N31 not match. B07 Adjustment due to NSF check. NULL CR P12 NULL B08 This line was manually priced due to a partial refund. NULL CR 129 MA67 B09 Denied. Service billed is unrelated to this claim  NULL CO A1 N576 number/injured worker. B10 No bills are payable due to the rejection reason on this claim. NULL CO P13 N643 B11 Denied. Procedure code 76005 not payable in conjunction with NULL CO 96, A1 N20 these services. B12 Paid per L&I Claims Consultant. NULL CO 45 N10 B13 Paid.  Procedure now allowed. NULL CO 45 NULL B14 Denied.  Procedure code 72275 not payable with 64470- NULL CO 96, A1 N20 64476. B15 Place of service was changed to reflect actual site of service. NULL CO 16 M77 B16 Facility fees are not payable for procedures performed in  NULL CO P12 NULL physician's office. B20 Endoscopy 100% NULL CO 59 NULL B21 Endoscopy Minus Base NULL CO 59 NULL B22 Endoscopy 100% then multiple surgery rule 100% NULL CO 59 NULL B23 Endoscopy minus base then multiple surgery rule 100% NULL CO 59 NULL B24 Endoscopy 100% then multiple surgery rule 50% NULL CO 59 NULL B25 Endoscopy minus base then multiple surgery rule 50% NULL CO 59 NULL B26 Endoscopy 100% then multiple surgery rule 25% NULL CO 59 NULL B27 Endoscopy minus base then multiple surgery rule 25% NULL CO 59 NULL B30 Multiple surgery rule 100% NULL CO 59 NULL B31 Multiple surgery rule 50% NULL CO 59 NULL B32 Multiple surgery rule 25% NULL CO 59 NULL EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code B33 Denied. The required request for additional reimbursement  NULL CO 16 NULL form not received. B34 A narrative report of work history is required when billing  NULL CO 150 N29 1055M. B40 The 2nd procedure code modifier is either completely invalid  NULL CO 4 NULL or invalid for the service dates billed. B41 The 3rd procedure code modifier is either completely invalid  NULL CO 4 NULL or invalid for the service dates billed. B42 The 4th procedure code modifier is either completely invalid  NULL CO 4 NULL or invalid for the service dates billed. B43 The 2nd proc code modifier is not a valid pymt modifier in  NULL CO 4 NULL conjunction with the procedure billed. B44 The 3rd procedure code modifier is not a valid payment  NULL CO 4 NULL modifier in conjunction with the procedure billed. B45 The 4th procedure code modifier is not a valid payment  NULL CO 4 NULL modifier in conjunction with the procedure billed. B46 The 2nd procedure code modifier is invalid for this provider  NULL CO 4 NULL type. B47 The 3rd procedure code modifier is invalid for this provider  NULL CO 4 NULL type. B48 The 4th procedure code modifier is invalid for this provider  NULL CO 4 NULL type. B62 L&I cannot pay for retraining services 3 or more months in  15 CO 110 NULL advance. Rebill closer to service dates. B63 Denied.  No record that an IME was requested/scheduled for  NULL CO A1 N629 the service date billed. B64 Multiple MRI's for the same part of body are not payable for  NULL CO A1 M86 the same date of service. D01 High dose alert.  Drug dispensed exceeds maximum daily  88 CO 16, B5 N435 dosage. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code D02 Drug to drug interaction; severity level 1.  Drug interacts with  88 CO 16, B5 N410 another drug dispensed. D03 Two or more drugs have been prescribed/dispensed which may 88 CO 16, B5 N410 represent a duplicate therapy. D04 Denied.  Multiple DUR and/or refill-too-soon edits prevent  88 CO 16, B5 N410 payment.  For information call 1-800-848-0811. D05 Non-preferred drug prescribed and therapeutic class has not  70 CO 96, 197 NULL been authorized for this claim. D06 Non-preferred drug prescribed by endorser without dispensed  70 CO 96 NULL as written (DAW) indicator. D07 Submitted dispensed as written (DAW) is invalid. 22 CO 16 M49 D08 The prescribing provider number entered does not have  71 CO A1, 184 N31, M143 prescriptive authority. D09 Drug enforcement agency (DEA) number is not valid, it does  25 CO 16 N31 not meet DEA number validation. D10 Reimbursement includes the incentive fee for the acceptance  NULL CO 91 NULL of risk (prior authorization #00074276229). D11 Missing/Invalid prior authorization type. EU CO 16 NULL D12 Missing/Invalid prior authorization number. EV CO 16 NULL D13 Prior authorization denied.  Claim is on file, does not meet  3Y CO P13 NULL requirement allowing prior authorization for acceptance of risk and incentive fee. D14 Prior authorization for incentive fee was submitted but not  NULL CO P13 NULL allowed.  The incentive fee was not included in reimbursement. D15 Denied.  Third Party supplemental agreement not on file. 5 CO 16 N290 D16 Denied.  Third Party billers must     submit all bills through  5 CO 16 N290 L&I point-of-sale (POS) system, excluding adjustments. D17 Denied.  This drug class requires prior authorization for use  75 CO 197, B5 NULL beyond 30 days.  For authorization call 1-888-443-6798 D18 Initial prescription qualifies for first fill payment. NULL NULL NULL NULL EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code D19 Prior authorization denied.  Does not meet first fill  3Y CO 16 N592 requirements for payment of initial prescription. D20 Denied.  Day supply exceeds L&I's 30 day supply limit. AG CO A1 N378 D21 Denied.  Procedure is for unclassified injectable drugs.  Not  NULL CO A1 M51 payable for oral drugs. D22 Denied.  Prescription filled after date of pension and treatment  70 CO A1 N578 order does not include scheduled drugs. D23 Denied.  L&I does not pay for brand drugs when a generic is  AJ CO A1 N578 available and substitution is allowed. D80 Denied.  Tooth number is denied under this claim. NULL CO A1 N37 E00 Denied.  Procedure code requires RR or NU modifier.  See  NULL CO A1. 16 N519 HCPCS section of Medical Aid Rules & Fee Schedules for appropriate modifier. E01 Further rental is denied.  Purchase of new DME is required.  NULL CO A1 M7, N370 Retrieve rental DME and replace with new DME.  Bill for new DME item with NU modifier. E02 Further rental is denied.  There is no medical certification on  NULL CO A1, B12 N370 file for continued use. E03 Twelve (12) months of rental payments have been made.  NULL CO P12 N370 Equipment is now owned by the injured worker.  No additional payments will be made. E04 Further rental is denied.  There is no medical certification on  NULL CO A1, B12 N370 file for continued use of E0935. E05 Denied.  These services are not payable during the DME  NULL CO A1, 16 N578 warranty period. E06 Denied.  A warranty is required for all DME repair.  Please  NULL CO A1, 16 N29, N705 send warranty and rebill. E07 Maximum units were reviewed by L&I and no additional units  NULL CO 45 N362 will be paid. E08 Bill Denied with 6 DE due to possible EDI edit functionality  NULL CO P13 NULL issues. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code E09 This payment is a reimbursement for WA Stay-At-Work  NULL CO 100 NULL Program. E10 This claim denied as a duplicate. COHE Admin Fee processed  NULL CO 18, B13 NULL under the workers accepted claim number. H00 EDI formatting error: This billing is denied/rejected - The  NULL CO A1 MA130 second EOB details the error. H01 Invalid workers' compensation pay-to provider number. NULL CO A1 N77 H02 Missing workers' compensation billing provider number. NULL CO A1 N77 H03 Invalid workers' compensation billing provider number. NULL CO A1 N77 H04 Submitting transaction is not identified as a workers'  NULL CO 31, 109 NULL compensation billing. H05 Invalid/missing workers' compensation claim number  NULL CO 31, 140 MA130 (subscriber identification). H06 Invalid transaction type code (must be chargeable). NULL CO A1 MA130 H07 Invalid transaction type identification (identified as  NULL CO A1 MA130 draft/pilot). H08 Invalid claim frequency type code  NULL CO A1 MA130 (adjustment/replacement/void not allowed). H09 Line item maximum exceeded (see EDI companion guide). NULL CO A1 M139 H10 Missing workers' compensation pay-to provider number. NULL CO A1 N77 H11 Missing workers' compensation rendering provider number. NULL CO A1 N77 H12 Invalid workers' compensation rendering provider number. NULL CO A1 N77 H13 Denied.  The procedure code is incorrect for the report  NULL CO A1 N56 requested and/or received.  Refer to current fee schedule and rebill the correct code. H14 Denied.  This report was not requested by L&I.  Please bill the  NULL CO A1 N629 party who requested this report. H15 Report of Accident (ROA) not payable to a physician assistant  NULL CO B7, P13 N180 because this claim does not meet the definition of a simple industrial injury. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code H16 Suspended.  Claim number is missing or invalid on bill.  Call  NULL CO 16 NULL 1-800-831-5227 to confirm claim number before rebilling. H17 Denied.  No audiogram was received. NULL CO 16, A1 N706, N146, N102, N29 Q07 Paid. Diagnostic(s)and/or Service(s)requested by the IME  NULL CO P12, W1 NULL Examiner/Panel or Department. H18 Denied. ICD-10 diagnosis submitted prior to ICD-10 effective  NULL CO A1 755 date. H19 Denied. ICD-10 procedure code submitted prior to ICD-10  NULL CO A1 N755 effective date. H21 The payee provider's NPI is either invalid or is not registered.  NULL CO A1 N77 Call Provider Credentialing at 360-902-5140. H22 Invalid NPI billing provider number.  The submitted NPI is  NULL CO A1 N77 not on file or is not associated to an L&I provider number. H23 The service provider's NPI is invalid or is not registered.  Call  NULL CO A1 N77 Provider Credentialing at 360-902-5140. H24 We are unable to determine the payee.  Call Provider  NULL CO 16 N280 Credentialing at 360-902-5140. H25 We are unable to determine the provider of service with the  NULL CO 16 N290 NPI provided.  Call Provider Credentialing at 360-902-5140. H26 The payee's NPI is invalid (format error).  Please correct and  NULL CO 16 N280 resubmit your bill. H27 The prescribing provider's NPI is either invalid or is not  NULL CO 16 NULL registered.  Call Provider Credentialing at 360-902-5140. H28 The prescribing provider's NPI is invalid (format error).  NULL CO 16 NULL Please correct and resubmit your bill. H29 In the future please bill using the NPI of the individual not the  NULL NULL NULL NULL organization. H30 We are unable to determine the prescribing provider with the  NULL CO 16 NULL NPI provided.  Call Provider Credentialing at 360-902-5140. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code H31 ICN (Internal Control Number) submitted on request for  NULL CO A1 M47 electronic adjustment is not finalized (paid) or not found in payer's system or is invalid. H32 Claim number submitted on request for electronic adjustment  NULL CO A1 MA61 does not match the claim number found on the ICN of the bill to be adjusted. H33 Rendering provider submitted on request for electronic  NULL CO A1 N290, N291 adjustment does not match the rendering provider found on the ICN of the bill to be adjusted. H34 ICN (Internal Control Number) submitted on request for  NULL CO A1, 18 N522 electronic adjustment is already in process and will appear on a future remittance advice. H35 ICN (Internal Control Number) submitted for electronic  NULL CO A1, 18 N522 adjustment has already been adjusted/credited. Original ICN adjustment/credit allowed once. H36 ICN (Internal Control Number) submitted for electronic  NULL CO A1 N522 adjustment previously processed as a credit (void). Resubmit new bill if credit was in error. H37 ICN (Internal Control Number) submitted on request for  NULL CO A1 M47 electronic adjustment allowed for original ICN received in HIPAA 837 format (ICN 7). H38 Electronic adjustment transaction submitted is missing  NULL CO A1 M47 required payer claim control number (ICN) segment - 2300 REF*F8. H39 ICN (Internal Control Number) submitted for electronic  NULL CO A1 N142 adjustment void is for denial bill. Void not allowed on denied bill. I01 Denied.  Required form not received.  Direct interpreter  NULL CO A1 N29 services must be documented as specified in L&I's interpretive services payment policies. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code I02 Denied.  Per the signed ""interpreter attestation sheet"",  NULL CO P13 NULL interpreter is an employee of the clinic of service, therefore services are not payable. I03 Denied.  Mileage documentation not received.  Printout from  NULL CO A1 N29 software mileage program & name of program is required to document actual mileage. I04 Denied.  Interpreter services appointment record (ISAR) not  NULL CO A1 N29 received and/or signed by the health care or vocational provider or their staff. I05 Denied.  Mileage billed was not substantiated by appointment  NULL CO A1 N29 record. I10 This bill was paid a hospital specific POAC for critical access  NULL CO P12 NULL hospital, sub-acute swing bed services. M01 Mod 22 was removed to permit auto pricing of daily  NULL CO P12 M78 maximum therapy fee. Refer to fee schedule. M02 Denied.  Hearing aid repair/modify visit (V5014) must be  NULL CO A1 N161, M62 billed same date w/ repair fee (5093V).  Note: These codes also require prior authorization. M03 Denied.  Restocking fee (5091V) is not payable until refund  NULL CO A1 N397 received from hearing aid & dispensing fee. M04 Denied.  T1017 must be billed with E/M. NULL CO A1 N56 M05 Denied.  Procedure 97546 must be billed with 97545. NULL CO A1 N182 M06 Denied.  Serial number on repair invoice does not match serial  NULL CO A1 N354, M99 number on warranty. M07 Denied.  Date of service is after injured worker's date of death. 69 CO A1 N56 M08 Denied.  Claim not allowed.  Please rebill this service if claim  NULL NULL NULL NULL is allowed. P01 Go to <http://www.lni.wa.gov/forms/pdf/248011a0.pdf> to  NULL NULL NULL NULL print & complete a provider application. P02 Paid.  One-time only provider number authorized. NULL CO 45 NULL EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P03 Provider name corrected to match number.  Bill with correct  NULL CO 16 N289 name for provider number/NPI in future. P04 Payee number is missing.  For information contact Electronic  NULL CO 16 N280 Billing Unit at 360-902-6511. P05 Payee name/number missing or invalid.  For more information  NULL CO 16 N290, N280 contact the Electronic Billing Unit at 360-902-6511. P06 Denied.  Records do not show the provider/group account  NULL CO A1 N198 numbers as related.  Call 1-800-848-0811. P07 Payment made as result of provider audit. NULL CO P12 N10 P08 Adjustment done to correct invalid provider/payee connection. NULL CO P12 MA67 P09 Line adjusted due to refund.  Other lines may adjust due to  NULL CO P12 NULL payment policies. P10 Refund applies to related bill adjustment(s) which may affect  NULL CO P12 NULL multiple claim numbers. P11 This transaction reflects a refund that clears a credit balance  NULL CO P12 NULL and corrects year to date info. P12 Processed per direction of the Provider Review and Education  NULL CO 12 N10 Section. P13 The performing and/or payee provider account number was  NULL CO 16 N77 terminated at your request.  For assistance call 360-902-5140. P14 Denied.  Use of this procedure code is invalid for this provider  NULL CO A1 N56 type on this date of service P15 Denied.  1101M cannot be billed without 1100M.  Please  NULL CO A1 N182, N380 correct and rebill using appropriate procedure code. P16 Denied.  Our records indicate the injured worker did not take  NULL CO A1 N675, N441 the flight. P17 Service was paid on a more recent invoice sent to L&I. NULL CO B13 NULL P18 Our records indicate your internship dates have ended.  NULL CO P13 NULL Contact Provider Credentialing at 360-902-5140. P20 This transaction transfers your debt to L&I Collections. NULL OA 12 NULL EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P21 Payment is applied to the payee's debt recorded with L&I  NULL OA P12 N10 Collections. P22 Denied.  This service has already been billed by and paid to  NULL CO B20 NULL the provider of service. P23 Processed per L&I Pharmacy Consultant. NULL CO P12 N10 P24 ICN adjusted due to payee/provider number relationship error. NULL CO P12 NULL P25 This procedure code is not payable on the same day as the  NULL CO A1 N20 IME. P26 Add on procedures must be billed with primary code. NULL CO P12 NULL P27 PT (97001-97799) not payable to chiropractors.  Refer to WA  NULL CO P13 NULL State Fee Schedule to determine if service meets requirements to be billed under 1040M. P28 Denied.  Rental is monthly.  One month or less = 1 unit of  NULL CO A1 MA32, M53 service.  # of units = # of rental months calculated from 1st to last date of service. P29 Denied.  1 day is = to 1 unit of svc.  The # of units must equal  NULL CO A1 M53, MA32 the # of rental days calculated from the 1st date of svc to the last date of svc. P30 Denied.  Modifier -7N may only be used with X-ray, lab  NULL CO P13 M78 services, and other allowed diagnostic tests performed in conjunction with an IME. P31 Denied.  Provider does not have valid credentials for date of  NULL CO B7, A1 N612 service billed. P32 Denied.  Procedure undergoing review. NULL CO 133 NULL P33 Denied.  This procedure is only payable when billed with an  NULL CO P13 NULL IME exam code. q06 Per review by L&I therapy consultant. NULL CO W1 N10 P34 Payment processed per Operations/MIPS Manager's  NULL CO P12 N10 authorization. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P35 Not valid for version of OCE software currently installed by  NULL CO A1 N34 L&I.  Adjustments will be done after the next software update to correct payment errors. P36 Do not send adjustment, submit new bill. NULL CO A1 N142 P37 Denial processed per Operations/MIPS Manager's  NULL CO A1 N35 authorization. P38 L&I is returning your refund.  Your refund is in excess of the  NULL CO P12, 94 NULL amount required per your request.  Please correct amount and resubmit. P39 Denied.  1071M cannot be billed without an activity  NULL CO W1 N380 prescription form code.  Please correct and rebill using appropriate procedure code. P40 Payment made per special arrangement. NULL NULL NULL NULL P41 Denied.  Q1003 must be billed with 66982 - 66986. NULL CO P13 NULL P42 Payment of this service has been made per Superior Court. NULL CO 45 N10 P43 Denied.  2 monaural hearing aids dispensed on the same day.  NULL CO P13 NULL Rebill with binaural dispensing code. P44 Denied.  2 monaural hearing aids dispensed on the same day.  NULL CO P13 NULL Rebill with binaural hearing aid codes. P46 NPI is not registered with L&I.  Call Provider Credentialing at  NULL NULL NULL NULL",NULL,CR,P12,NULL
+360,"-902-5140 or bill using your L&I provider number. P47 Denied.  Report of Accident (ROA) is limited to 1 per  NULL CO A1 N362 provider per claim. P48 Modifiers billed are not payable in combination. NULL CO A1 N519 P49 12 visits paid.  Over 12 visits require auth; over 24 visits  NULL NULL NULL NULL require UR.  See WWW.LNI.WA.GOV/CLAIMSINS/PROVIDERS/MANAGE /RTW/THERAPY for details. P50 Denied.  Treatment not authorized or has exceeded authorized  NULL CO A1, 197 M62, N27 visits.  Contact Qualis Health for Utilization Review at 800-",NULL,NULL,NULL,NULL
+541,"-2894. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P51 Denied. Please submit one bill using one office visit level and  NULL CO A1 N149 list all claims in Box 11. Electronic Billers use remarks. Dept. will split charges. P52 Denied.  Payment denied as result of provider audit. NULL CO A1 N10 P53 Bill adjusted due to L&I policy change. NULL CO P13 NULL P54 ASC bundled service. NULL CO NULL M15 P55 Denied.  Please rebill with an unaltered invoice/packing slip  NULL CO A1 N354 from the buying company or manufacturer showing warranty information. P56 This charge has been processed per L&I Occupational Nurse  NULL CO P12 N10 Consultant. P57 When billing for procedure 99080 with E/M service, a  NULL CO P13 NULL separate chart note and report are required.  Please send chart note. P58 When billing for procedure 99080 with E/M, a separate chart  NULL CO P13 NULL note and report are required.  Please send report. P59 Denied.  Activity Prescription Form was not requested by L&I. NULL CO A1 N629 P60 Denied.  Date of service is after provider's date of death. NULL CO P13 NULL P61 Denied.  Radiology consultation service can only be performed NULL CO A1 N95 by a provider with a specialty for radiology diagnostic. Provider specialty type 30. P62 Denied.  Individual name of provider must be listed under  NULL CO A1 N225 appointment information on Interpreter Services Appointment Record (ISAR). P63 Denied.  Same day charges for same claim number must be on  NULL CO P13 NULL the same bill.  Please submit adjustment to the paid bill. P64 Denied.  Signed Interpreter Services Appointment Record  NULL CO A1 N225 (ISAR) has not been received for date of service. P65 Lines were added to your bill to split your charges to match  NULL CO P12 NULL multiple referral dates. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P66 Denied.  Injection of anesthetic agent is bundled with the  NULL CO A1 M15 surgery procedure. P67 Adjudicated per instructions from provider review auditor. NULL CO P12 N10 P68 Denied.  Documentation to justify payment has either no time  NULL CO P13 NULL or not enough time noted for this procedure. P69 Payment for this line item reduced.  Time documented in note  NULL CO P12 NULL does not support units billed. P70 Denied.  No handwritten chart note/report received to support  NULL CO P13 NULL services billed. P71 Denied.  Chart notes modified.  Unable to determine what  NULL CO A1 N225 services were rendered and/or by whom. P72 The tax identification number and name on your provider  NULL CO A1 MA113 account does not match IRS records.  Please contact Provider Credentialing at 360-902-5140. P73 A request for payment outside of policy has been received and  NULL CO P12 N10 processed. P74 Denied.  Tax ID number on your provider account does not  NULL CO A1 MA113 match the tax ID number on your bill.  Please contact Provider Credentialing at 360-902-5140. P75 Denied.  Supporting documentation or provider signature is  NULL CO A1 N205 illegible. P76 Denied.  Paid under wrong provider/payee number. NULL CO P13 NULL P77 Denied.  Report/documentation submitted does not justify  NULL CO A1 N646 payment for a surgical assistant. P78 Denied per L&I Claims Consultant. NULL CO A1 N10 P79 Denied.  L&I does not issue provider  numbers to this type of  NULL CO 170 N95 provider.  See WAC 296-20-015 or contact Provider Credentialing 360-902-5140 for information. P80 Denied.  Only one claim was requested on IME assignment. NULL CO P13 NULL P81 Denied.  Dispensing fee not payable when hearing aids have  NULL CO P13 NULL been denied.  Please resubmit when rebilling for hearing aids. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P82 Denied.  Tax ID number is missing.  Resubmit new bill with  NULL CO A1, P13 NULL tax ID number. P83 Bill with your current tax ID number on future billings. NULL CO A1, P12 N209 P84 All or part of service(s) performed was non-covered per L&I  NULL CO P12 NULL policy. P85 Payment for this line item is reduced.  All or part of service is  NULL CO P12 NULL payable under a different code.  Refer to fee schedule. P86 Payment denied as per the provider fraud program's pre- NULL CO A1, P12 N432 payment review. P87 Payment reduced as per the provider fraud program's pre- NULL CO A1, P12 N432 payment review. P88 Denied. A specific description of the item that was repaired  NULL CO A1 N350 must be in remarks or on the bill. P89 Procedure 99080 paid as a 60 day report. NULL CO P12 NULL P90 Procedure 99080 paid as a response to insurer request. NULL CO P12 NULL P91 These payments have been adjusted due to a change in the  NULL CO P12 NULL offset amount. P92 PT (97001-97799) not payable to naturopaths.  Refer to WA  NULL CO A1, P13 N612 State Fee Schedule to determine if service meets requirements to be billed under 1040M. P98 Payment made for Report of Accident  (ROA) submitted via  NULL CO P12 NULL paper/fax P99 Payment made for Report of Accident (ROA) submitted via  NULL CO P12 NULL web. Q01 Prior authorization (PA#) number has been cancelled. NULL CO P13 NULL Q02 Denied. Only 1 PT/OT visit allowed per day; PT/OT visit  NULL CO A1 N362 billed by and paid to another PT/OT provider. Q03 PT or OT services provided by more than one provider at same  NULL CO A1 N362 visit; PT or OT daily cap met; payment for this line item reduced. Q04 PT or OT daily cap met; payment for this line item reduced. NULL CO W1 N362 EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code Q05 Denied. Performing provider signature missing from  NULL CO A1 MA70 supporting documentation. Unable to validate who performed the service. R01 Denied. Provider letter mailed separately to explain this  NULL CO A1 N202 denial. R02 Denied. Injured worker letter mailed separately to explain this  NULL PR A1 N202 denial. R03 Denied. Prescription co-pay letter mailed separately to explain  NULL PR A1 N202 this denial. R04 Denied. Health care co-pay letter mailed separately to explain  NULL PR A1 N202 this denial. R05 Denied. Pharmacy letter mailed separately to explain this  NULL PR A1 N202 denial. R06 Denied. Provider compliance letter mailed separately to  NULL CO A1 N202 explain this denial. R07 Denied. Travel Reimbursement Request return letter mailed  NULL PR A1 N202 separately to explain this denial. R08 Denied.  Drug reimbursement letter mailed separately to  NULL CO A1 M16 explain this denial. R09 Denied.  Provider letter mailed separately to explain this  NULL CO A1 M16 denial. R10 Injured worker letter mailed separately to explain how your  NULL CO A1 M16 bill was processed. R11 Legal representation letter mailed separately to explain how  NULL CO A1 M16 your bill was processed. R12 Denied.  The legal maximum of $12,000 for retraining has  NULL CO P13 NULL been expended. R13 Denied. Date of service does not match first treatment date on  NULL CO A1, P13 N521, N299 Report of Accident (ROA). Correct and resubmit. S00 Denied.  Procedure code 1207M must be billed and paid  NULL CO A1, P12 N266 before 1215M can be considered for payment. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code S01 Denied. The structured settlement agreement does not include  69 CO 27 NULL a provision for medical services. S02 Paid per the structured settlement agreement. NULL NULL NULL NULL S03 Denied. The structured settlement agreement unit has denied  70 CO P13 N161 this service(s). T18 Processed per WAC 296-20-1103.  This line item has been  NULL NULL NULL NULL reduced by 30 miles roundtrip. T19 Denied.  Treatment is available within 15 miles one way.  NULL NULL NULL NULL Travel expense is not payable. T20 Denied.  Only payable when you must travel more than 15  NULL NULL NULL NULL miles one way. T21 Denied.  Only authorized travel over 15 miles one way to  NULL NULL NULL NULL nearest available treatment is payable. T22 Processed per WAC 296-20-1103.  This one way trip has been  NULL NULL NULL NULL reduced by 15 miles. Z01 Payment expended from 1st year retraining plan. NULL NULL NULL NULL Z02 Payment expended from 2nd year retraining plan. NULL NULL NULL NULL Z03 Processed due to tools/equipment returned to L&I. NULL CO A1 M3 Z04 Returned tools/equipment reissued. NULL CO A1 M3 Z05 Payment expended from Option 1 Retraining Plan. NULL NULL NULL NULL Z06 Payment expended from Option 2 Retraining Plan. NULL NULL NULL NULL Z20 Denied.  All or part of your service is beyond the 14-day grace  NULL CO P13 NULL period allowed for these vocational services. E11 Further rental denied, purchase required.  Retrieve rental and  NULL CO W1 M7, N370 replace with new pump.  Bill for new pump with -NU modifier. E12 L&I allows 4 months rental and requires purchase on the 5th  NULL CO W1 M7 month. D24 Name Submitted on prescription bill does not match injured  NULL CO 16 NULL worker name on file for this claim. Pharmacy verified bill was submitted in error. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code P45 Denied. Locum Tenens providers must use their own provider  NULL CO A1, 4 N277 account numbers without the Q6 modifier. M09 Bill processed to pay as timely.  Originally paid by Medicare  NULL CO 19 NULL but has been determined to be L&I responsibility. S04 Denied application pending.  Contact Provider Credentialing  NULL CO 242, B7 N530 & Compliance at 360-902-5140 if you have questions regarding your network status. S09 Denied. 'This exam date' from the report of accident (which is  NULL CO 16 N307, N299 the initial visit date) is missing. Contact Claim Manager. S08 Denied.  Network status is non-participating, only initial visit  NULL CO 242, B7 N530 (IV) is payable. S14 Denied. Prescribing provider is not eligible to prescribe for  71 CO 242, B7 N530 date of service billed. S10 Denied.  Provider is not eligible for payment for date of  NULL CO 242, B7 N530 service billed. B49 Bill returned to provider with information to establish a L&I  NULL CO 242, 185 N77 provider number. B50 Denied, chart note amended incorrectly.  Please refer to the  NULL CO B12 N225 Medical Aid Rules and Fee Schedules for policies on amended medical records. S13 Denied.  Date span overlaps multiple network statuses.  Rebill  NULL CO 239 N63, N300 one date of service per line. M10 Denied.  Bill includes both ICD-9 and ICD-10 codes.  Please  NULL CO A1 M64 correct and rebill. D25 Denied.  L&I does not pay for repackaged drugs. 70 CO 96, A1 N448 M11 Denied.  10th-25th diagnosis code is invalid for first date of  NULL CO A1 M64 service. M12 Denied.  10th-25th diagnosis code is not sufficiently specific. NULL CO A1 M64 D26 Denied.  Day supply for opioids exceeds L&I's 28 day supply  NULL CO A1 N362 limit. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code D27 Denied.  Day supply exceeds L&I's 90 day supply limit for  NULL CO A1 N363 mail order prescriptions. D28 Denied.  Claim not authorized for mail order prescription.  70 CO 39 NULL Prescription filled by mail order pharmacy and claim not authorized for mail order rx. B66 Denied. this is a Federal claim. Please contact the Department  NULL CO 109 NULL of Labor. B67 Denied. Service not billed in accordance with L&I policies  NULL CO P13 NULL and/or CPT guidelines. B68 This is an adjustment to correct diagnosis code mapping errors  NULL CO P12 MA67 on inpatient bills that were adjudicated between 10/01/12 and 10/18/13. I26 Travel expense denied. Provider was not in the L&I network  NULL NULL NULL NULL on the service date. I27 Travel expense denied. Provider did not have an active L&I  NULL NULL NULL NULL account on the service date. M14 Assistant surgeon (modifier -80, -81, -82) not payable when co-NULL CO 236 N519 surgeon (modifier -62) is paid for the same procedure. M15 Denied. Radiological guidance must be used when performing  NULL CO P13 NULL this procedure. H40 DENIED. REBILL WITH THE DATE OF SERVICE AIDS  NULL CO A1 N304 WERE DISPENSED BACK TO THE INJURED WORKER. NULL NULL NULL NULL NULL B69 Activity Prescription Form (APF) not received. N/A CO A1 N29 M16 Adjudicated per instructions from the Pension Adjudicator NULL CO 27 N10",NULL,NULL,NULL,NULL
+890,"Denied. The 1st procedure code modifier in M1 is invalid for this provider type. I06 Payment reduced to the maximum allowable minutes per day.  NULL CO 119, 45 NULL Per L&I Payment Policy, limited to 480 units (8 hours per day). EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code M17 Denied. Prior authorization required. Please fax an  NULL CO A1, 197 M62 authorization request form WWW.LNI.WA.GOV/PRIORAUTH to the Provider Hotline",NULL,CO,4,NULL
+360,"-902-6490. B70 Denied. Provider portion of the Report of Accident (ROA) has  NULL CO A1 N29 not been received. B71 Denied. Procedure/Diagnosis has been suspended. Please  NULL CO P12 NULL contact the Claim Manager. I07 Denied. Limited to 480 units (8 hours per day), per Interpreter,  NULL CO 119, 45 NULL covers all claims. Services have exceeded limits. B72 Paid. Authorized per Pension Adjudicator/Treatment Order. NULL CO 45 N10 B73 Denied. Signature and/or date are missing from submitted  NULL CO A1 MA70 document. M18 Denied. Please submit the appropriate ICD Code set (ICD-9 or  NULL CO 16 M64 ICD-10) based on the date of service provided. M19 Corrected to adjust the original bill submitted. NULL CR 129 MA67 I30 Denied. No ISAR received or ISAR received does not match  NULL CO 252, A1 N463 billing. I31 Denied. The Interpreter Services Appointment Record (ISAR)  NULL 252, A1 N463 NULL received for services is missing required Interpreter or Provider verification signature. B74 Reduced. Some charges are included in the dispensing fee or  NULL CO P12 NULL are a non-covered item. I35 Denied. Group services indicator on Interpreter Service  NULL CO 252, A1 N463 Appointment Record (ISAR) does not match procedure code billed for interpreter service. S07 Denied.  No network status for date of service billed.  Contact  NULL CO 242, B7 N530 Provider Credentialing & Compliance at 360-902-5140. I32 Denied. Total billable mileage submitted or Interpreter Service  NULL 252, A1 N463 NULL Appointment record (ISAR) does not match units billed for services 9986M. EOB  Description Rejection  Group  Reason  Remark Code Code Code Code Code Z21 Adjudicated per instructions from the Vocational Services  NULL CO 27 N10 Specailists. b75 Denied. Please send your itemized list of charges as required  NULL co 16, A1 N63 by WAC-296-23A-150 and rebill. B76 Service Qualifies for interest payment per RCW 51.36.080 NULL CO 85 NULL B77 Interest paid per RCW 51.36.080 NULL CO 85 NULL A51 Line item denied. Bill lacks required cornea/procedure code. NULL CO A1 N683 A53 Biosimilar HCPCS reported without biosimilar modifier. NULL CO 4 NULL I33 Denied. Interpreter Provider number submitted on Interpreter  NULL CO 252, A1 N463 Service Appointment record (ISAR) missing/does not match provider of service on bill. I34 Denied. Total Billable minutes submitted on Interpreter  NULL CO 252, A1 N463 Service Appointment record (ISAR) does not match units billed for interpreter service. I37 Denied. Interpreter Appointment Date of Service on or after  NULL CO 252, A1 N463 09/01/2015 requires L&I ISAR form F245-056-000 06-2015. ISAR submitted on old form. I36 Denied. Claim number submitted on Interpreter Service  NULL CO 252, A1 N463 Appointment Records for Process. Submit ISAR with correct claim number & rebill. M13 Denied.  10th-25th diagnosis code denotes a non-industrial  NULL CO A1 M81 condition or is not sufficiently specific. S15 Denied. Date of serivce is before 'This Exam Date' (which is  N/A CO 16, P13 MA122, they intital visit date) from the Report of Accident. N652",NULL,NULL,NULL,NULL
