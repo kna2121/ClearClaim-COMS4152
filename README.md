@@ -43,7 +43,7 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 | Endpoint | Purpose | Required params |
 | --- | --- | --- |
 | `POST /claims/analyze` | Ingest a denied-claim PDF/image and return extracted metadata and denial codes. | `file` (multipart upload) |
-| `POST /claims/suggest_corrections` | Map denial/EOB codes to stored reasons/corrections. | `denial_codes[]` |
+| `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[group_code, remark_code]` tuples) to stored reasons/corrections. | `denial_codes[]` |
 | `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`, optional `template` |
 
 Example request to analyze a PDF:
@@ -51,6 +51,19 @@ Example request to analyze a PDF:
 ```bash
 curl -X POST http://localhost:3000/claims/analyze \
   -F "file=@spec/fixtures/files/sample_denial.pdf"
+```
+
+Example correction lookup with tuple payload:
+
+```bash
+curl -X POST http://localhost:3000/claims/suggest_corrections \
+  -H "Content-Type: application/json" \
+  -d '{
+    "denial_codes": [
+      ["CO29", "N211"],
+      ["PR3", null]
+    ]
+  }'
 ```
 
 Example appeal generation:

@@ -6,6 +6,11 @@ def sanitize_field(value)
   value.to_s.strip.presence
 end
 
+def sanitize_code(value)
+  str = value.to_s.strip
+  str.present? ? str.upcase : nil
+end
+
 def parse_codes(value)
   sanitized = value.to_s.strip
   return [] if sanitized.blank?
@@ -27,10 +32,10 @@ if File.exist?(csv_path)
 
     denial = DenialReason.find_or_initialize_by(code: code)
     denial.description = sanitize_field(row["DESCRIPTION"])
-    denial.rejection_code = sanitize_field(row["Rejection Code"])
-    denial.group_code = sanitize_field(row["Group Code"])
+    denial.rejection_code = sanitize_code(row["Rejection Code"])
+    denial.group_code = sanitize_code(row["Group Code"])
     denial.reason_codes = parse_codes(row["Reason Code"])
-    denial.remark_code = sanitize_field(row["Remark Code"])
+    denial.remark_code = sanitize_code(row["Remark Code"])
     denial.save!
   end
   puts "Seeded #{DenialReason.count} denial reason rows."
