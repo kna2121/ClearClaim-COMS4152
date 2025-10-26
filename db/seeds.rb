@@ -20,6 +20,7 @@ def parse_codes(value)
     .split(/[, ]/)
     .map { |code| code.strip.upcase }
     .reject(&:blank?)
+    .uniq
 end
 
 csv_path = Rails.root.join("config", "EOBList.csv")
