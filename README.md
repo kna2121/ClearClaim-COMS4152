@@ -43,7 +43,7 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 | Endpoint | Purpose | Required params |
 | --- | --- | --- |
 | `POST /claims/analyze` | Ingest a denied-claim PDF/image and return extracted metadata and denial codes. | `file` (multipart upload) |
-| `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[group_code, remark_code]` tuples) to stored reasons/corrections. | `denial_codes[]` |
+| `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[remit_code, remark_code]` tuples like `["CO45","N54"]`) to stored reasons/corrections. | `denial_codes[]` |
 | `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`, optional `template` |
 
 Example request to analyze a PDF:
@@ -94,6 +94,7 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
 - Run `bin/rails db:migrate` to create the `denial_reasons` table with columns for EOB code (`code`), payer description, rejection code, group code, parsed reason codes (array), remark code, suggested corrections, and documentation.
 - Keep the GA EOB crosswalk (or any payer-provided spreadsheet) in `config/EOBList.csv`. Seed the table via `bin/rails db:seed` or manually import with `bin/rails denial_reasons:import_eob[/absolute/path/to/EOBList.csv]`.
 - Each row in the CSV must include headers `EOB CODE, DESCRIPTION, Rejection Code, Group Code, Reason Code, Remark Code`; multiple reason codes in a single cell (e.g., `"A1, 45 N54"`) are automatically split into arrays.
+- `Claims::CorrectionSuggester` accepts plain codes (e.g., `"001"`) or ERA-style tuples. It automatically splits remittance codes like `"CO29"` into `group_code: "CO"` and `reason_code: "29"` before querying the database, and also matches on remark codes such as `"N211"`.
 - Export the curated DB for auditing/sharing with `bin/rails denial_reasons:export_csv[optional/output.csv]`.
 - `Claims::CorrectionSuggester` consumes these records, so the REST API immediately reflects any newly imported or edited codes.
 
