@@ -47,3 +47,7 @@ group :test do
   gem "webdrivers"
   gem "simplecov", require: false
 end
+
+gem "openai", "~> 0.34.1"
+
+gem "ruby-openai", "~> 8.3"
