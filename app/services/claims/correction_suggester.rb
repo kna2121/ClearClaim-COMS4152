@@ -1,5 +1,5 @@
 module Claims
-  # Maps denial codes or (group_code, remark_code) tuples to explanations and recommended fixes
+  # Maps denial codes or (group_code, reason_code, remark_code) tuples to explanations and recommended fixes
   class CorrectionSuggester
     def initialize(denial_codes:)
       @contexts = Array(denial_codes).map { |entry| normalize_entry(entry) }.compact
@@ -25,23 +25,30 @@ module Claims
     def normalize_entry(entry)
       case entry
       when Array
-        group_code = normalize_code(entry[0])
-        remark_code = normalize_code(entry[1])
-        return nil if group_code.blank? && remark_code.blank?
+        remit_raw, remark_raw = entry
+        group_code, reason_code = split_remit_code(remit_raw)
+        remark_code = normalize_code(remark_raw)
 
-        { group_code: group_code, remark_code: remark_code }
+        context = {}
+        context[:group_code] = group_code if group_code.present?
+        context[:reason_code] = reason_code if reason_code.present?
+        context[:remark_code] = remark_code if remark_code.present?
+        context.presence
       when Hash
         code = normalize_code(entry[:code] || entry["code"], preserve_numeric: true)
         group_code = normalize_code(entry[:group_code] || entry["group_code"])
+        reason_code = normalize_code(entry[:reason_code] || entry["reason_code"], preserve_numeric: true)
         remark_code = normalize_code(entry[:remark_code] || entry["remark_code"])
-        return nil if code.blank? && group_code.blank? && remark_code.blank?
 
-        { code: code, group_code: group_code, remark_code: remark_code }
+        context = {}
+        context[:code] = code if code.present?
+        context[:group_code] = group_code if group_code.present?
+        context[:reason_code] = reason_code if reason_code.present?
+        context[:remark_code] = remark_code if remark_code.present?
+        context.presence
       else
         code = normalize_code(entry, preserve_numeric: true)
-        return nil if code.blank?
-
-        { code: code }
+        code.present? ? { code: code } : nil
       end
     end
 
@@ -53,19 +60,34 @@ module Claims
       str.upcase
     end
 
+    def split_remit_code(value)
+      normalized = value.to_s.strip.upcase
+      return [nil, nil] if normalized.blank?
+
+      sanitized = normalized.gsub(/\s+/, "")
+      match = sanitized.match(/\A([A-Z]{2})([A-Z0-9]+)?\z/)
+      return [normalize_code(sanitized), nil] unless match
+
+      group = match[1]
+      reason = match[2]
+      reason = nil if reason.blank?
+      [group, reason]
+    end
+
     def fetch_rule(context)
-      if context[:group_code].present? || context[:remark_code].present?
-        repository.fetch_by_group_and_remark(context[:group_code], context[:remark_code]) ||
-          repository.fetch(context[:code])
-      else
-        repository.fetch(context[:code])
-      end
+      repository.fetch_by_context(
+        code: context[:code],
+        group_code: context[:group_code],
+        reason_code: context[:reason_code],
+        remark_code: context[:remark_code]
+      )
     end
 
     def build_response(context, rule)
       {
         code: context[:code] || rule["code"],
         group_code: context[:group_code].presence || rule["group_code"],
+        reason_code: context[:reason_code],
         remark_code: context[:remark_code].presence || rule["remark_code"],
         description: rule["description"] || rule["reason"],
         reason: rule["reason"],
@@ -89,6 +111,7 @@ module Claims
       {
         code: context[:code],
         group_code: context[:group_code],
+        reason_code: context[:reason_code],
         remark_code: context[:remark_code],
         reason: "No rule found. Escalate to manual review.",
         suggested_correction: "Verify documentation and payer requirements.",
