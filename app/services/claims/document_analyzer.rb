@@ -20,12 +20,35 @@ module Claims
     attr_reader :file
 
     def pdf_file?
-      return false unless file.respond_to?(:content_type) || file.respond_to?(:original_filename)
+      # 1) Content-Type says PDF
+      if file.respond_to?(:content_type)
+        type = file.content_type.to_s.downcase
+        return true if type == "application/pdf"
+      end
 
-      type = file.respond_to?(:content_type) ? file.content_type : nil
-      name = file.respond_to?(:original_filename) ? file.original_filename : nil
-      return true if type&.downcase == "application/pdf"
-      return true if name&.downcase&.end_with?(".pdf")
+      # 2) Uploaded filename indicates PDF
+      if file.respond_to?(:original_filename)
+        name = file.original_filename.to_s.downcase
+        return true if name.end_with?(".pdf")
+      end
+
+      # 3) Local file path indicates PDF
+      if file.respond_to?(:path)
+        path = file.path.to_s.downcase
+        return true if path.end_with?(".pdf")
+      end
+
+      # 4) Magic header sniff: starts with %PDF-
+      if file.respond_to?(:read)
+        begin
+          # Peek the first 5 bytes, then rewind to not disturb readers
+          head = file.read(5)
+          file.rewind if file.respond_to?(:rewind)
+          return true if head.to_s.start_with?("%PDF-")
+        rescue StandardError
+          # Ignore sniffing errors and fall back to non-PDF
+        end
+      end
 
       false
     end
