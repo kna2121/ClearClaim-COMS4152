@@ -11,6 +11,7 @@ class ClaimsController < ApplicationController
   end
 
   def suggest_corrections
+    # Accept both legacy `denial_codes` arrays and the new `denials` tuple payloads
     suggestions = Claims::CorrectionSuggester.new(denial_codes: denial_payload).call
     render json: { suggestions: suggestions }
   end
@@ -42,6 +43,7 @@ class ClaimsController < ApplicationController
   end
 
   def denial_payload
+    # Support both `denials` (tuple arrays) and `denial_codes` (legacy strings).
     params[:denials] || params[:denial_codes] || []
   end
 end

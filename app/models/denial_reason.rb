@@ -1,12 +1,15 @@
 class DenialReason < ApplicationRecord
   validates :code, presence: true, uniqueness: true
 
+  # Keep codes normalized so lookups succeed regardless of input casing/style.
   before_save :normalize_codes!
 
+  # Provide a consistent fallback string when a record lacks a human description.
   def reason_text
     description.presence || "Reason details unavailable."
   end
 
+  # Expose a hash compatible with the existing rule lookup contract.
   def to_rule_hash
     {
       "code" => code,
@@ -23,6 +26,7 @@ class DenialReason < ApplicationRecord
 
   private
 
+  # Normalize each code attribute to upper-case strings and deduplicate arrays.
   def normalize_codes!
     self.code = code.to_s.strip if code.present?
     self.group_code = normalize_code(group_code)
