@@ -1,43 +1,56 @@
-require "erb"
+# frozen_string_literal: true
+require "openai"
 
 module Appeals
-  # Assembles an appeal draft and leaves hooks for LLM polishing/export
   class AppealGenerator
-    TEMPLATE_ROOT = Rails.root.join("app", "views", "appeals", "templates")
-
-    def initialize(claim:, denial_reasons:, template: "default_letter")
+    def initialize(claim:, denial_reasons:, template:)
       @claim = claim
       @denial_reasons = denial_reasons
       @template = template
     end
 
     def call
-      rendered = render_template
-      polished = polish_with_llm(rendered)
-      {
-        format: :text,
-        body: polished,
-        metadata: {
-          template: template,
-          polish: "llm_placeholder"
-        }
-      }
+      prompt = build_prompt
+      response_text = query_llm(prompt)
+      { appeal_letter: response_text }   
+    rescue StandardError => e
+      { error: "LLM generation failed: #{e.message}" } 
     end
 
     private
 
-    attr_reader :claim, :denial_reasons, :template
+    def build_prompt
+      <<~PROMPT
+        You are an expert healthcare billing specialist.
+        Generate a clear, professional insurance appeal letter based on the following information:
 
-    def render_template
-      template_path = TEMPLATE_ROOT.join("#{template}.erb")
-      raise ArgumentError, "template #{template} not found" unless File.exist?(template_path)
+        Claim number: #{@claim[:claim_number]}
+        Patient: #{@claim[:patient_name]}
+        Payer: #{@claim[:payer_name]}
+        Service period: #{@claim[:service_period]}
+        Denial reasons: #{@denial_reasons.join(', ')}
 
-      ERB.new(File.read(template_path)).result(binding)
+        Use formal tone and clear formatting.
+      PROMPT
     end
 
-    def polish_with_llm(body)
-      # Slot in OpenAI/Anthropic or an internal model here.
-      body
-    end
+   def query_llm(prompt)
+    client = OpenAI::Client.new
+
+    response = client.chat(
+      parameters: {
+        model: "gpt-4",
+        messages: [
+          { role: "system", content: "You are a medical claim appeal assistant." },
+          { role: "user", content: prompt }
+        ],
+        temperature: 0.6
+      }
+    )
+
+    puts response.dig("choices", 0, "message", "content") || "No response from LLM"
+  end
+
+
   end
 end
