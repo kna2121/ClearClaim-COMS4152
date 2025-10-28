@@ -46,6 +46,38 @@ RSpec.describe Claims::CorrectionSuggester do
       expect(pr_response[:reason_code]).to eq("96")
     end
 
+    it "supports hash payload with string keys" do
+      suggestions = described_class.new(
+        denial_codes: [
+          {
+            "code" => "125",
+            "group_code" => "co",
+            "reason_code" => "29",
+            "remark_code" => "n211"
+          }
+        ]
+      ).call
+
+      expect(suggestions).to contain_exactly(
+        a_hash_including(
+          code: "125",
+          group_code: "CO",
+          reason_code: "29",
+          remark_code: "N211"
+        )
+      )
+    end
+
+    it "supports plain code strings as entries" do
+      other_reason = create(:denial_reason, code: "200", description: "Generic denial")
+
+      suggestions = described_class.new(denial_codes: ["200"]).call
+
+      expect(suggestions).to contain_exactly(
+        a_hash_including(code: other_reason.code, reason: "Generic denial")
+      )
+    end
+
     it "returns fallback when no data matches" do
       suggestions = described_class.new(denial_codes: [["CO99", "N999"]]).call
 

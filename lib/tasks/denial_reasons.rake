@@ -2,6 +2,7 @@ require "csv"
 require "fileutils"
 
 namespace :denial_reasons do
+  # Shared helpers between rake task and seeds ensure consistent normalization.
   def sanitize_field(value)
     value.to_s.strip.presence
   end
@@ -29,6 +30,7 @@ namespace :denial_reasons do
     abort "CSV not found at #{path}" unless File.exist?(path)
 
     imported = 0
+    # Mirror db/seeds logic so ops can refresh data without redeploying.
     CSV.foreach(path, headers: true) do |row|
       code = sanitize_field(row["EOB CODE"])
       next if code.blank?

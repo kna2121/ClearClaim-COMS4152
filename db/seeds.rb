@@ -2,6 +2,7 @@
 
 require "csv"
 
+# Utility helpers mirror the rake task so both can share normalization logic.
 def sanitize_field(value)
   value.to_s.strip.presence
 end
@@ -28,6 +29,7 @@ csv_path = Rails.root.join("config", "EOBList.csv")
 if File.exist?(csv_path)
   puts "Importing denial reasons from #{csv_path}..."
   CSV.foreach(csv_path, headers: true) do |row|
+    # Each row mirrors the payer crosswalk; normalize the interesting bits and persist/update the record.
     code = sanitize_field(row["EOB CODE"])
     next if code.blank?
 

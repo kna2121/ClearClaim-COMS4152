@@ -7,16 +7,19 @@ module DenialRules
       @path = path
     end
 
+    # Public shortcut for code-only lookups.
     def fetch(code)
       fetch_by_context(code: code)
     end
 
+    # Resolves a denial reason using any combination of identifiers provided by the caller.
     def fetch_by_context(code: nil, group_code: nil, reason_code: nil, remark_code: nil)
       normalized_code = normalize(code)
       normalized_group = normalize(group_code)
       normalized_reason = normalize(reason_code, preserve_numeric: true)
       normalized_remark = normalize(remark_code)
 
+      # Prefer DB matches, but fall back to YAML if needed so the API always returns something.
       database_rule_by_code(normalized_code) ||
         database_rule_by_group_and_remark(normalized_group, normalized_remark) ||
         database_rule_by_group_and_reason(normalized_group, normalized_reason) ||
@@ -27,6 +30,7 @@ module DenialRules
     end
 
     def all
+      # Merge YAML fallback and DB entries so admin tools can show combined view.
       yaml_rules.merge(database_rules_index)
     end
 
@@ -39,6 +43,7 @@ module DenialRules
       return nil if str.blank?
       return str if preserve_numeric && str.match?(/\A[0-9]+\z/)
 
+      # Group codes are alphabetic; everything else gets uppercased for comparison.
       str.upcase
     end
 
@@ -59,10 +64,12 @@ module DenialRules
       scope.first&.to_rule_hash
     end
 
+    # Attempt to match on group + reason code combo (when remark is missing).
     def database_rule_by_group_and_reason(group_code, reason_code)
       return nil unless table_ready?
       return nil if reason_code.blank?
 
+      # Reason codes live in an array, so iterate rather than using a SQL WHERE ... @> unless we add json indexing.
       scope = DenialReason.all
       scope = scope.where(group_code: group_code) if group_code.present?
       record = scope.find do |denial|
@@ -93,6 +100,7 @@ module DenialRules
     end
 
     def yaml_rules
+      # Load YAML rules once and cache; keys are normalized to upper case.
       @yaml_rules ||= begin
         raw = YAML.load_file(path) || {}
         raw.transform_keys { |key| key.to_s.upcase }
@@ -108,6 +116,7 @@ module DenialRules
     end
 
     def yaml_rule_by_group_and_remark(group_code, remark_code)
+      # YAML payload matches DB schema so we can reuse the same comparison logic.
       yaml_rules.values.find do |rule|
         matches_group = group_code.present? ? rule["group_code"].to_s.upcase == group_code : true
         matches_remark = remark_code.present? ? rule["remark_code"].to_s.upcase == remark_code : true
@@ -120,6 +129,7 @@ module DenialRules
 
       yaml_rules.values.find do |rule|
         matches_group = group_code.present? ? rule["group_code"].to_s.upcase == group_code : true
+        # YAML uses same data shape, so reuse normalization helper for comparisons.
         reasons = Array(rule["reason_codes"]).map { |code| normalize(code, preserve_numeric: true) }
         matches_group && reasons.include?(reason_code)
       end
