@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       post :analyze
       post :suggest_corrections
       post :generate_appeal
-      post "/appeals", to: "appeals#create"
     end
   end
 end

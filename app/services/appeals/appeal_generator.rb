@@ -48,9 +48,7 @@ module Appeals
       }
     )
 
-    puts response.dig("choices", 0, "message", "content") || "No response from LLM"
+    response.dig("choices", 0, "message", "content") || "No response from LLM"
   end
-
-
   end
 end
