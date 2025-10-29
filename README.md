@@ -87,7 +87,7 @@ curl -X POST http://localhost:3000/claims/suggest_corrections \
   }'
 ```
 
-Example appeal generation:\n
+Example appeal generation:  
 To test from terminal:
 ```bash
 curl -X POST http://localhost:3000/claims/generate_appeal \
