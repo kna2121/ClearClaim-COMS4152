@@ -39,7 +39,7 @@ module Appeals
 
     response = client.chat(
       parameters: {
-        model: "gpt-4",
+        model: "gpt-4o-mini",
         messages: [
           { role: "system", content: "You are a medical claim appeal assistant." },
           { role: "user", content: prompt }

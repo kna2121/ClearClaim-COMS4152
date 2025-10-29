@@ -12,3 +12,5 @@
 .DS_Store
 coverage/
 .env
+
+/config/master.key
