@@ -22,7 +22,6 @@ class ClaimsController < ApplicationController
     response = Appeals::AppealGenerator.new(
       claim: claim_payload,
       denial_reasons: denial_reasons,
-      template: params[:template] || "default_letter"
     ).call
 
     render json: response

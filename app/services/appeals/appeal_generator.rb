@@ -3,10 +3,9 @@ require "openai"
 
 module Appeals
   class AppealGenerator
-    def initialize(claim:, denial_reasons:, template:)
+    def initialize(claim:, denial_reasons:)
       @claim = claim
       @denial_reasons = denial_reasons
-      @template = template
     end
 
     def call

@@ -66,7 +66,6 @@ RSpec.describe "ClaimsController", type: :request do
   #     expect(response).to have_http_status(:ok)
   #     payload = JSON.parse(response.body)
   #     expect(payload).to include("body")
-  #     expect(payload.dig("metadata", "template")).to eq("default_letter")
   #   end
   # end
 end
