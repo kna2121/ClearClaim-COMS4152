@@ -32,11 +32,26 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 
 ## Appeal Assistant Architecture
 
-- **Document intake** – `Claims::DocumentAnalyzer` routes uploads to `Claims::PdfAnalyzer` (pdf-reader/combine_pdf) or `Claims::OcrReader` (rtesseract) for text extraction.
+1. **🔍 Intelligent Document Analysis** (`/claims/analyze`)
+   - OCR-powered PDF parsing for EOB documents
+   - Extracts patient demographics, billing codes, and denial reasons
+   - Supports both digital and scanned PDFs
+
+2. **🎯 Smart Correction Suggestions** (`/claims/suggest_corrections`)
+   - Cross-references 1000+ Georgia EOB codes with payer policies
+   - Maps remit codes (CO29, PR3) and remark codes (N211, M86)
+   - Provides actionable correction recommendations
+
+3. **✍️ Automated Appeal Generation** (`/claims/generate_appeal`)
+   - Generates fully formatted, persuasive appeal letters
+   - Cites relevant policy language and supporting documentation
+   - Customizable templates for different payers and denial types
+
+<!-- - **Document intake** – `Claims::DocumentAnalyzer` routes uploads to `Claims::PdfAnalyzer` (pdf-reader/combine_pdf) or `Claims::OcrReader` (rtesseract) for text extraction.
 - **Rule mapping** – `DenialRules::Repository` reads from the `denial_reasons` table (populated via `config/EOBList.csv`) and falls back to `config/denial_rules.yml` so payer logic can change without redeploys.
 - **Appeal drafting** – `Appeals::AppealGenerator` renders ERB templates (see `app/views/appeals/templates`) and leaves a hook to call LLM APIs before exporting via Prawn/Caracal.
 - **Storage targets** – PostgreSQL remains the system of record for claims/denials; ActiveStorage (with S3/GCS/Azure) should store original PDFs and generated appeals once wired up.
-- **Async/AI** – Sidekiq is included so heavy OCR, PDF builds, or LLM calls can move to background jobs in future iterations.
+- **Async/AI** – Sidekiq is included so heavy OCR, PDF builds, or LLM calls can move to background jobs in future iterations. -->
 
 ## HTTP Endpoints
 
