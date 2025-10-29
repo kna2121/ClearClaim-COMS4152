@@ -113,3 +113,25 @@ bundle exec cucumber
 ```
 
 Both suites currently include a simple smoke test covering the landing page.
+
+### Targeted Denial Logic Tests
+
+- Service and repository behaviour for denial lookups lives under `spec/services`. Run just those specs with:
+
+  ```bash
+  bundle exec rspec spec/services/claims/correction_suggester_spec.rb spec/services/denial_rules/repository_spec.rb
+  ```
+
+- Controller behaviour (tuple payloads, JSON responses) is covered by `spec/requests/claims_controller_spec.rb`:
+
+  ```bash
+  bundle exec rspec spec/requests/claims_controller_spec.rb
+  ```
+
+- End-to-end cucumber scenario for ERA tuples is defined in `features/denial_corrections.feature`:
+
+  ```bash
+  bundle exec cucumber features/denial_corrections.feature
+  ```
+
+These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
