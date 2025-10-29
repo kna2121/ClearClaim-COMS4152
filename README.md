@@ -32,20 +32,26 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 
 ## Appeal Assistant Architecture
 
-1. **🔍 Intelligent Document Analysis** (`/claims/analyze`)
-   - OCR-powered PDF parsing for EOB documents
+#### 1. 📤 **PDF Upload** (via API or Web Interface)
+   - Accepts EOB documents in PDF format (digital or scanned)
+   - Handles both machine-readable and image-based PDFs
+
+#### 2. 🔍 **Intelligent Document Analysis** (`/claims/analyze`)
+   - OCR-powered PDF parsing for EOB documents using RTesseract
    - Extracts patient demographics, billing codes, and denial reasons
-   - Supports both digital and scanned PDFs
+   - Parses billing line items with service dates and amounts
 
-2. **🎯 Smart Correction Suggestions** (`/claims/suggest_corrections`)
+#### 3. 🎯 **Smart Correction Suggestions** (`/claims/suggest_corrections`)
    - Cross-references 1000+ Georgia EOB codes with payer policies
-   - Maps remit codes (CO29, PR3) and remark codes (N211, M86)
-   - Provides actionable correction recommendations
+   - Maps important denial codes (eg: remit codes and remark codes) to detailed explanations
+   - Provides actionable correction recommendations for each denial
 
-3. **✍️ Automated Appeal Generation** (`/claims/generate_appeal`)
-   - Generates fully formatted, persuasive appeal letters
+#### 4. ✍️ **Automated Appeal Generation** (`/claims/generate_appeal`)
+   - Input deidentified patient information to LLM to generates fully formatted, persuasive appeal letters.
    - Cites relevant policy language and supporting documentation
    - Customizable templates for different payers and denial types
+   - Addresses each denial code with specific corrections
+
 
 <!-- - **Document intake** – `Claims::DocumentAnalyzer` routes uploads to `Claims::PdfAnalyzer` (pdf-reader/combine_pdf) or `Claims::OcrReader` (rtesseract) for text extraction.
 - **Rule mapping** – `DenialRules::Repository` reads from the `denial_reasons` table (populated via `config/EOBList.csv`) and falls back to `config/denial_rules.yml` so payer logic can change without redeploys.
