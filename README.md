@@ -87,7 +87,7 @@ curl -X POST http://localhost:3000/claims/suggest_corrections \
   }'
 ```
 
-Example appeal generation:
+Example appeal generation:\n
 To test from terminal:
 ```bash
 curl -X POST http://localhost:3000/claims/generate_appeal \
@@ -104,8 +104,10 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
   }'
 ```
 To test from rails console:
-`rails c`
+
 ```
+rails c
+
 service = Appeals::AppealGenerator.new(
 claim: { claim_number: "A123", patient_name: "John Doe", payer_name: "Aetna", service_period: "2025-01-10" },
 denial_reasons: ["Missing pre-authorization"]
