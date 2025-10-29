@@ -18,7 +18,7 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    bundle install
    ```
 
-3. Set up the database:
+3. Set up the database (make sure postgresql is running on your machine):
 
    ```bash
    bin/rails db:setup
@@ -34,17 +34,17 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 
 - **Document intake** – `Claims::DocumentAnalyzer` routes uploads to `Claims::PdfAnalyzer` (pdf-reader/combine_pdf) or `Claims::OcrReader` (rtesseract) for text extraction.
 - **Rule mapping** – `DenialRules::Repository` reads from the `denial_reasons` table (populated via `config/EOBList.csv`) and falls back to `config/denial_rules.yml` so payer logic can change without redeploys.
-- **Appeal drafting** – `Appeals::AppealGenerator` renders ERB templates (see `app/views/appeals/templates`) and leaves a hook to call LLM APIs before exporting via Prawn/Caracal.
+- **Appeal Generating** – `Appeals::AppealGenerator` queries gpt-4o-mini using an openai api key and generates appeal letters for denied claims. It takes in specific information about the case to write a strong appeal letter.
 - **Storage targets** – PostgreSQL remains the system of record for claims/denials; ActiveStorage (with S3/GCS/Azure) should store original PDFs and generated appeals once wired up.
 - **Async/AI** – Sidekiq is included so heavy OCR, PDF builds, or LLM calls can move to background jobs in future iterations.
 
-## HTTP Endpoints
+## HTTP Endpoints (Specific Testing)
 
 | Endpoint | Purpose | Required params |
 | --- | --- | --- |
 | `POST /claims/analyze` | Ingest a denied-claim PDF/image and return extracted metadata and denial codes. | `file` (multipart upload) |
 | `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[remit_code, remark_code]` tuples like `["CO45","N54"]`) to stored reasons/corrections. | `denial_codes[]` |
-| `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`, optional `template` |
+| `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`
 
 Example request to analyze a PDF:
 
@@ -67,7 +67,7 @@ curl -X POST http://localhost:3000/claims/suggest_corrections \
 ```
 
 Example appeal generation:
-
+To test from terminal:
 ```bash
 curl -X POST http://localhost:3000/claims/generate_appeal \
   -H "Content-Type: application/json" \
@@ -82,6 +82,16 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
     "denial_codes": ["CO45", "PR204"]
   }'
 ```
+To test from rails console:
+`rails c`
+```
+service = Appeals::AppealGenerator.new(
+claim: { claim_number: "A123", patient_name: "John Doe", payer_name: "Aetna", service_period: "2025-01-10" },
+denial_reasons: ["Missing pre-authorization"]
+)
+puts service.call[:appeal_letter]
+```
+
 
 ## Configuring OCR & Rules
 
