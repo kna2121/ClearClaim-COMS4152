@@ -90,6 +90,7 @@ curl -X POST http://localhost:3000/claims/suggest_corrections \
 
 Example appeal generation:  
 To test from terminal:
+** You must have environment variable $OPENAI_API_KEY set for this to work.
 ```bash
 curl -X POST http://localhost:3000/claims/generate_appeal \
   -H "Content-Type: application/json" \
@@ -104,7 +105,7 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
     "denial_codes": ["CO45", "PR204"]
   }'
 ```
-To test from rails console:
+To test from rails console:  
 `rails c`
 ```
 
