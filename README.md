@@ -131,6 +131,16 @@ puts service.call[:appeal_letter]
 - Export the curated DB for auditing/sharing with `bin/rails denial_reasons:export_csv[optional/output.csv]`.
 - `Claims::CorrectionSuggester` consumes these records, so the REST API immediately reflects any newly imported or edited codes.
 
+## 🚀 Deployment
+
+The production app is deployed on Heroku.
+You can access the live instance here:
+
+👉link
+
+The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
+so no manual setup is required to test the deployed app.
+
 ## Testing
 
 Run RSpec:
