@@ -136,10 +136,14 @@ puts service.call[:appeal_letter]
 The production app is deployed on Heroku.
 You can access the live instance here:
 
-👉link
+👉link: https://clearclaim-coms4152-c1ad14d4491b.herokuapp.com/
 
 The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
 so no manual setup is required to test the deployed app.
+However in order to be able to test it locally you need an openai api key. Its unsafe and bad practice to commit api keys in github so it is not stored here.
+You can store your api key as an environment variable with the following command
+`export OPENAI_API_KEY="your_key"`
+
 
 ## Testing
 
