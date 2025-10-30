@@ -184,3 +184,9 @@ Both suites currently include a simple smoke test covering the landing page.
   ```
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
+
+## Next Steps
+Things we hope to achieve/explore in the next iteration:
+- Using templates for appeal letter generation
+- Adding to our frontend page to increase its usability
+- Finding ways to ensure the security of our patients.
