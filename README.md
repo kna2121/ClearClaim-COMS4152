@@ -153,6 +153,7 @@ Run RSpec:
 ```bash
 bundle exec rspec
 ```
+(95% coverage)
 
 Run Cucumber:
 
