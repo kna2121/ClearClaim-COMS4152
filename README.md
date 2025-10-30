@@ -59,7 +59,7 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 - **Storage targets** – PostgreSQL remains the system of record for claims/denials; ActiveStorage (with S3/GCS/Azure) should store original PDFs and generated appeals once wired up.
 - **Async/AI** – Sidekiq is included so heavy OCR, PDF builds, or LLM calls can move to background jobs in future iterations. -->
 
-## HTTP Endpoints (Specific Testing)
+## HTTP Endpoints
 
 | Endpoint | Purpose | Required params |
 | --- | --- | --- |
@@ -67,6 +67,7 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 | `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[remit_code, remark_code]` tuples like `["CO45","N54"]`) to stored reasons/corrections. | `denial_codes[]` |
 | `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`
 
+# Example Requests to Test Specific Endpoints
 Example request to analyze a PDF:
 
 ```bash
@@ -104,7 +105,6 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
   }'
 ```
 To test from rails console:
-
 ```
 rails c
 
