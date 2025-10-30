@@ -105,8 +105,8 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
   }'
 ```
 To test from rails console:
+`rails c`
 ```
-rails c
 
 service = Appeals::AppealGenerator.new(
 claim: { claim_number: "A123", patient_name: "John Doe", payer_name: "Aetna", service_period: "2025-01-10" },
