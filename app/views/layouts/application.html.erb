@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         padding: 20px;
@@ -34,10 +29,7 @@
         letter-spacing: -1px;
       }
       
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+      .container { max-width: 800px; margin: 0 auto; }
       
       .welcome-section {
         text-align: center;
@@ -52,10 +44,7 @@
         letter-spacing: -1px;
       }
       
-      .welcome-section p {
-        font-size: 20px;
-        opacity: 0.95;
-      }
+      .welcome-section p { font-size: 20px; opacity: 0.95; }
       
       .upload-card {
         background: white;
@@ -76,7 +65,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
       }
       
       .upload-area:hover {
@@ -102,9 +90,7 @@
         margin-bottom: 24px;
       }
       
-      .upload-icon-wrapper svg {
-        color: white;
-      }
+      .upload-icon-wrapper svg { color: white; }
       
       .upload-title {
         font-size: 20px;
@@ -113,14 +99,8 @@
         margin-bottom: 8px;
       }
       
-      .upload-description {
-        font-size: 15px;
-        color: #64748b;
-      }
-      
-      input[type="file"] {
-        display: none;
-      }
+      .upload-description { font-size: 15px; color: #64748b; }
+      input[type="file"] { display: none; }
       
       .file-card {
         background: #f8fafc;
@@ -144,14 +124,8 @@
         flex-shrink: 0;
       }
       
-      .file-icon svg {
-        color: white;
-      }
-      
-      .file-details {
-        flex: 1;
-        min-width: 0;
-      }
+      .file-icon svg { color: white; }
+      .file-details { flex: 1; min-width: 0; }
       
       .file-name {
         font-weight: 600;
@@ -163,10 +137,7 @@
         white-space: nowrap;
       }
       
-      .file-meta {
-        font-size: 14px;
-        color: #64748b;
-      }
+      .file-meta { font-size: 14px; color: #64748b; }
       
       .btn-remove {
         width: 36px;
@@ -183,18 +154,9 @@
         flex-shrink: 0;
       }
       
-      .btn-remove:hover {
-        background: #fecaca;
-        transform: scale(1.1);
-      }
-      
-      .preview-container {
-        margin-bottom: 24px;
-      }
-      
-      .preview-header {
-        margin-bottom: 12px;
-      }
+      .btn-remove:hover { background: #fecaca; transform: scale(1.1); }
+      .preview-container { margin-bottom: 24px; }
+      .preview-header { margin-bottom: 12px; }
       
       .preview-title {
         font-size: 14px;
@@ -247,9 +209,7 @@
         transform: none;
       }
       
-      .spinner {
-        animation: spin 1s linear infinite;
-      }
+      .spinner { animation: spin 1s linear infinite; }
       
       .spinner circle {
         stroke-dasharray: 90, 150;
@@ -257,23 +217,12 @@
         animation: dash 1.5s ease-in-out infinite;
       }
       
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
+      @keyframes spin { to { transform: rotate(360deg); } }
       
       @keyframes dash {
-        0% {
-          stroke-dasharray: 1, 150;
-          stroke-dashoffset: 0;
-        }
-        50% {
-          stroke-dasharray: 90, 150;
-          stroke-dashoffset: -35;
-        }
-        100% {
-          stroke-dasharray: 90, 150;
-          stroke-dashoffset: -124;
-        }
+        0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+        50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+        100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
       }
       
       .results-section {
@@ -285,14 +234,8 @@
       }
       
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       
       .results-header h2 {
@@ -348,26 +291,11 @@
       }
       
       @media (max-width: 768px) {
-        body {
-          padding: 12px;
-        }
-        
-        .welcome-section h1 {
-          font-size: 32px;
-        }
-        
-        .upload-card,
-        .results-section {
-          padding: 32px 24px;
-        }
-        
-        .upload-area {
-          padding: 40px 20px;
-        }
-        
-        .results-grid {
-          grid-template-columns: 1fr;
-        }
+        body { padding: 12px; }
+        .welcome-section h1 { font-size: 32px; }
+        .upload-card, .results-section { padding: 32px 24px; }
+        .upload-area { padding: 40px 20px; }
+        .results-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
