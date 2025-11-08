@@ -2,7 +2,7 @@
   <h1>Generated Appeal Letter</h1>
 
   <% if @appeal_letter.present? %>
-    <pre class="appeal-letter"><%= @appeal_letter.gsub('\n', "\n") %></pre>
+    <pre class="appeal-letter"><%= JSON.pretty_generate(@appeal_letter) rescue @appeal_letter.to_s %></pre>
   <% else %>
     <p>No appeal letter found. Please return to <%= link_to 'upload page', root_path %>.</p>
   <% end %>

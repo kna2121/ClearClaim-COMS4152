@@ -25,7 +25,7 @@ class ClaimsController < ApplicationController
       claim: claim_payload,
       denial_reasons: denial_reasons,
     ).call
-    render json: { appeal_letter: appeal_letter }
+    render json: { appeal_letter: appeal_letter.to_s }
     
   rescue ArgumentError => e
     render json: { error: e.message }, status: :unprocessable_entity
