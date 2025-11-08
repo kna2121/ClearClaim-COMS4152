@@ -1,16 +1,19 @@
+# frozen_string_literal: true
 
-When("I click the upload area") do
-    find("#upload-area").click
+Given('I visit the home page') do
+  visit root_path
 end
 
-And("I upload {string}") do |filename|
-  attach_file("pdf-input", Rails.root.join("spec/fixtures/files", filename))
+Then('I should see {string}') do |expected_text|
+  expect(page).to have_content(expected_text)
 end
 
-Then("I should see the file name {string}") do |filename|
-  using_wait_time 5 do 
-    expect(page).to have_content(filename)
-  end
+When("I upload {string}") do |filename|
+  attach_file("pdf-input", Rails.root.join("spec/fixtures/files", filename), visible: false)
+end
+
+Then("the {string} button should become enabled") do |button_text|
+  expect(page).to have_button(button_text, disabled: false)
 end
 
 And("I press {string}") do |button_text|
@@ -21,6 +24,3 @@ And("I press {string}") do |button_text|
   click_button(button_text)
 end
 
-Then("I should see {string}") do |expected_text|
-  expect(page).to have_content(expected_text)
-end
