@@ -72,10 +72,16 @@
     <div id="results-content" class="results-grid"></div>
     
     <div class="action-buttons" style="display: none;" id="action-buttons">
-      <button class="btn-secondary" onclick="generateAppeal()">Generate Appeal Letter</button>
+      <button class="btn-secondary" id="generate-appeal-btn" type="button">Generate Appeal Letter</button>
       <button class="btn-secondary" onclick="resetForm()">Analyze Another Document</button>
     </div>
   </div>
+
+  <div id="appeal-section" style="display:none; margin-top:1.5rem;">
+    <h3>Generated Appeal Letter</h3>
+    <pre id="appeal-output" class="appeal-text"></pre>
+  </div>
+  
 
   <div id="error-section" class="error-section" style="display: none;">
     <div class="error-content" id="error-content"></div>

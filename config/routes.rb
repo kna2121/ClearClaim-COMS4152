@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       post :generate_appeal
     end
   end
+  get "/appeal_letter", to: "appeals#show"
 end

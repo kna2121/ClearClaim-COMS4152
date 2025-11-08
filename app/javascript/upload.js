@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const btnLoading = document.getElementById('btn-loading');
   const actionButtons = document.getElementById('action-buttons');
   
-  let currentClaimData = null;
+  window.currentClaimData = null;
   
   // File upload handlers
   uploadArea.addEventListener('click', () => pdfInput.click());
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Form submission
   uploadForm.addEventListener('submit', async (e) => {
+
     e.preventDefault();
     
     const file = pdfInput.files[0];
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const data = await response.json();
       
       if (response.ok && data.claim) {
-        currentClaimData = data.claim;
+        window.currentClaimData = data.claim;
         displayResults(data.claim);
       } else {
         throw new Error(data.error || 'Failed to analyze document');
@@ -188,23 +189,61 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   async function generateAppeal() {
-    if (!currentClaimData) {
-      alert('No claim data available');
-      return;
+    const generateBtn = document.getElementById('generate-appeal-btn');
+    generateBtn.disabled = true;
+    generateBtn.textContent = 'Generating...';
+
+    try {
+      const response = await fetch('/claims/generate_appeal', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': document.querySelector('[name="authenticity_token"]').value
+        },
+        body: JSON.stringify({
+          claim: currentClaimData,
+          denial_codes: [{ code: 'CO197', reason: 'Missing pre-authorization' }]
+        })
+      });
+
+      // Read body once safely
+      const text = await response.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error('Server returned non-JSON response: ' + text);
+      }
+
+      if (response.ok && data.appeal_letter) {
+        // Option 1: short letters — pass via URL
+        const encoded = encodeURIComponent(data.appeal_letter);
+        window.location.href = `/appeal_letter?content=${encoded}`;
+
+      } else {
+        throw new Error(data.error || 'Failed to generate appeal letter.');
+      }
+    } catch (error) {
+      console.error('Error generating appeal:', error);
+      alert('Something went wrong: ' + error.message);
+    } finally {
+      generateBtn.disabled = false;
+      generateBtn.textContent = 'Generate Appeal Letter';
     }
-    
-    // This is where you'd integrate with the appeal generation endpoint
-    alert('Appeal generation would happen here with claim data: ' + JSON.stringify(currentClaimData));
-    // TODO: Implement actual appeal generation
   }
   
-  function formatBytes(bytes) {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+  const generateBtn = document.getElementById('generate-appeal-btn');
+  if (generateBtn) {
+    generateBtn.addEventListener('click', generateAppeal);
   }
+    
+    function formatBytes(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+    }
 });
 
 
@@ -231,7 +270,3 @@ window.resetForm = function() {
   }
 };
 
-window.generateAppeal = function() {
-  alert('Appeal generation would happen here');
-  // TODO: Implement actual appeal generation
-};

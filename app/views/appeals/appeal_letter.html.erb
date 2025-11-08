@@ -1,0 +1,27 @@
+<div class="appeal-container">
+  <h1>Generated Appeal Letter</h1>
+
+  <% if @appeal_letter.present? %>
+    <pre class="appeal-letter"><%= @appeal_letter.gsub('\n', "\n") %></pre>
+  <% else %>
+    <p>No appeal letter found. Please return to <%= link_to 'upload page', root_path %>.</p>
+  <% end %>
+</div>
+
+<style>
+.appeal-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.appeal-letter {
+  white-space: pre-wrap;
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #222;
+}
+</style>
