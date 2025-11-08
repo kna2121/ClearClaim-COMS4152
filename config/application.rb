@@ -15,5 +15,6 @@ module AiAppealAssistant
       g.helper_specs false
       g.view_specs false
     end
+    config.assets.paths << Rails.root.join('app', 'assets', 'javascripts')
   end
 end
