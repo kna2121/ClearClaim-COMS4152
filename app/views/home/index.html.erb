@@ -1,7 +1,8 @@
 <div class="container">
   <div class="welcome-section">
-    <h1>Let's get started</h1>
-    <p>Upload your claim document to begin analysis</p>
+    <h1>Your AI Appeal Assistant</h1>
+    <p class="tagline">Get started</p>
+    <p>Upload your medical claim document to begin automated analysis</p>
   </div>
 
   <div class="upload-card">
@@ -16,8 +17,8 @@
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
         </div>
-        <h3 class="upload-title">Choose a file or drag it here</h3>
-        <p class="upload-description">PDF files only • Maximum size 10MB</p>
+        <h3 class="upload-title">Choose a PDF file or drag it here</h3>
+        <p class="upload-description">Medical claim documents • PDF format • Maximum size 10MB</p>
         <input type="file" name="file" accept="application/pdf" required id="pdf-input">
       </div>
       
@@ -65,142 +66,21 @@
 
   <div id="results-section" class="results-section" style="display: none;">
     <div class="results-header">
-      <h2>Analysis Results</h2>
+      <h2>Claim Analysis Results</h2>
+      <p class="results-subtitle">Document successfully parsed and analyzed</p>
     </div>
     <div id="results-content" class="results-grid"></div>
+    
+    <div class="action-buttons" style="display: none;" id="action-buttons">
+      <button class="btn-secondary" onclick="generateAppeal()">Generate Appeal Letter</button>
+      <button class="btn-secondary" onclick="resetForm()">Analyze Another Document</button>
+    </div>
+  </div>
+
+  <div id="error-section" class="error-section" style="display: none;">
+    <div class="error-content" id="error-content"></div>
   </div>
 </div>
 
-<script>
-  const uploadArea = document.getElementById('upload-area');
-  const pdfInput = document.getElementById('pdf-input');
-  const fileSelected = document.getElementById('file-selected');
-  const previewContainer = document.getElementById('preview-container');
-  const previewIframe = document.getElementById('pdf-preview-iframe');
-  const submitBtn = document.getElementById('submit-btn');
-  const fileName = document.getElementById('file-name');
-  const fileSize = document.getElementById('file-size');
-  const removeFile = document.getElementById('remove-file');
-  const uploadForm = document.getElementById('upload-form');
-  const resultsSection = document.getElementById('results-section');
-  const resultsContent = document.getElementById('results-content');
-  const btnText = document.getElementById('btn-text');
-  const btnLoading = document.getElementById('btn-loading');
-  
-  uploadArea.addEventListener('click', () => pdfInput.click());
-  pdfInput.addEventListener('change', handleFile);
-  
-  uploadArea.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    uploadArea.classList.add('dragging');
-  });
-  
-  uploadArea.addEventListener('dragleave', () => {
-    uploadArea.classList.remove('dragging');
-  });
-  
-  uploadArea.addEventListener('drop', (e) => {
-    e.preventDefault();
-    uploadArea.classList.remove('dragging');
-    if (e.dataTransfer.files.length) {
-      pdfInput.files = e.dataTransfer.files;
-      handleFile();
-    }
-  });
-  
-  function handleFile() {
-    const file = pdfInput.files[0];
-    if (file) {
-      fileName.textContent = file.name;
-      fileSize.textContent = formatBytes(file.size);
-      uploadArea.style.display = 'none';
-      fileSelected.style.display = 'block';
-      submitBtn.disabled = false;
-      
-      const fileURL = URL.createObjectURL(file);
-      previewIframe.src = fileURL;
-    }
-  }
-  
-  removeFile.addEventListener('click', () => {
-    pdfInput.value = '';
-    fileSelected.style.display = 'none';
-    uploadArea.style.display = 'flex';
-    submitBtn.disabled = true;
-    resultsSection.style.display = 'none';
-  });
-  
-  uploadForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(uploadForm);
-    
-    submitBtn.disabled = true;
-    btnText.style.display = 'none';
-    btnLoading.style.display = 'inline-flex';
-    resultsSection.style.display = 'none';
-    
-    try {
-      const response = await fetch('/claims/analyze', {
-        method: 'POST',
-        body: formData,
-        headers: { 'X-CSRF-Token': document.querySelector('[name="authenticity_token"]').value }
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        displayResults(data);
-      } else {
-        displayError(data.error || 'An error occurred while analyzing the document');
-      }
-    } catch (error) {
-      displayError('Failed to analyze document. Please try again.');
-    } finally {
-      submitBtn.disabled = false;
-      btnText.style.display = 'inline';
-      btnLoading.style.display = 'none';
-    }
-  });
-  
-  function displayResults(data) {
-    const claim = data.claim;
-    let html = '';
-    
-    const fields = [
-      { key: 'claim_number', label: 'Claim Number' },
-      { key: 'patient_name', label: 'Patient Name' },
-      { key: 'payer_name', label: 'Payer Name' },
-      { key: 'service_period', label: 'Service Period' },
-      { key: 'submitter_name', label: 'Submitter Name' }
-    ];
-    
-    fields.forEach(field => {
-      if (claim[field.key]) {
-        html += `
-          <div class="result-card">
-            <div class="result-label">${field.label}</div>
-            <div class="result-value">${claim[field.key]}</div>
-          </div>
-        `;
-      }
-    });
-    
-    resultsContent.innerHTML = html;
-    resultsSection.style.display = 'block';
-    setTimeout(() => resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
-  }
-  
-  function displayError(message) {
-    resultsContent.innerHTML = `<div class="error-message">${message}</div>`;
-    resultsSection.style.display = 'block';
-    setTimeout(() => resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
-  }
-  
-  function formatBytes(bytes) {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
-  }
-</script>
+<%= javascript_include_tag 'upload', nonce: true %>
+
