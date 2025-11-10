@@ -6,8 +6,10 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 
 require 'cucumber/rails'
 require 'capybara/cucumber'
+require 'selenium-webdriver'
 require 'factory_bot'
 require 'rspec/expectations'
+require 'rspec/mocks'
 
 ActionController::Base.allow_rescue = false
 
@@ -22,3 +24,17 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World(FactoryBot::Syntax::Methods)
 World(RSpec::Matchers)
+World(RSpec::Mocks::ExampleMethods)
+
+Before do
+  RSpec::Mocks.setup
+end
+
+After do
+  RSpec::Mocks.verify
+  RSpec::Mocks.teardown
+end
+
+
+Capybara.javascript_driver = :selenium_chrome_headless
+Capybara.default_max_wait_time = 10

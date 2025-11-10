@@ -11,6 +11,8 @@
       </div>
     </div>
 
+    <h1 class="letter-title">Generated Appeal Letter</h1>
+
     <% if @appeal_letter.present? %>
       <div class="letter-body">
         <%= simple_format(@appeal_letter, {}, sanitize: true) %>
@@ -67,6 +69,14 @@
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.letter-title {
+  font-size: 1.75rem;
+  margin: 1.5rem 0 1rem;
+  color: #1f2933;
+  font-weight: 700;
+  text-align: left;
 }
 
 .letter-meta {

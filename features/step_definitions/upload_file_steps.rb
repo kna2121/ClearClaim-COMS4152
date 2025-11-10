@@ -17,10 +17,8 @@ Then("the {string} button should become enabled") do |button_text|
 end
 
 And("I press {string}") do |button_text|
-  using_wait_time 10 do # wait up to 10 seconds
-    puts page.html
+  using_wait_time 10 do
     expect(page).to have_button(button_text, disabled: false)
+    click_button(button_text)
   end
-  click_button(button_text)
 end
-

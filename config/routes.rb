@@ -11,4 +11,7 @@ Rails.application.routes.draw do
     end
   end
   get "/appeal_letter", to: "appeals#show"
+
+  # Allow headless browser tests to request favicon without raising errors.
+  get "/favicon.ico", to: proc { [204, {}, []] }
 end
