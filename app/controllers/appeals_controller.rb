@@ -57,6 +57,7 @@ class AppealsController < ApplicationController
         br if idx < lines.length - 1
       end
     end
+    doc.p ""
   end
 
   def cleaned_letter_text(content)
