@@ -88,6 +88,16 @@
   gap: 0.25rem;
 }
 
+.letter-body {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  background: #fdfdfd;
+}
+
 .letter-body p {
   margin-bottom: 1rem;
   line-height: 1.8;
@@ -144,7 +154,8 @@
 
 @media (max-width: 640px) {
   .letter-wrapper {
-    padding: 1.75rem;
+    padding: 1.5rem;
+    max-width: 100%;
   }
 
   .letter-heading {
@@ -155,6 +166,10 @@
 
   .letter-meta {
     text-align: left;
+  }
+
+  .letter-body {
+    max-height: 50vh;
   }
 }
 </style>
