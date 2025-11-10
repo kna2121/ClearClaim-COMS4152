@@ -57,9 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
       fileSelected.style.display = 'block';
       submitBtn.disabled = false;
       
-      // Show PDF preview
-      const fileURL = URL.createObjectURL(file);
-      previewIframe.src = fileURL;
+      // Show PDF preview using a data URL so Chrome/Safari render inline
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        previewIframe.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
     } else {
       alert('Please select a valid PDF file');
       pdfInput.value = '';
@@ -73,10 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.disabled = true;
     resultsSection.style.display = 'none';
     errorSection.style.display = 'none';
-    if (previewIframe.src) {
-      URL.revokeObjectURL(previewIframe.src);
-      previewIframe.src = '';
-    }
+    previewIframe.removeAttribute('src');
   });
   
   // Form submission
@@ -182,10 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     errorSection.style.display = 'none';
     actionButtons.style.display = 'none';
     currentClaimData = null;
-    if (previewIframe.src) {
-      URL.revokeObjectURL(previewIframe.src);
-      previewIframe.src = '';
-    }
+    previewIframe.removeAttribute('src');
   }
   
   async function generateAppeal() {
@@ -264,9 +261,5 @@ window.resetForm = function() {
   resultsSection.style.display = 'none';
   errorSection.style.display = 'none';
   actionButtons.style.display = 'none';
-  if (previewIframe.src) {
-    URL.revokeObjectURL(previewIframe.src);
-    previewIframe.src = '';
-  }
+  previewIframe.removeAttribute('src');
 };
-
