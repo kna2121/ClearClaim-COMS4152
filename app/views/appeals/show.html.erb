@@ -1,0 +1,150 @@
+<div class="appeal-page">
+  <div class="letter-wrapper">
+    <div class="letter-heading">
+      <div>
+        <p class="brand">ClearClaim</p>
+        <p class="subhead">AI Appeal Assistant</p>
+      </div>
+      <div class="letter-meta">
+        <span>Generated <%= @generated_at&.strftime("%b %d, %Y %I:%M %p") %></span>
+        <span>Reference: <%= params[:ref].presence || "CC-#{@generated_at&.strftime('%Y%m%d')}" %></span>
+      </div>
+    </div>
+
+    <% if @appeal_letter.present? %>
+      <div class="letter-body">
+        <%= simple_format(@appeal_letter, {}, sanitize: true) %>
+      </div>
+    <% else %>
+      <div class="empty-state">
+        <p>No appeal letter was provided. Please return to the <%= link_to 'upload page', root_path %> and try again.</p>
+      </div>
+    <% end %>
+
+    <div class="letter-footer">
+      <p class="disclaimer">Please verify all facts before submitting this appeal to the payer.</p>
+      <%= link_to "← Back to document upload", root_path, class: "btn-secondary" %>
+    </div>
+  </div>
+</div>
+
+<style>
+.appeal-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a8dff 0%, #b066ff 100%);
+  padding: 3rem 1.5rem;
+}
+
+.letter-wrapper {
+  background: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(20, 32, 70, 0.2);
+  padding: 2.5rem;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.letter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4b5bd7;
+  margin: 0;
+}
+
+.subhead {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.letter-meta {
+  text-align: right;
+  color: #6b7280;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.letter-body p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #1f2933;
+  font-size: 1.08rem;
+}
+
+.letter-body p:last-child {
+  margin-bottom: 0;
+}
+
+.letter-footer {
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.disclaimer {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #f3f4f6;
+  color: #1f2933;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.empty-state {
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px dashed #d1d5db;
+  text-align: center;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .letter-wrapper {
+    padding: 1.75rem;
+  }
+
+  .letter-heading {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .letter-meta {
+    text-align: left;
+  }
+}
+</style>

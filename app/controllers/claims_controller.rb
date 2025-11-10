@@ -21,11 +21,16 @@ class ClaimsController < ApplicationController
     claim_payload = claim_params.to_h.symbolize_keys
     denial_reasons = Claims::CorrectionSuggester.new(denial_codes: denial_payload).call
     puts 
-    appeal_letter = Appeals::AppealGenerator.new(
+    appeal_result = Appeals::AppealGenerator.new(
       claim: claim_payload,
       denial_reasons: denial_reasons,
     ).call
-    render json: { appeal_letter: appeal_letter.to_s }
+    
+    if appeal_result[:error].present?
+      render json: { error: appeal_result[:error] }, status: :unprocessable_entity
+    else
+      render json: appeal_result
+    end
     
   rescue ArgumentError => e
     render json: { error: e.message }, status: :unprocessable_entity
