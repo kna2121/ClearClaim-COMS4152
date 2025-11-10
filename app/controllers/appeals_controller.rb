@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+require "caracal"
+
 # app/controllers/appeals_controller.rb
 class AppealsController < ApplicationController
   def show
@@ -17,7 +21,7 @@ class AppealsController < ApplicationController
 
   def send_letter_download(format)
     filename = "appeal_letter_#{Time.current.strftime('%Y%m%d_%H%M%S')}"
-    body = @appeal_letter.presence || "No appeal letter generated."
+    body = cleaned_letter_text(@appeal_letter)
 
     case format
     when :docx
@@ -34,14 +38,33 @@ class AppealsController < ApplicationController
         doc.hr
 
         content.to_s.split(/\n{2,}/).each do |paragraph|
-          next if paragraph.strip.blank?
-          doc.p paragraph.strip
+          add_paragraph(doc, paragraph)
         end
       end
 
       file.rewind
       return file.read
     end
+  end
+
+  def add_paragraph(doc, paragraph)
+    lines = paragraph.to_s.split(/\n+/).map(&:strip).reject(&:blank?)
+    return if lines.empty?
+
+    doc.p do
+      lines.each_with_index do |line, idx|
+        text line
+        br if idx < lines.length - 1
+      end
+    end
+  end
+
+  def cleaned_letter_text(content)
+    text = content.to_s
+    text.gsub!(/\*\*(.*?)\*\*/, '\1')
+    text.gsub!(/\*\*Attachments.*\z/mi, "")
+    text.strip!
+    text.presence || "No appeal letter generated."
   end
 
   def normalize_letter(raw_content)
@@ -73,6 +96,3 @@ class AppealsController < ApplicationController
     parse_json_payload(json_like)
   end
 end
-# frozen_string_literal: true
-
-require "caracal"
