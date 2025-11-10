@@ -5,10 +5,10 @@ RSpec.describe 'PDF Upload Feature', type: :feature do
   scenario 'user visits home page and sees upload interface' do
     visit root_path
     
-    expect(page).to have_content("Let's get started")
-    expect(page).to have_content('Upload your claim document to begin analysis')
-    expect(page).to have_content('Choose a file or drag it here')
-    expect(page).to have_content('PDF files only')
+    expect(page).to have_content('Get started')
+    expect(page).to have_content('Upload your medical claim document to begin automated analysis')
+    expect(page).to have_content('Choose a PDF file or drag it here')
+    expect(page).to have_content('Medical claim documents • PDF format • Maximum size 10MB')
   end
   
   scenario 'displays ClearClaim branding' do
