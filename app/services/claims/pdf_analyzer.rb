@@ -42,6 +42,9 @@ module Claims
       demographics = extract_demographics(text)
       line_items = extract_line_items(text)
       all_denial_codes = extract_all_denial_codes(text)
+    
+      payer_name = extract_payer_name(text)
+      submitter_name = "ClearClaim Assistant"
       
       {
         source: "pdf",
@@ -51,7 +54,9 @@ module Claims
         denial_codes: all_denial_codes,
         # Legacy compatibility fields
         patient_name: demographics[:patient_name],
-        claim_number: demographics[:icn],
+        claim_number: demographics[:icn],  # ICN is the claim number
+        payer_name: payer_name,
+        submitter_name: submitter_name,
         service_period: extract_service_period(line_items)
       }
     end
@@ -209,6 +214,32 @@ module Claims
       value = value.split(/\s{2,}[A-Z][A-Za-z\s\/#-]*:/, 2)[0].to_s
 
       value.strip.presence
+    end
+
+      # Add method to extract payer name (insurance company)
+    def extract_payer_name(text)
+      # Look for insurance company name at the top of the document
+      # Pattern 1: First line that looks like a company name
+      first_lines = text.split("\n").first(5)
+      company_line = first_lines.find { |line| line.match?(/INSURANCE|HEALTH|MEDICAL|CARE/) }
+      return company_line.strip if company_line
+      
+      # Pattern 2: Explicit payer field
+      payer_match = text.match(/Payer:\s*(.+?)(?:\s{2,}|\n)/i)
+      payer_match[1].strip if payer_match
+    end
+
+    # Add method to extract submitter/provider name
+    # Deprecated: submitter is now fixed to "ClearClaim Assistant".
+
+    # Update service period extraction to handle single dates
+    def extract_service_period(line_items)
+      return nil if line_items.empty?
+      
+      dates = line_items.map { |item| item[:service_date] }.compact.uniq.sort
+      return dates.first if dates.size == 1
+      
+      "#{dates.first} - #{dates.last}"
     end
   end
 end
