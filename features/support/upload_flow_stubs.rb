@@ -6,7 +6,7 @@ Before('@upload_flow') do
     patient_name: "Dave Doe",
     payer_name: "Acme Health",
     service_period: "11/27/2024",
-    submitter_name: "ClearClaim Clinic"
+    submitter_name: "ClearClaim Assistant"
   }
 
   analyzer_double = instance_double(Claims::DocumentAnalyzer, call: sample_claim)

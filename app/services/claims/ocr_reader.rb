@@ -37,9 +37,11 @@ module Claims
         demographics: demographics,
         line_items: line_items,
         denial_codes: all_denial_codes,
-        # Legacy compatibility
+        # Enhanced fields
         patient_name: demographics[:patient_name],
         claim_number: demographics[:icn],
+        payer_name: extract_payer_name(text),
+        submitter_name: "ClearClaim Assistant",
         service_period: extract_service_period(line_items)
       }
     end
@@ -176,5 +178,16 @@ module Claims
       value = value.split(/\s{2,}[A-Z][A-Za-z\s\/#-]*:/, 2)[0].to_s
       value.strip.presence
     end
+  
+    def extract_payer_name(text)
+      first_lines = text.split("\n").first(5)
+      company_line = first_lines.find { |line| line.match?(/INSURANCE|HEALTH|MEDICAL|CARE/) }
+      return company_line.strip if company_line
+      
+      payer_match = text.match(/Payer:\s*(.+?)(?:\s{2,}|\n)/i)
+      payer_match[1].strip if payer_match
+    end
+
+    # Deprecated: submitter is fixed to "ClearClaim Assistant"
   end
 end
