@@ -40,7 +40,7 @@ module Appeals
    end
 
    def query_llm(prompt)
-    client = OpenAI::Client.new
+    client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
 
     response = client.chat(
       parameters: {
