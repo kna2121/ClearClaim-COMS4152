@@ -161,7 +161,7 @@ Run Cucumber:
 bundle exec cucumber
 ```
 (86% coverage)
-Both suites currently include a simple smoke test covering the landing page.
+
 
 Cucumber user stories can be found in our features/.feature files.
 ## Manual Testing
@@ -188,8 +188,3 @@ On the homepage, upload the provided sample pdf file which can be found under `s
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
 
-## Next Steps
-Things we hope to achieve/explore in the next iteration:
-- Using templates for appeal letter generation
-- Adding to our frontend page to increase its usability
-- Finding ways to ensure the security of our patients.
