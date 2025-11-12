@@ -188,3 +188,5 @@ On the homepage, upload the provided sample pdf file which can be found under `s
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
 
+### Next Steps
+- Handle invalid files
