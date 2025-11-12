@@ -164,8 +164,10 @@ All Files ( 86.88% covered at 5.02 hits/line )
 
 
 Cucumber user stories can be found in our features/.feature files.
-## Manual Testing
-On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`. Then Analyze Document > Generate Appeal.
+## User Testing
+On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`.  
+Then Analyze Document > Generate Appeal.  
+You can then download the appeal letter as a .docx and customize it further.
 ### Targeted Denial Logic Tests
 
 - Service and repository behaviour for denial lookups lives under `spec/services`. Run just those specs with:
