@@ -11,7 +11,7 @@ module Claims
       if pdf_file?
         PdfAnalyzer.new(file: file).call
       else
-        OcrReader.new(file: file).call
+        raise ArgumentError, "Only PDF files are supported"
       end
     end
 

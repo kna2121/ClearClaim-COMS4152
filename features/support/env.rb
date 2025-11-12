@@ -16,7 +16,11 @@ ActionController::Base.allow_rescue = false
 
 begin
   DatabaseCleaner.strategy = :transaction
-  DatabaseCleaner.clean_with(:truncation)
+  begin
+    DatabaseCleaner.clean_with(:truncation)
+  rescue StandardError => e
+    warn "Skipping initial DB clean (database not available): #{e.class}: #{e.message}"
+  end
 rescue NameError
   raise "You need to add 'database_cleaner-active_record' to your Gemfile."
 end
