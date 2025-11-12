@@ -43,15 +43,11 @@ RSpec.describe Claims::DocumentAnalyzer do
     end
 
     context "with a non-PDF file (e.g., PNG)" do
-      it "routes to OcrReader" do
+      it "raises an error indicating only PDFs are supported" do
         png_io = StringIO.new("\x89PNG anything")
-
-        fake_reader = instance_double(Claims::OcrReader)
-        expect(Claims::OcrReader).to receive(:new).with(file: png_io).and_return(fake_reader)
-        expect(fake_reader).to receive(:call).and_return({ source: "ocr", demographics: {} })
-
-        result = described_class.new(file: png_io).call
-        expect(result[:source]).to eq("ocr")
+        expect {
+          described_class.new(file: png_io).call
+        }.to raise_error(ArgumentError, /Only PDF files are supported/)
       end
     end
 
@@ -77,4 +73,3 @@ RSpec.describe Claims::DocumentAnalyzer do
     end
   end
 end
-
