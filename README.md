@@ -141,9 +141,9 @@ You can access the live instance here:
 
 The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
 so no manual setup is required to test the deployed app.
-However in order to be able to test it locally you need an openai api key. Its unsafe and bad practice to commit api keys in github so it is not stored here.
+However in order to be able to test it locally you need an openai api key.
 You can store your api key as an environment variable with the following command
-`export OPENAI_API_KEY="your_key"`
+`export OPENAI_API_KEY="your_key"` or using an .env file.
 
 
 ## Testing
@@ -153,14 +153,14 @@ Run RSpec:
 ```bash
 bundle exec rspec
 ```
-(95% coverage)
+All Files ( 92.65% covered at 19.43 hits/line )
 
 Run Cucumber:
 
 ```bash
 bundle exec cucumber
 ```
-(86% coverage)
+All Files ( 86.88% covered at 5.02 hits/line )
 
 
 Cucumber user stories can be found in our features/.feature files.
