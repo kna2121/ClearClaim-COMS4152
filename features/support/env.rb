@@ -10,6 +10,7 @@ require 'selenium-webdriver'
 require 'factory_bot'
 require 'rspec/expectations'
 require 'rspec/mocks'
+require_relative 'simplecov'
 
 ActionController::Base.allow_rescue = false
 
