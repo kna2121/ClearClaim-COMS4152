@@ -160,7 +160,7 @@ Run Cucumber:
 ```bash
 bundle exec cucumber
 ```
-
+(95% coverage)
 Both suites currently include a simple smoke test covering the landing page.
 
 ## User Stories Covered by Cucumber
