@@ -17,7 +17,7 @@ test:
   database: ai_appeal_assistant_test
 
 production:
-  <<: *default
-  database: ai_appeal_assistant_production
-  username: <%= ENV.fetch("POSTGRES_USER", "ai_appeal_assistant") %>
-  password: <%= ENV.fetch("POSTGRES_PASSWORD", "") %>
+  url: <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
