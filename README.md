@@ -141,9 +141,9 @@ You can access the live instance here:
 
 The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
 so no manual setup is required to test the deployed app.
-However in order to be able to test it locally you need an openai api key. Its unsafe and bad practice to commit api keys in github so it is not stored here.
+However in order to be able to test it locally you need an openai api key.
 You can store your api key as an environment variable with the following command
-`export OPENAI_API_KEY="your_key"`
+`export OPENAI_API_KEY="your_key"` or using an .env file.
 
 
 ## Testing
@@ -153,22 +153,19 @@ Run RSpec:
 ```bash
 bundle exec rspec
 ```
-(95% coverage)
+All Files ( 92.65% covered at 19.43 hits/line )
 
 Run Cucumber:
 
 ```bash
 bundle exec cucumber
 ```
-(95% coverage)
-Both suites currently include a simple smoke test covering the landing page.
+All Files ( 86.88% covered at 5.02 hits/line )
 
-## User Stories Covered by Cucumber
 
-- **Upload → Analyze → Generate** (`features/upload_file.feature`): As a front-line user I upload an EOB, review the extracted claim data, and trigger the AI appeal letter workflow from the UI.
-- **Automated appeal generation API** (`features/generate_appeal.feature`): As a claims processor I call the JSON API with a claim and denial codes and receive a drafted letter referencing the patient/cohort.
-- **Appeal downloads for downstream channels** (`features/appeal_download.feature`): As a specialist preparing submissions, I can download the generated letter either as TXT (for email or fax cover sheets) or DOCX (for payer portals), guaranteeing the exported file contains the body of the appeal.
-
+Cucumber user stories can be found in our features/.feature files.
+## Manual Testing
+On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`. Then Analyze Document > Generate Appeal.
 ### Targeted Denial Logic Tests
 
 - Service and repository behaviour for denial lookups lives under `spec/services`. Run just those specs with:
@@ -191,8 +188,5 @@ Both suites currently include a simple smoke test covering the landing page.
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
 
-## Next Steps
-Things we hope to achieve/explore in the next iteration:
-- Using templates for appeal letter generation
-- Adding to our frontend page to increase its usability
-- Finding ways to ensure the security of our patients.
+### Next Steps
+- Handle invalid files
