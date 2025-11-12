@@ -163,12 +163,9 @@ bundle exec cucumber
 (95% coverage)
 Both suites currently include a simple smoke test covering the landing page.
 
-## User Stories Covered by Cucumber
-
-- **Upload → Analyze → Generate** (`features/upload_file.feature`): As a front-line user I upload an EOB, review the extracted claim data, and trigger the AI appeal letter workflow from the UI.
-- **Automated appeal generation API** (`features/generate_appeal.feature`): As a claims processor I call the JSON API with a claim and denial codes and receive a drafted letter referencing the patient/cohort.
-- **Appeal downloads for downstream channels** (`features/appeal_download.feature`): As a specialist preparing submissions, I can download the generated letter either as TXT (for email or fax cover sheets) or DOCX (for payer portals), guaranteeing the exported file contains the body of the appeal.
-
+Cucumber user stories can be found in our features/.feature files.
+## Manual Testing
+On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`. Then Analyze Document > Generate Appeal.
 ### Targeted Denial Logic Tests
 
 - Service and repository behaviour for denial lookups lives under `spec/services`. Run just those specs with:
