@@ -184,11 +184,26 @@ document.addEventListener('DOMContentLoaded', function() {
     currentClaimData = null;
     previewIframe.removeAttribute('src');
   }
+
+  function extractDenialCodes(claim) {
+    if (!claim) return [];
+
+    const legacy = Array.isArray(claim.denial_codes) ? claim.denial_codes : [];
+    const fromLineItems = Array.isArray(claim.line_items)
+      ? claim.line_items.flatMap((item) => [
+          ...(item.remit_codes || []),
+          ...(item.remark_codes || [])
+        ])
+      : [];
+
+    return [...new Set([...legacy, ...fromLineItems].map((code) => code?.toString().trim()).filter(Boolean))];
+  }
   
   async function generateAppeal() {
     const generateBtn = document.getElementById('generate-appeal-btn');
     generateBtn.disabled = true;
     generateBtn.textContent = 'Generating...';
+    const denialCodes = extractDenialCodes(currentClaimData);
 
     try {
       const response = await fetch('/claims/generate_appeal', {
@@ -199,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         body: JSON.stringify({
           claim: currentClaimData,
-          denial_codes: [{ code: 'CO197', reason: 'Missing pre-authorization' }]
+          denial_codes: denialCodes
         })
       });
 
