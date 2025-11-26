@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { key: 'service_period', label: 'Service Period', icon: '📅' },
       { key: 'submitter_name', label: 'Provider/Submitter', icon: '👨‍⚕️' }
     ];
+    const parsedCodes = extractDenialCodes(claim);
     
     let hasData = false;
     fields.forEach(field => {
@@ -150,6 +151,17 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
       }
     });
+    
+    if (parsedCodes.length) {
+      hasData = true;
+      html += `
+        <div class="result-card">
+          <div class="result-icon">🔖</div>
+          <div class="result-label">Parsed Codes</div>
+          <div class="result-value">${parsedCodes.join(', ')}</div>
+        </div>
+      `;
+    }
     
     if (!hasData) {
       html = '<div class="no-data">No claim data could be extracted. Please ensure the PDF contains a valid medical claim.</div>';
@@ -174,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function resetForm() {
+    // Return UI to initial upload state without leaving the page.
     pdfInput.value = '';
     fileSelected.style.display = 'none';
     uploadArea.style.display = 'flex';
@@ -181,8 +194,10 @@ document.addEventListener('DOMContentLoaded', function() {
     resultsSection.style.display = 'none';
     errorSection.style.display = 'none';
     actionButtons.style.display = 'none';
+    resultsContent.innerHTML = '';
     currentClaimData = null;
     previewIframe.removeAttribute('src');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function extractDenialCodes(claim) {
@@ -248,6 +263,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (generateBtn) {
     generateBtn.addEventListener('click', generateAppeal);
   }
+  const analyzeAnotherBtn = document.getElementById('analyze-another-btn');
+  if (analyzeAnotherBtn) {
+    analyzeAnotherBtn.addEventListener('click', resetForm);
+  }
     
     function formatBytes(bytes) {
       if (bytes === 0) return '0 Bytes';
@@ -260,21 +279,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.resetForm = function() {
-  const pdfInput = document.getElementById('pdf-input');
-  const fileSelected = document.getElementById('file-selected');
-  const uploadArea = document.getElementById('upload-area');
-  const submitBtn = document.getElementById('submit-btn');
-  const resultsSection = document.getElementById('results-section');
-  const errorSection = document.getElementById('error-section');
-  const actionButtons = document.getElementById('action-buttons');
-  const previewIframe = document.getElementById('pdf-preview-iframe');
-  
-  pdfInput.value = '';
-  fileSelected.style.display = 'none';
-  uploadArea.style.display = 'flex';
-  submitBtn.disabled = true;
-  resultsSection.style.display = 'none';
-  errorSection.style.display = 'none';
-  actionButtons.style.display = 'none';
-  previewIframe.removeAttribute('src');
+  resetForm();
 };
