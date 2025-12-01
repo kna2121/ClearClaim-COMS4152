@@ -176,7 +176,7 @@ All Files ( 86.88% covered at 5.02 hits/line )
 
 Cucumber user stories can be found in our features/.feature files.
 ## User Testing
-On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`.  
+On the homepage, upload any of the 3 provided sample pdf files which can be found under `spec/fixtures/`.  
 Then Analyze Document > Generate Appeal.  
 You can then download the appeal letter as a .docx and customize it further.
 ### Targeted Denial Logic Tests
@@ -200,6 +200,3 @@ You can then download the appeal letter as a .docx and customize it further.
   ```
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
-
-### Next Steps
-- Handle invalid files
