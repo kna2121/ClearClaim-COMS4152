@@ -29,6 +29,8 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    ```bash
    bin/rails server
    ```
+Optional: To run locally you need to set an environment variable with your api key. 
+```export OPENAI_API_KEY="your_key"```
 
 ## Appeal Assistant Architecture
 
@@ -141,9 +143,6 @@ You can access the live instance here:
 
 The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
 so no manual setup is required to test the deployed app.
-However in order to be able to test it locally you need an openai api key.
-You can store your api key as an environment variable with the following command
-`export OPENAI_API_KEY="your_key"` or using an .env file.
 
 
 ## Testing
