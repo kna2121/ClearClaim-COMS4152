@@ -29,9 +29,21 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    ```bash
    bin/rails server
    ```
-Optional: To run locally you need to set an environment variable with your api key. 
-```export OPENAI_API_KEY="your_key"```
+## Optional Setup for Local Testing
+Note: We recommend using the deployed version of our app on heroku (linked below). Running locally can lead to running into issues with the database configuration and permissions. However, the instructions below should allow testing in development.
+1. To run locally you need to set an environment variable with your openai api key. 
+```bash
+export OPENAI_API_KEY="your_key"
+```
 
+2. Postgres also has to be configured appropriately in order to run locally. Ensure that postgres is running. As long as your local Postgres lets you connect as postgres with no password you can run the following command:
+ ```bash
+   rails db:setup
+ ```
+3. Start the rails server
+ ```bash
+    rails s
+   ```
 ## Appeal Assistant Architecture
 
 #### 1. 📤 **PDF Upload** (via API or Web Interface)
