@@ -164,14 +164,14 @@ Run RSpec:
 ```bash
 bundle exec rspec
 ```
-All Files ( 92.65% covered at 19.43 hits/line )
+Line Coverage: 92.39% (352 / 381)
 
 Run Cucumber:
 
 ```bash
 bundle exec cucumber
 ```
-All Files ( 86.88% covered at 5.02 hits/line )
+Line Coverage: 86.88% (331 / 381)
 
 
 Cucumber user stories can be found in our features/.feature files.
