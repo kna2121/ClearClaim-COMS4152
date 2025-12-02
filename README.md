@@ -29,7 +29,21 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    ```bash
    bin/rails server
    ```
+## Optional Setup for Local Testing
+Note: We recommend using the deployed version of our app on heroku (linked below). Running locally can lead to running into issues with the database configuration and permissions. However, the instructions below should allow testing in development.
+1. To run locally you need to set an environment variable with your openai api key. 
+```bash
+export OPENAI_API_KEY="your_key"
+```
 
+2. Postgres also has to be configured appropriately in order to run locally. Ensure that postgres is running. As long as your local Postgres lets you connect as postgres with no password you can run the following command:
+ ```bash
+   rails db:setup
+ ```
+3. Start the rails server
+ ```bash
+    rails s
+   ```
 ## Appeal Assistant Architecture
 
 #### 1. 📤 **PDF Upload** (via API or Web Interface)
@@ -141,9 +155,6 @@ You can access the live instance here:
 
 The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
 so no manual setup is required to test the deployed app.
-However in order to be able to test it locally you need an openai api key.
-You can store your api key as an environment variable with the following command
-`export OPENAI_API_KEY="your_key"` or using an .env file.
 
 
 ## Testing
@@ -153,19 +164,19 @@ Run RSpec:
 ```bash
 bundle exec rspec
 ```
-All Files ( 92.65% covered at 19.43 hits/line )
+Line Coverage: 92.39% (352 / 381)
 
 Run Cucumber:
 
 ```bash
 bundle exec cucumber
 ```
-All Files ( 86.88% covered at 5.02 hits/line )
+Line Coverage: 86.88% (331 / 381)
 
 
 Cucumber user stories can be found in our features/.feature files.
 ## User Testing
-On the homepage, upload the provided sample pdf file which can be found under `spec/fixtures/Dave_Doe_EOB_input.pdf`.  
+On the homepage, upload any of the 3 provided sample pdf files which can be found under `spec/fixtures/`.  
 Then Analyze Document > Generate Appeal.  
 You can then download the appeal letter as a .docx and customize it further.
 ### Targeted Denial Logic Tests
@@ -189,6 +200,3 @@ You can then download the appeal letter as a .docx and customize it further.
   ```
 
 These tests assume you have migrated and seeded the database (`bin/rails db:migrate db:seed`) so the denial lookup table exists.
-
-### Next Steps
-- Handle invalid files

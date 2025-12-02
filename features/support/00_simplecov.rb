@@ -1,5 +1,7 @@
 # features/support/simplecov.rb
 require 'simplecov'
+SimpleCov.command_name 'Cucumber'     
+SimpleCov.coverage_dir 'coverage/cucumber'
 
 SimpleCov.start 'rails' do
   add_filter '/features/'  # ignore cucumber test files themselves
