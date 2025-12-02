@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const resultsContent = document.getElementById('results-content');
   const errorSection = document.getElementById('error-section');
   const errorContent = document.getElementById('error-content');
+  const resultsSubtitle = document.querySelector('.results-subtitle');
   const btnText = document.getElementById('btn-text');
   const btnLoading = document.getElementById('btn-loading');
   const actionButtons = document.getElementById('action-buttons');
+  const generateBtn = document.getElementById('generate-appeal-btn');
+  const analyzeAnotherBtn = document.getElementById('analyze-another-btn');
   
   window.currentClaimData = null;
   
@@ -163,10 +166,30 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
     }
     
+    const hasAllBannerFields = fields.every((field) => Boolean(claim[field.key]));
+    const hasCodes = parsedCodes.length > 0;
+    const hasCompleteBanner = hasAllBannerFields && hasCodes;
+
     if (!hasData) {
       html = '<div class="no-data">No claim data could be extracted. Please ensure the PDF contains a valid medical claim.</div>';
+      actionButtons.style.display = 'flex';
+      if (generateBtn) generateBtn.style.display = 'none';
+      if (analyzeAnotherBtn) analyzeAnotherBtn.style.display = 'inline-flex';
+      if (generateBtn) generateBtn.disabled = true;
+      if (resultsSubtitle) resultsSubtitle.textContent = 'Missing required claim details';
+    } else if (!hasCompleteBanner) {
+      html += '<div class="no-data">We could not extract all required claim details. Please upload a complete medical claim PDF to generate an appeal letter.</div>';
+      actionButtons.style.display = 'flex';
+      if (generateBtn) generateBtn.style.display = 'none';
+      if (analyzeAnotherBtn) analyzeAnotherBtn.style.display = 'inline-flex';
+      if (generateBtn) generateBtn.disabled = true;
+      if (resultsSubtitle) resultsSubtitle.textContent = 'Missing required claim details';
     } else {
       actionButtons.style.display = 'flex';
+      if (generateBtn) generateBtn.style.display = 'inline-flex';
+      if (analyzeAnotherBtn) analyzeAnotherBtn.style.display = 'inline-flex';
+      if (generateBtn) generateBtn.disabled = false;
+      if (resultsSubtitle) resultsSubtitle.textContent = 'Document successfully parsed and analyzed';
     }
     
     resultsContent.innerHTML = html;
@@ -194,6 +217,10 @@ document.addEventListener('DOMContentLoaded', function() {
     resultsSection.style.display = 'none';
     errorSection.style.display = 'none';
     actionButtons.style.display = 'none';
+    if (generateBtn) generateBtn.style.display = 'inline-flex';
+    if (analyzeAnotherBtn) analyzeAnotherBtn.style.display = 'inline-flex';
+    if (generateBtn) generateBtn.disabled = true;
+    if (resultsSubtitle) resultsSubtitle.textContent = 'Document successfully parsed and analyzed';
     resultsContent.innerHTML = '';
     currentClaimData = null;
     previewIframe.removeAttribute('src');
@@ -215,7 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   async function generateAppeal() {
-    const generateBtn = document.getElementById('generate-appeal-btn');
+    if (!generateBtn || generateBtn.disabled) return;
+
     generateBtn.disabled = true;
     generateBtn.textContent = 'Generating...';
     const denialCodes = extractDenialCodes(currentClaimData);
@@ -258,12 +286,9 @@ document.addEventListener('DOMContentLoaded', function() {
       generateBtn.textContent = 'Generate Appeal Letter';
     }
   }
-  
-  const generateBtn = document.getElementById('generate-appeal-btn');
   if (generateBtn) {
     generateBtn.addEventListener('click', generateAppeal);
   }
-  const analyzeAnotherBtn = document.getElementById('analyze-another-btn');
   if (analyzeAnotherBtn) {
     analyzeAnotherBtn.addEventListener('click', resetForm);
   }
