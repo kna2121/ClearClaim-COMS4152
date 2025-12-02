@@ -97,9 +97,10 @@ module Claims
     # Format a repository rule into the API response shape.
     def build_response(context, rule)
       {
-        code: context[:code] || rule["code"],
-        group_code: context[:group_code].presence || rule["group_code"],
-        reason_code: context[:reason_code],
+        # Prefer the stored EOB code when we have a rule; otherwise fall back to the provided value.
+        code: rule["code"].presence || context[:code],
+        group_code: rule["group_code"].presence || context[:group_code],
+        reason_code: context[:reason_code].presence || Array(rule["reason_codes"]).first,
         remark_code: context[:remark_code].presence || rule["remark_code"],
         description: rule["description"] || rule["reason"],
         reason: rule["reason"],
@@ -122,7 +123,7 @@ module Claims
     # Provide conservative default guidance when nothing matched upstream.
     def fallback_response(context)
       {
-        code: context[:code],
+        code: nil,
         group_code: context[:group_code],
         reason_code: context[:reason_code],
         remark_code: context[:remark_code],
