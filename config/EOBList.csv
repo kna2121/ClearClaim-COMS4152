@@ -804,3 +804,4 @@ EOB CODE,DESCRIPTION,Rejection Code,Group Code,Reason Code,Remark Code
 997,Refer to the accompanying explanation of benefits code listed for this service.,NULL,NULL,NULL,NULL
 998,This transaction is a refund from this provider.,NULL,CR,P12,NULL
 003,"Denied. Prescription co-pay letter mailed separately to explain this.",NULL,PR,A1,N202
+211,"This remark code indicates the claim decision is final and cannot be appealed.",NULL,N,NULL,N211

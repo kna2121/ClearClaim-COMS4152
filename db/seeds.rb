@@ -12,6 +12,19 @@ def sanitize_code(value)
   str.present? ? str.upcase : nil
 end
 
+def primary_code(eob_code, group_code)
+  code = sanitize_field(eob_code)
+  group = sanitize_code(group_code)
+  return nil if code.blank? && group.blank?
+  return code if group.blank?
+
+  # Drop leading zeros in the numeric portion so remit codes like CO3/CO29 match.
+  normalized_code = code.sub(/\A0+/, "")
+  normalized_code = code if normalized_code.blank? # keep original if it was all zeros
+
+  "#{group}#{normalized_code}"
+end
+
 def parse_codes(value)
   sanitized = value.to_s.strip
   return [] if sanitized.blank?
@@ -30,7 +43,7 @@ if File.exist?(csv_path)
   puts "Importing denial reasons from #{csv_path}..."
   CSV.foreach(csv_path, headers: true) do |row|
     # Each row mirrors the payer crosswalk; normalize the interesting bits and persist/update the record.
-    code = sanitize_field(row["EOB CODE"])
+    code = primary_code(row["EOB CODE"], row["Group Code"])
     next if code.blank?
 
     denial = DenialReason.find_or_initialize_by(code: code)

@@ -35,6 +35,8 @@ module Claims
         remark_code = normalize_code(remark_raw)
 
         context = {}
+        # Compose full remit code (e.g. CO29) to improve direct lookups.
+        context[:code] = "#{group_code}#{reason_code}" if group_code.present? && reason_code.present?
         context[:group_code] = group_code if group_code.present?
         context[:reason_code] = reason_code if reason_code.present?
         context[:remark_code] = remark_code if remark_code.present?

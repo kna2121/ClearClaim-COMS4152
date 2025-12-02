@@ -12,6 +12,18 @@ namespace :denial_reasons do
     str.present? ? str.upcase : nil
   end
 
+  def primary_code(eob_code, group_code)
+    code = sanitize_field(eob_code)
+    group = sanitize_code(group_code)
+    return nil if code.blank? && group.blank?
+    return code if group.blank?
+
+    normalized_code = code.sub(/\A0+/, "")
+    normalized_code = code if normalized_code.blank?
+
+    "#{group}#{normalized_code}"
+  end
+
   def parse_codes(value)
     sanitized = value.to_s.strip
     return [] if sanitized.blank?
@@ -32,7 +44,7 @@ namespace :denial_reasons do
     imported = 0
     # Mirror db/seeds logic so ops can refresh data without redeploying.
     CSV.foreach(path, headers: true) do |row|
-      code = sanitize_field(row["EOB CODE"])
+      code = primary_code(row["EOB CODE"], row["Group Code"])
       next if code.blank?
 
       denial = DenialReason.find_or_initialize_by(code: code)

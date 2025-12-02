@@ -51,7 +51,9 @@ module DenialRules
       return nil unless table_ready?
       return nil if code.blank?
 
-      DenialReason.find_by(code: code)&.to_rule_hash
+      rule = DenialReason.find_by(code: code)&.to_rule_hash
+      log_hit("db", "code=#{code}", rule)
+      rule
     end
 
     def database_rule_by_group_and_remark(group_code, remark_code)
@@ -61,7 +63,9 @@ module DenialRules
       scope = DenialReason.all
       scope = scope.where(group_code: group_code) if group_code.present?
       scope = scope.where(remark_code: remark_code) if remark_code.present?
-      scope.first&.to_rule_hash
+      rule = scope.first&.to_rule_hash
+      log_hit("db", "group=#{group_code} remark=#{remark_code}", rule)
+      rule
     end
 
     # Attempt to match on group + reason code combo (when remark is missing).
@@ -75,14 +79,18 @@ module DenialRules
       record = scope.find do |denial|
         Array(denial.reason_codes).map { |code| normalize(code, preserve_numeric: true) }.include?(reason_code)
       end
-      record&.to_rule_hash
+      rule = record&.to_rule_hash
+      log_hit("db", "group=#{group_code} reason=#{reason_code}", rule)
+      rule
     end
 
     def database_rule_by_remark(remark_code)
       return nil unless table_ready?
       return nil if remark_code.blank?
 
-      DenialReason.find_by(remark_code: remark_code)&.to_rule_hash
+      rule = DenialReason.find_by(remark_code: remark_code)&.to_rule_hash
+      log_hit("db", "remark=#{remark_code}", rule)
+      rule
     end
 
     def database_rules_index
@@ -112,31 +120,44 @@ module DenialRules
     def yaml_rule_by_code(code)
       return nil if code.blank?
 
-      yaml_rules[code]
+      rule = yaml_rules[code]
+      log_hit("yaml", "code=#{code}", rule)
+      rule
     end
 
     def yaml_rule_by_group_and_remark(group_code, remark_code)
+      return nil if group_code.blank? && remark_code.blank?
+
       # YAML payload matches DB schema so we can reuse the same comparison logic.
-      yaml_rules.values.find do |rule|
+      rule = yaml_rules.values.find do |rule|
         matches_group = group_code.present? ? rule["group_code"].to_s.upcase == group_code : true
         matches_remark = remark_code.present? ? rule["remark_code"].to_s.upcase == remark_code : true
         matches_group && matches_remark
       end
+      log_hit("yaml", "group=#{group_code} remark=#{remark_code}", rule)
+      rule
     end
 
     def yaml_rule_by_group_and_reason(group_code, reason_code)
       return nil if reason_code.blank?
 
-      yaml_rules.values.find do |rule|
+      rule = yaml_rules.values.find do |rule|
         matches_group = group_code.present? ? rule["group_code"].to_s.upcase == group_code : true
         # YAML uses same data shape, so reuse normalization helper for comparisons.
         reasons = Array(rule["reason_codes"]).map { |code| normalize(code, preserve_numeric: true) }
         matches_group && reasons.include?(reason_code)
       end
+      log_hit("yaml", "group=#{group_code} reason=#{reason_code}", rule)
+      rule
     end
 
     def default_path
       Rails.root.join("config", "denial_rules.yml")
+    end
+
+    def log_hit(source, context, rule)
+      status = rule.present? ? "hit" : "miss"
+      Rails.logger.info("[denial_rules][#{source}] #{status} #{context}")
     end
   end
 end
