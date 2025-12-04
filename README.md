@@ -1,10 +1,10 @@
 # ClearClaim-COMS4152
 ## AI Appeal Assistant for Healthcare Denials  
 Developed by:
-Jalen Stephens (js5987) ➡️ Database
-Kira Ariyan (kna2121) ➡️ LLM Connection
-Zilin Jing (zj2398) ➡️ PDF parser
-Darran Shivdat (dss2194) ➡️ Front end
+Jalen Stephens (js5987) ➡️ Database  
+Kira Ariyan (kna2121) ➡️ LLM Connection  
+Zilin Jing (zj2398) ➡️ PDF parser  
+Darran Shivdat (dss2194) ➡️ Front end  
 
 # AI Appeal Assistant
 
