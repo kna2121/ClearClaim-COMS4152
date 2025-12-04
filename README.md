@@ -27,19 +27,19 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    ```bash
    bin/rails db:setup
    ```
-Note: If your local postgres configuration differs from the default, ensure it is configured as follows to avoid DB connection errors:
-   ```bash
-      export POSTGRES_USER="postgres"
-      export POSTGRES_PASSWORD=""
-      export POSTGRES_HOST="localhost"
-   ```
-This is only necessary if your postgres is not already configured this way.
 
 5. Run the Rails server:
 
    ```bash
    bin/rails server
    ```
+Troubleshooting note: If you run into DB connection issues ensure your local postgres is configured as follows:
+   ```bash
+      export POSTGRES_USER="postgres"
+      export POSTGRES_PASSWORD=""
+      export POSTGRES_HOST="localhost"
+   ```
+This is only necessary if it is not already configured this way.
 ## Appeal Assistant Architecture
 
 #### 1. 📤 **PDF Upload** (via API or Web Interface)
