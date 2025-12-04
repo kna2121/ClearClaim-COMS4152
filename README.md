@@ -180,7 +180,8 @@ On the homepage, upload any of the 3 provided sample pdf files which can be foun
 Then Analyze Document > Generate Appeal.  
 You can then download the appeal letter as a .docx and customize it further.
 
-### Note: If you upload any invalid document without valid information (like the course syllabus that we show in the demo day), the clearcliam will prompt you to upload another document.
+### Error Handling Tip
+If you upload any invalid document without valid information (like the course syllabus that we showed on demo day), ClearClaim will prompt you to upload another document.
 
 ### Targeted Denial Logic Tests
 
