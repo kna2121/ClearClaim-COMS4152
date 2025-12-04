@@ -62,6 +62,16 @@ This is only necessary if it is not already configured this way.
    - Customizable templates for different payers and denial types
    - Addresses each denial code with specific corrections
 
+## 🚀 Deployment
+
+The production app is deployed on Heroku.
+You can access the live instance here:
+
+👉link: https://clearclaim-coms4152-c1ad14d4491b.herokuapp.com/
+
+The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
+so no manual setup is required to test the deployed app.
+
 
 <!-- - **Document intake** – `Claims::DocumentAnalyzer` routes uploads to `Claims::PdfAnalyzer` (pdf-reader/combine_pdf) or `Claims::OcrReader` (rtesseract) for text extraction.
 - **Rule mapping** – `DenialRules::Repository` reads from the `denial_reasons` table (populated via `config/EOBList.csv`) and falls back to `config/denial_rules.yml` so payer logic can change without redeploys.
@@ -142,15 +152,6 @@ puts service.call[:appeal_letter]
 - Export the curated DB for auditing/sharing with `bin/rails denial_reasons:export_csv[optional/output.csv]`.
 - `Claims::CorrectionSuggester` consumes these records, so the REST API immediately reflects any newly imported or edited codes.
 
-## 🚀 Deployment
-
-The production app is deployed on Heroku.
-You can access the live instance here:
-
-👉link: https://clearclaim-coms4152-c1ad14d4491b.herokuapp.com/
-
-The OpenAI API key is securely stored in Heroku environment variables (OPENAI_API_KEY),
-so no manual setup is required to test the deployed app.
 
 
 ## Testing
