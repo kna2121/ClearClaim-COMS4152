@@ -179,6 +179,9 @@ Cucumber user stories can be found in our features/.feature files.
 On the homepage, upload any of the 3 provided sample pdf files which can be found under `spec/fixtures/`.  
 Then Analyze Document > Generate Appeal.  
 You can then download the appeal letter as a .docx and customize it further.
+
+### Note: If you upload any invalid document without valid information (like the course syllabus that we show in the demo day), the clearcliam will prompt you to upload another document.
+
 ### Targeted Denial Logic Tests
 
 - Service and repository behaviour for denial lookups lives under `spec/services`. Run just those specs with:
