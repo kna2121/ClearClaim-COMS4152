@@ -19,9 +19,9 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    bundle install
    ```
 2. To run locally you need to set an environment variable with your openai api key. To avoid this, use the production version of ClearClaim on heroku (linked below).
-```bash
-export OPENAI_API_KEY="your_key"
-```
+   ```bash
+   export OPENAI_API_KEY="your_key"
+   ```
 3. Set up the database (make sure postgresql is running on your machine):
 
    ```bash
