@@ -28,11 +28,11 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    bin/rails db:setup
    ```
 Note: If your local postgres configuration differs from the default, ensure it is configured as follows to avoid DB connection errors:
-      ```bash
+   ```bash
       export POSTGRES_USER="postgres"
       export POSTGRES_PASSWORD=""
       export POSTGRES_HOST="localhost"
-      ```
+   ```
 This is only necessary if your postgres is not already configured this way.
 
 5. Run the Rails server:
