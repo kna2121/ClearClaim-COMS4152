@@ -4,7 +4,7 @@
 Jalen Stephens (js5987) ➡️ Configured database connection  
 Kira Ariyan (kna2121) ➡️ Configured LLM API connection  
 Zilin Jing (zj2398) ➡️ Set up PDF parser  
-Darran Shivdat (dss2194) ➡️ Constructued front end  
+Darran Shivdat (dss2194) ➡️ Constructed front end  
 
 # AI Appeal Assistant
 
