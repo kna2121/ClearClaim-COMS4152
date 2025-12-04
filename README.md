@@ -9,7 +9,8 @@ Darran Shivdat (dss2194)
 
 This directory contains a Ruby on Rails 7 starter application tailored for the AI Appeal Assistant SaaS product. It includes RSpec and Cucumber wiring so you can immediately begin implementing features and acceptance tests.
 
-## Getting Started
+## Setup for Local Testing. 
+### (No set up required for deployed application)
 
 1. Ensure you have Ruby 3.4.5 installed.
 2. Install dependencies:
@@ -17,7 +18,10 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
    ```bash
    bundle install
    ```
-
+2. To run locally you need to set an environment variable with your openai api key. To avoid this, use the production version of ClearClaim on heroku (linked below).
+```bash
+export OPENAI_API_KEY="your_key"
+```
 3. Set up the database (make sure postgresql is running on your machine):
 
    ```bash
@@ -28,21 +32,6 @@ This directory contains a Ruby on Rails 7 starter application tailored for the A
 
    ```bash
    bin/rails server
-   ```
-## Optional Setup for Local Testing
-Note: We recommend using the deployed version of our app on heroku (linked below). Running locally can lead to running into issues with the database configuration and permissions. However, the instructions below should allow testing in development.
-1. To run locally you need to set an environment variable with your openai api key. 
-```bash
-export OPENAI_API_KEY="your_key"
-```
-
-2. Postgres also has to be configured appropriately in order to run locally. Ensure that postgres is running. As long as your local Postgres lets you connect as postgres with no password you can run the following command:
- ```bash
-   rails db:setup
- ```
-3. Start the rails server
- ```bash
-    rails s
    ```
 ## Appeal Assistant Architecture
 
