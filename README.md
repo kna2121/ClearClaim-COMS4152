@@ -87,7 +87,7 @@ so no manual setup is required to test the deployed app.
 | `POST /claims/suggest_corrections` | Map denial/EOB codes (or `[remit_code, remark_code]` tuples like `["CO45","N54"]`) to stored reasons/corrections. | `denial_codes[]` |
 | `POST /claims/generate_appeal` | Produce an appeal draft using claim payload + denial reasons. | `claim[...]`, `denial_codes[]`
 
-# Example Requests to Test Specific Endpoints
+## Example Requests to Test Specific Endpoints
 Example request to analyze a PDF:
 
 ```bash
@@ -125,18 +125,6 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
     "denial_codes": ["CO45", "PR204"]
   }'
 ```
-To test from rails console:  
-`rails c`
-```
-
-service = Appeals::AppealGenerator.new(
-claim: { claim_number: "A123", patient_name: "John Doe", payer_name: "Aetna", service_period: "2025-01-10" },
-denial_reasons: ["Missing pre-authorization"]
-)
-puts service.call[:appeal_letter]
-```
-
-
 ## Configuring OCR & Rules
 
 - Install Tesseract locally to unlock `Claims::OcrReader` (`brew install tesseract` on macOS).
