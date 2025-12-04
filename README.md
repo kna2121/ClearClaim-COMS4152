@@ -11,7 +11,7 @@ Darran Shivdat (dss2194) ➡️ Constructed front end
 This directory contains a Ruby on Rails 7 starter application tailored for the AI Appeal Assistant SaaS product. It includes RSpec and Cucumber wiring so you can immediately begin implementing features and acceptance tests.
 
 ## Getting Started: Setup for Local Testing
-(No set up required for deployed application)
+(Only necessary to test locally)
 
 1. Ensure you have Ruby 3.4.5 installed.
 2. Install dependencies:
