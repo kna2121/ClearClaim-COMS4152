@@ -125,11 +125,6 @@ curl -X POST http://localhost:3000/claims/generate_appeal \
     "denial_codes": ["CO45", "PR204"]
   }'
 ```
-## Configuring OCR & Rules
-
-- Install Tesseract locally to unlock `Claims::OcrReader` (`brew install tesseract` on macOS).
-- Maintain denial data primarily via the `denial_reasons` table (see next section); `config/denial_rules.yml` remains as a lightweight fallback for quick overrides.
-- Swap the appeal template or add new ones under `app/views/appeals/templates`, then pass `template` when calling `/claims/generate_appeal`.
 
 ## Denial Reason Database
 
